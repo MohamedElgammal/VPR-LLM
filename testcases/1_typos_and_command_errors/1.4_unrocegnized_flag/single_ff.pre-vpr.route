@@ -1,0 +1,27 @@
+Placement_File: single_ff.pre-vpr.place Placement_ID: SHA256:c8d012735bd25aacaf26e749fbda622b2c05536035d5c2ebc670073dc827dc92
+Array size: 3 x 3 logic blocks.
+
+Routing:
+
+Net 0 (in)
+
+Node:	217	SOURCE (2,1,0)  Pad: 19  Switch: 0
+Node:	241	  OPIN (2,1,0)  Pad: 19  Switch: 2
+Node:	252	 CHANY (1,1,0)  Track: 0  Switch: 1
+Node:	100	  IPIN (1,1,0)  Pin: 1   clb.I[1] Switch: 0
+Node:	96	  SINK (1,1,0)  Class: 0  Switch: -1 Net_pin_index: 1
+
+
+Net 1 (out)
+
+Node:	97	SOURCE (1,1,0)  Class: 1  Switch: 0
+Node:	139	  OPIN (1,1,0)  Pin: 40   clb.O[0] Switch: 2
+Node:	248	 CHANX (1,1,0)  Track: 0  Switch: 1
+Node:	177	  IPIN (1,2,0)  Pad: 3  Switch: 0
+Node:	153	  SINK (1,2,0)  Pad: 3  Switch: -1 Net_pin_index: 1
+
+
+Net 2 (clock): global net connecting:
+
+Block clock (#2) at (2,1,0), Pin class 10.
+Block out (#0) at (1,1,0), Pin class 2.

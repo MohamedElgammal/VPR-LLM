@@ -1,0 +1,620 @@
+VPR FPGA Placement and Routing.
+Version: 9.0.0-dev+v8.0.0-11925-ga544f5fea-dirty
+Revision: v8.0.0-11925-ga544f5fea-dirty
+Compiled: 2025-01-14T21:35:49
+Compiler: GNU 9.4.0 on Linux-4.15.0-213-generic x86_64
+Build Info: release IPO VTR_ASSERT_LEVEL=2
+
+University of Toronto
+verilogtorouting.org
+vtr-users@googlegroups.com
+This is free open source code under MIT license.
+
+VPR was run with the following command-line:
+./vpr/vpr k6FracN10LB_mem20K_complexDSP_customSB_22nm.xml bwave_like.fixed.large.pre-vpr.blif --target_utilization 0.15
+
+Using up to 1 parallel worker(s)
+
+Architecture file: k6FracN10LB_mem20K_complexDSP_customSB_22nm.xml
+Circuit name: bwave_like.fixed.large.pre-vpr
+
+# Loading Architecture Description
+# Loading Architecture Description took 0.24 seconds (max_rss 15.4 MiB, delta_rss +2.4 MiB)
+
+Timing analysis: ON
+Circuit netlist file: bwave_like.fixed.large.pre-vpr.net
+Circuit placement file: bwave_like.fixed.large.pre-vpr.place
+Circuit routing file: bwave_like.fixed.large.pre-vpr.route
+Circuit SDC file: bwave_like.fixed.large.pre-vpr.sdc
+Vpr floorplanning constraints file: not specified
+
+Packer: ENABLED
+Placer: ENABLED
+Analytical Placer: DISABLED
+Router: ENABLED
+Analysis: ENABLED
+
+VPR was run with the following options:
+
+NetlistOpts.absorb_buffer_luts            : true
+NetlistOpts.sweep_dangling_primary_ios    : true
+NetlistOpts.sweep_dangling_nets           : true
+NetlistOpts.sweep_dangling_blocks         : true
+NetlistOpts.sweep_constant_primary_outputs: false
+NetlistOpts.netlist_verbosity             : 1
+NetlistOpts.const_gen_inference           : COMB_SEQ
+
+PackerOpts.allow_unrelated_clustering: auto
+PackerOpts.alpha_clustering: 0.750000
+PackerOpts.beta_clustering: 0.900000
+PackerOpts.cluster_seed_type: BLEND2
+PackerOpts.connection_driven: true
+PackerOpts.global_clocks: true
+PackerOpts.inter_cluster_net_delay: 1.000000
+PackerOpts.timing_driven: true
+PackerOpts.target_external_pin_util: auto
+
+PlacerOpts.place_freq: PLACE_ONCE
+PlacerOpts.place_algorithm: CRITICALITY_TIMING_PLACE
+PlacerOpts.pad_loc_type: FREE
+PlacerOpts.constraints_file: No constraints file given
+PlacerOpts.place_chan_width: 100
+PlacerOpts.inner_loop_recompute_divider: 0
+PlacerOpts.recompute_crit_iter: 1
+PlacerOpts.timing_tradeoff: 0.500000
+PlacerOpts.td_place_exp_first: 1.000000
+PlacerOpts.td_place_exp_last: 8.000000
+PlacerOpts.delay_offset: 0.000000
+PlacerOpts.delay_ramp_delta_threshold: -1
+PlacerOpts.delay_ramp_slope: 0.000000
+PlacerOpts.tsu_rel_margin: 1.000000
+PlacerOpts.tsu_abs_margin: 0.000000
+PlacerOpts.post_place_timing_report_file: 
+PlacerOpts.allowed_tiles_for_delay_model: 
+PlacerOpts.delay_model_reducer: MIN
+PlacerOpts.delay_model_type: SIMPLE
+PlacerOpts.rlim_escape_fraction: 0.000000
+PlacerOpts.move_stats_file: 
+PlacerOpts.placement_saves_per_temperature: 0
+PlacerOpts.effort_scaling: CIRCUIT
+PlacerOpts.place_delta_delay_matrix_calculation_method: ASTAR_ROUTE
+PlaceOpts.seed: 1
+AnnealSched.type: AUTO_SCHED
+AnnealSched.inner_num: 0.500000
+
+RouterOpts.route_type: DETAILED
+RouterOpts.flat_routing: false
+RouterOpts.choke_points: on
+RouterOpts.router_algorithm: TIMING_DRIVEN
+RouterOpts.base_cost_type: DELAY_NORMALIZED_LENGTH
+RouterOpts.fixed_channel_width: NO_FIXED_CHANNEL_WIDTH
+RouterOpts.check_route: FULL
+RouterOpts.acc_fac: 1.000000
+RouterOpts.bb_factor: 3
+RouterOpts.bend_cost: 0.000000
+RouterOpts.first_iter_pres_fac: 0.000000
+RouterOpts.initial_pres_fac: 0.500000
+RouterOpts.pres_fac_mult: 1.300000
+RouterOpts.max_pres_fac: 1000.000000
+RouterOpts.max_router_iterations: 50
+RouterOpts.min_incremental_reroute_fanout: 16
+RouterOpts.do_check_rr_graph: true
+RouterOpts.verify_binary_search: false
+RouterOpts.min_channel_width_hint: 0
+RouterOpts.read_rr_edge_metadata: false
+RouterOpts.exit_after_first_routing_iteration: false
+RouterOpts.astar_fac: 1.200000
+RouterOpts.astar_offset: 0.000000
+RouterOpts.router_profiler_astar_fac: 1.200000
+RouterOpts.criticality_exp: 1.000000
+RouterOpts.max_criticality: 0.990000
+RouterOpts.init_wirelength_abort_threshold: 0.850000
+RouterOpts.incr_reroute_delay_ripup: AUTO
+RouterOpts.save_routing_per_iteration: false
+RouterOpts.congested_routing_iteration_threshold_frac: 1.000000
+RouterOpts.high_fanout_threshold: 64
+RouterOpts.router_debug_net: -2
+RouterOpts.router_debug_sink_rr: -2
+RouterOpts.router_debug_iteration: -2
+RouterOpts.max_convergence_count: 1
+RouterOpts.reconvergence_cpd_threshold: 0.990000
+RouterOpts.update_lower_bound_delays: true
+RouterOpts.first_iteration_timing_report_file: 
+RouterOpts.route_bb_update: DYNAMIC
+RouterOpts.lookahead_type: MAP
+RouterOpts.initial_timing: LOOKAHEAD
+RouterOpts.router_heap: FOUR_ARY_HEAP
+RouterOpts.routing_failure_predictor = SAFE
+RouterOpts.routing_budgets_algorithm = DISABLE
+
+AnalysisOpts.gen_post_synthesis_netlist: false
+AnalysisOpts.timing_report_npaths: 100
+AnalysisOpts.timing_report_skew: false
+AnalysisOpts.echo_dot_timing_graph_node: -1
+AnalysisOpts.timing_report_detail: NETLIST
+AnalysisOpts.post_synth_netlist_unconn_input_handling: UNCONNECTED
+AnalysisOpts.post_synth_netlist_unconn_output_handling: UNCONNECTED
+
+# Building complex block graph
+Warning 1: io[0].clock[0] unconnected pin in architecture.
+Warning 2: dsp_top[0].dsp_I2[44] unconnected pin in architecture.
+Warning 3: dsp_top[0].dsp_I2[45] unconnected pin in architecture.
+Warning 4: dsp_top[0].dsp_I2[46] unconnected pin in architecture.
+Warning 5: dsp_top[0].dsp_I2[47] unconnected pin in architecture.
+Warning 6: dsp_top[0].dsp_I2[48] unconnected pin in architecture.
+Warning 7: dsp_top[0].dsp_I2[49] unconnected pin in architecture.
+Warning 8: dsp_top[0].dsp_I2[50] unconnected pin in architecture.
+Warning 9: dsp_top[0].dsp_I2[51] unconnected pin in architecture.
+Warning 10: dsp_top[0].dsp_I2[52] unconnected pin in architecture.
+Warning 11: dsp_top[0].dsp_I2[53] unconnected pin in architecture.
+Warning 12: dsp_top[0].dsp_I2[54] unconnected pin in architecture.
+Warning 13: dsp_top[0].dsp_I2[55] unconnected pin in architecture.
+Warning 14: dsp_top[0].dsp_I2[56] unconnected pin in architecture.
+Warning 15: dsp_top[0].dsp_I2[57] unconnected pin in architecture.
+Warning 16: dsp_top[0].dsp_I2[58] unconnected pin in architecture.
+Warning 17: dsp_top[0].dsp_I2[59] unconnected pin in architecture.
+Warning 18: dsp_top[0].dsp_I2[60] unconnected pin in architecture.
+Warning 19: dsp_top[0].dsp_I2[61] unconnected pin in architecture.
+Warning 20: dsp_top[0].dsp_I2[62] unconnected pin in architecture.
+Warning 21: dsp_top[0].dsp_I2[63] unconnected pin in architecture.
+Warning 22: dsp[0].dsp_I2[44] unconnected pin in architecture.
+Warning 23: dsp[0].dsp_I2[45] unconnected pin in architecture.
+Warning 24: dsp[0].dsp_I2[46] unconnected pin in architecture.
+Warning 25: dsp[0].dsp_I2[47] unconnected pin in architecture.
+Warning 26: dsp[0].dsp_I2[48] unconnected pin in architecture.
+Warning 27: dsp[0].dsp_I2[49] unconnected pin in architecture.
+Warning 28: dsp[0].dsp_I2[50] unconnected pin in architecture.
+Warning 29: dsp[0].dsp_I2[51] unconnected pin in architecture.
+Warning 30: dsp[0].dsp_I2[52] unconnected pin in architecture.
+Warning 31: dsp[0].dsp_I2[53] unconnected pin in architecture.
+Warning 32: dsp[0].dsp_I2[54] unconnected pin in architecture.
+Warning 33: dsp[0].dsp_I2[55] unconnected pin in architecture.
+Warning 34: dsp[0].dsp_I2[56] unconnected pin in architecture.
+Warning 35: dsp[0].dsp_I2[57] unconnected pin in architecture.
+Warning 36: dsp[0].dsp_I2[58] unconnected pin in architecture.
+Warning 37: dsp[0].dsp_I2[59] unconnected pin in architecture.
+Warning 38: dsp[0].dsp_I2[60] unconnected pin in architecture.
+Warning 39: dsp[0].dsp_I2[61] unconnected pin in architecture.
+Warning 40: dsp[0].dsp_I2[62] unconnected pin in architecture.
+Warning 41: dsp[0].dsp_I2[63] unconnected pin in architecture.
+Warning 42: dsp_pb[0].datain[96] unconnected pin in architecture.
+Warning 43: dsp_pb[0].datain[97] unconnected pin in architecture.
+Warning 44: dsp_pb[0].datain[98] unconnected pin in architecture.
+Warning 45: dsp_pb[0].datain[99] unconnected pin in architecture.
+Warning 46: dsp_pb[0].datain[100] unconnected pin in architecture.
+Warning 47: dsp_pb[0].datain[101] unconnected pin in architecture.
+Warning 48: dsp_pb[0].datain[102] unconnected pin in architecture.
+Warning 49: dsp_pb[0].datain[103] unconnected pin in architecture.
+Warning 50: dsp_pb[0].datain[104] unconnected pin in architecture.
+Warning 51: dsp_pb[0].datain[105] unconnected pin in architecture.
+Warning 52: dsp_pb[0].datain[106] unconnected pin in architecture.
+Warning 53: dsp_pb[0].datain[107] unconnected pin in architecture.
+Warning 54: dsp_pb[0].datain[108] unconnected pin in architecture.
+Warning 55: dsp_pb[0].datain[109] unconnected pin in architecture.
+Warning 56: dsp_pb[0].datain[110] unconnected pin in architecture.
+Warning 57: dsp_pb[0].datain[111] unconnected pin in architecture.
+Warning 58: dsp_pb[0].datain[112] unconnected pin in architecture.
+Warning 59: dsp_pb[0].datain[113] unconnected pin in architecture.
+Warning 60: dsp_pb[0].datain[114] unconnected pin in architecture.
+Warning 61: dsp_pb[0].datain[115] unconnected pin in architecture.
+# Building complex block graph took 0.12 seconds (max_rss 31.1 MiB, delta_rss +15.7 MiB)
+Circuit file: bwave_like.fixed.large.pre-vpr.blif
+# Load circuit
+Found constant-zero generator '$sdffe~1981^Q~7'
+Found constant-zero generator '$sdffe~1981^Q~15'
+Found constant-zero generator '$sdffe~1981^Q~23'
+Found constant-zero generator '$sdffe~1981^Q~31'
+Found constant-zero generator '$sdffe~1981^Q~39'
+Found constant-zero generator '$sdffe~1981^Q~47'
+Found constant-zero generator '$sdffe~1981^Q~55'
+Found constant-zero generator '$sdffe~1981^Q~63'
+Found constant-zero generator '$sdffe~1981^Q~71'
+Found constant-zero generator '$sdffe~1981^Q~79'
+Found constant-zero generator '$sdffe~1981^Q~87'
+Found constant-zero generator '$sdffe~1981^Q~95'
+Found constant-zero generator '$sdffe~1981^Q~103'
+Found constant-zero generator '$sdffe~1981^Q~111'
+Found constant-zero generator '$sdffe~1981^Q~119'
+Found constant-zero generator '$sdffe~1981^Q~127'
+Found constant-zero generator '$sdffe~1249^Q~7'
+Found constant-zero generator '$sdffe~1249^Q~15'
+Found constant-zero generator '$sdffe~1249^Q~23'
+Found constant-zero generator '$sdffe~1249^Q~31'
+Found constant-zero generator '$sdffe~1249^Q~39'
+Found constant-zero generator '$sdffe~1249^Q~47'
+Found constant-zero generator '$sdffe~1249^Q~55'
+Found constant-zero generator '$sdffe~1249^Q~63'
+Found constant-zero generator '$sdffe~1249^Q~71'
+Found constant-zero generator '$sdffe~1249^Q~79'
+Found constant-zero generator '$sdffe~1249^Q~87'
+Found constant-zero generator '$sdffe~1249^Q~95'
+Found constant-zero generator '$sdffe~1249^Q~103'
+Found constant-zero generator '$sdffe~1249^Q~111'
+Found constant-zero generator '$sdffe~1249^Q~119'
+Found constant-zero generator '$sdffe~1249^Q~127'
+Found constant-one generator 'vcc'
+Found constant-zero generator 'gnd'
+Found constant-zero generator 'unconn'
+# Load circuit took 4.59 seconds (max_rss 181.0 MiB, delta_rss +149.9 MiB)
+# Clean circuit
+Absorbed 10147 LUT buffers
+Inferred    0 additional primitive pins as constant generators since they have no combinationally connected inputs
+Inferred  270 additional primitive pins as constant generators due to constant inputs
+Inferred    0 additional primitive pins as constant generators since they have no combinationally connected inputs
+Inferred    0 additional primitive pins as constant generators due to constant inputs
+Swept input(s)      : 0
+Swept output(s)     : 0 (0 dangling, 0 constant)
+Swept net(s)        : 24014
+Swept block(s)      : 0
+Constant Pins Marked: 270
+# Clean circuit took 0.06 seconds (max_rss 181.0 MiB, delta_rss +0.0 MiB)
+# Compress circuit
+# Compress circuit took 0.22 seconds (max_rss 181.0 MiB, delta_rss +0.0 MiB)
+# Verify circuit
+# Verify circuit took 0.06 seconds (max_rss 181.0 MiB, delta_rss +0.0 MiB)
+Circuit Statistics:
+  Blocks: 44026
+    .input       :     178
+    .latch       :   11542
+    .names       :   21047
+        0-LUT:      34
+        1-LUT:       6
+        2-LUT:    2531
+        3-LUT:   10731
+        4-LUT:    2322
+        5-LUT:    1747
+        6-LUT:    3676
+    .output      :     150
+    adder        :    1189
+    dual_port_ram:    9344
+    int_sop_2    :     512
+    multiply     :      64
+  Nets  : 71163
+    Avg Fanout:     5.5
+    Max Fanout: 36720.0
+    Min Fanout:     1.0
+  Netlist Clocks: 1
+# Build Timing Graph
+  Timing Graph Nodes: 762051
+  Timing Graph Edges: 3437005
+  Timing Graph Levels: 70
+# Build Timing Graph took 3.47 seconds (max_rss 645.2 MiB, delta_rss +464.2 MiB)
+Netlist contains 1 clocks
+  Netlist Clock 'clk' Fanout: 21398 pins (4.6%), 21398 blocks (48.6%)
+# Load Timing Constraints
+
+SDC file 'bwave_like.fixed.large.pre-vpr.sdc' not found
+Setting default timing constraints:
+   * constrain all primay inputs and primary outputs on netlist clock 'clk'
+   * optimize netlist clock to run as fast as possible
+Timing constraints created 1 clocks
+  Constrained Clock 'clk' Source: 'clk.inpad[0]'
+
+# Load Timing Constraints took 0.35 seconds (max_rss 645.2 MiB, delta_rss +0.0 MiB)
+# Packing
+Begin packing 'bwave_like.fixed.large.pre-vpr.blif'.
+
+After removing unused inputs...
+	total blocks: 44026, total nets: 71163, total inputs: 178, total outputs: 150
+Begin prepacking.
+
+There is one chain in this architecture called "chain" with the following starting points:
+	clb[0]/lab[0]/fle[0]/ble5[0]/arithmetic[0]/adder[0].cin[0]
+
+0 attraction groups were created during prepacking.
+Finish prepacking.
+Using inter-cluster delay: 2.1832e-09
+Packing with pin utilization targets: io:1,1 clb:0.8,0.6 dsp_top:1,1 memory:1,1
+Packing with high fanout thresholds: io:128 clb:32 dsp_top:128 memory:128
+Starting Clustering - Clustering Progress: 
+-------------------   --------------------------   ---------
+Molecules processed   Number of clusters created   FPGA size
+-------------------   --------------------------   ---------
+  1278/31450     4%                          583   186 x 186   
+  2543/31450     8%                          643   186 x 186   
+  3801/31450    12%                          727   186 x 186   
+  5069/31450    16%                          800   186 x 186   
+  6329/31450    20%                          869   186 x 186   
+  7589/31450    24%                          938   186 x 186   
+  8849/31450    28%                         1007   186 x 186   
+ 10121/31450    32%                         1076   186 x 186   
+ 11381/31450    36%                         1145   186 x 186   
+ 12656/31450    40%                         1216   186 x 186   
+ 13914/31450    44%                         1286   186 x 186   
+ 15181/31450    48%                         1366   186 x 186   
+ 16442/31450    52%                         1456   186 x 186   
+ 17702/31450    56%                         1545   186 x 186   
+ 18975/31450    60%                         1630   186 x 186   
+ 20242/31450    64%                         1695   186 x 186   
+ 21508/31450    68%                         1760   186 x 186   
+ 22781/31450    72%                         1825   186 x 186   
+ 24050/31450    76%                         1889   186 x 186   
+ 25322/31450    80%                         1953   186 x 186   
+ 26586/31450    84%                         2017   186 x 186   
+ 27849/31450    88%                         2100   186 x 186   
+ 29107/31450    92%                         2195   186 x 186   
+ 30376/31450    96%                         2291   186 x 186   
+ 31450/31450   100%                         2719   186 x 186   
+
+Logic Element (fle) detailed count:
+  Total number of Logic Elements used : 12610
+  LEs used for logic and registers    : 6649
+  LEs used for logic only             : 5961
+  LEs used for registers only         : 0
+
+Incr Slack updates 1 in 0.0145534 sec
+Full Max Req/Worst Slack updates 1 in 0.0145895 sec
+Incr Max Req/Worst Slack updates 0 in 0 sec
+Incr Criticality updates 0 in 0 sec
+Full Criticality updates 1 in 0.036166 sec
+FPGA sized to 186 x 186 (auto)
+Device Utilization: 0.13 (target 0.15)
+	Block Utilization: 0.06 Type: io
+	Block Utilization: 0.05 Type: clb
+	Block Utilization: 1.00 Type: dsp_top
+	Block Utilization: 0.46 Type: memory
+
+Start the iterative improvement process
+the iterative improvement process is done
+Final Clustering Statistics: 
+----------   --------   ------------------------------------   --------------------------
+Block Type   # Blocks   Avg. # of input clocks and pins used   Avg. # of output pins used
+----------   --------   ------------------------------------   --------------------------
+     EMPTY          0                                      0                            0   
+        io        328                               0.457317                     0.542683   
+       clb       1328                                32.1197                       11.488   
+   dsp_top        552                                117.797                      31.8841   
+    memory        511                                41.2857                      36.5714   
+Absorbed logical nets 19441 out of 71163 nets, 51722 nets not absorbed.
+
+Netlist conversion complete.
+
+# Packing took 58.32 seconds (max_rss 646.3 MiB, delta_rss +1.1 MiB)
+# Load packing
+Begin loading packed FPGA netlist file.
+Netlist generated from file 'bwave_like.fixed.large.pre-vpr.net'.
+Detected 34 constant generators (to see names run with higher pack verbosity)
+Warning 62: Netlist connects net lo02579 to both global and non-global pins.
+Warning 63: Netlist connects net lo02579 to both global and non-global pins.
+Warning 64: Netlist connects net lo02579 to both global and non-global pins.
+Warning 65: Netlist connects net lo02579 to both global and non-global pins.
+Warning 66: Netlist connects net lo02579 to both global and non-global pins.
+Warning 67: Netlist connects net lo02579 to both global and non-global pins.
+Warning 68: Netlist connects net lo02579 to both global and non-global pins.
+Warning 69: Netlist connects net lo02579 to both global and non-global pins.
+Warning 70: Netlist connects net lo02579 to both global and non-global pins.
+Warning 71: Netlist connects net lo02579 to both global and non-global pins.
+Warning 72: Netlist connects net lo02579 to both global and non-global pins.
+Warning 73: Netlist connects net lo02579 to both global and non-global pins.
+Warning 74: Netlist connects net lo02579 to both global and non-global pins.
+Warning 75: Netlist connects net lo02579 to both global and non-global pins.
+Warning 76: Netlist connects net lo02579 to both global and non-global pins.
+Warning 77: Netlist connects net lo02579 to both global and non-global pins.
+Warning 78: Netlist connects net lo02579 to both global and non-global pins.
+Warning 79: Netlist connects net lo02579 to both global and non-global pins.
+Warning 80: Netlist connects net lo02579 to both global and non-global pins.
+Warning 81: Netlist connects net lo02579 to both global and non-global pins.
+Warning 82: Netlist connects net lo02579 to both global and non-global pins.
+Warning 83: Netlist connects net lo02579 to both global and non-global pins.
+Warning 84: Netlist connects net lo02579 to both global and non-global pins.
+Warning 85: Netlist connects net lo02579 to both global and non-global pins.
+Warning 86: Netlist connects net lo02579 to both global and non-global pins.
+Warning 87: Netlist connects net lo02579 to both global and non-global pins.
+Warning 88: Netlist connects net lo02579 to both global and non-global pins.
+Warning 89: Netlist connects net lo02579 to both global and non-global pins.
+Warning 90: Netlist connects net lo02579 to both global and non-global pins.
+Warning 91: Netlist connects net lo02579 to both global and non-global pins.
+Warning 92: Netlist connects net lo02579 to both global and non-global pins.
+Warning 93: Netlist connects net lo02579 to both global and non-global pins.
+Warning 94: Netlist connects net lo02579 to both global and non-global pins.
+Warning 95: Netlist connects net lo02579 to both global and non-global pins.
+Warning 96: Netlist connects net lo02579 to both global and non-global pins.
+Warning 97: Netlist connects net lo02579 to both global and non-global pins.
+Warning 98: Netlist connects net lo02579 to both global and non-global pins.
+Warning 99: Netlist connects net lo02579 to both global and non-global pins.
+Warning 100: Netlist connects net lo02579 to both global and non-global pins.
+Warning 101: Netlist connects net lo02579 to both global and non-global pins.
+Warning 102: Netlist connects net lo02579 to both global and non-global pins.
+Warning 103: Netlist connects net lo02579 to both global and non-global pins.
+Warning 104: Netlist connects net lo02579 to both global and non-global pins.
+Warning 105: Netlist connects net lo02579 to both global and non-global pins.
+Warning 106: Netlist connects net lo02579 to both global and non-global pins.
+Warning 107: Netlist connects net lo02579 to both global and non-global pins.
+Warning 108: Netlist connects net lo02579 to both global and non-global pins.
+Warning 109: Netlist connects net lo02579 to both global and non-global pins.
+Warning 110: Netlist connects net lo02579 to both global and non-global pins.
+Warning 111: Netlist connects net lo02579 to both global and non-global pins.
+Warning 112: Netlist connects net lo02579 to both global and non-global pins.
+Warning 113: Netlist connects net lo02579 to both global and non-global pins.
+Warning 114: Netlist connects net lo02579 to both global and non-global pins.
+Warning 115: Netlist connects net lo02579 to both global and non-global pins.
+Warning 116: Netlist connects net lo02579 to both global and non-global pins.
+Warning 117: Netlist connects net lo02579 to both global and non-global pins.
+Warning 118: Netlist connects net lo02579 to both global and non-global pins.
+Warning 119: Netlist connects net lo02579 to both global and non-global pins.
+Warning 120: Netlist connects net lo02579 to both global and non-global pins.
+Warning 121: Netlist connects net lo02579 to both global and non-global pins.
+Warning 122: Netlist connects net lo02579 to both global and non-global pins.
+Warning 123: Netlist connects net lo02579 to both global and non-global pins.
+Warning 124: Netlist connects net lo02579 to both global and non-global pins.
+Warning 125: Netlist connects net lo02579 to both global and non-global pins.
+Warning 126: Netlist connects net lo02579 to both global and non-global pins.
+Warning 127: Netlist connects net lo02579 to both global and non-global pins.
+Warning 128: Netlist connects net lo02579 to both global and non-global pins.
+Finished loading packed FPGA netlist file (took 6.45097 seconds).
+Warning 129: Treated 2 constant nets as global which will not be routed (to see net names increase packer verbosity).
+Warning 130: Netlist contains 31167 global net to non-global architecture pin connections
+Warning 131: Logic block #2390 (gnd) has only 1 output pin 'gnd.O[39]'. It may be a constant generator.
+Completed clustering consistency check successfully.
+
+Pb types usage...
+  io                      : 328
+   inpad                  : 178
+   outpad                 : 150
+  clb                     : 1328
+   lab                    : 1328
+    fle                   : 12610
+     ble5                 : 17552
+      flut5               : 16363
+       lut5               : 16363
+        lut               : 16363
+       ff                 : 10837
+      arithmetic          : 1189
+       lut4               : 1008
+        lut               : 1008
+       adder              : 1189
+     ble6                 : 3676
+      lut6                : 3676
+       lut                : 3676
+      ff                  : 705
+  dsp_top                 : 552
+   dsp                    : 552
+    dsp_pb                : 552
+     mult_9x9_fixed_pt    : 64
+     sop_2                : 512
+  memory                  : 511
+   mem_1024x20_dp         : 511
+    memory_slice          : 9344
+
+# Load packing took 7.36 seconds (max_rss 655.8 MiB, delta_rss +9.6 MiB)
+# Create Device
+## Build Device Grid
+FPGA sized to 186 x 186: 34596 grid tiles (auto)
+
+Resource usage...
+	Netlist
+		328	blocks of type: io
+	Architecture
+		5888	blocks of type: io
+	Netlist
+		1328	blocks of type: clb
+	Architecture
+		29440	blocks of type: clb
+	Netlist
+		552	blocks of type: dsp_top
+	Architecture
+		552	blocks of type: dsp_top
+	Netlist
+		511	blocks of type: memory
+	Architecture
+		1104	blocks of type: memory
+
+Device Utilization: 0.13 (target 0.15)
+	Physical Tile io:
+	Block Utilization: 0.06 Logical Block: io
+	Physical Tile clb:
+	Block Utilization: 0.05 Logical Block: clb
+	Physical Tile dsp_top:
+	Block Utilization: 1.00 Logical Block: dsp_top
+	Physical Tile memory:
+	Block Utilization: 0.46 Logical Block: memory
+
+FPGA size limited by block type(s): dsp_top
+
+## Build Device Grid took 0.56 seconds (max_rss 655.8 MiB, delta_rss +0.0 MiB)
+## Build routing resource graph
+## Build routing resource graph took 72.47 seconds (max_rss 2341.3 MiB, delta_rss +1685.5 MiB)
+  RR Graph Nodes: 6661276
+  RR Graph Edges: 50315892
+# Create Device took 78.19 seconds (max_rss 2341.3 MiB, delta_rss +1685.5 MiB)
+
+# Computing router lookahead map
+## Computing wire lookahead
+## Computing wire lookahead took 29.42 seconds (max_rss 2341.3 MiB, delta_rss +0.0 MiB)
+## Computing src/opin lookahead
+Warning 132: Found no more sample locations for SOURCE in io
+Warning 133: Found no more sample locations for OPIN in io
+Warning 134: Found no more sample locations for SOURCE in clb
+Warning 135: Found no more sample locations for OPIN in clb
+Warning 136: Found no more sample locations for SOURCE in dsp_top
+Warning 137: Found no more sample locations for OPIN in dsp_top
+Warning 138: Found no more sample locations for SOURCE in memory
+Warning 139: Found no more sample locations for OPIN in memory
+## Computing src/opin lookahead took 1.26 seconds (max_rss 2341.3 MiB, delta_rss +0.0 MiB)
+# Computing router lookahead map took 30.90 seconds (max_rss 2341.3 MiB, delta_rss +0.0 MiB)
+# Computing placement delta delay look-up
+## Build routing resource graph
+## Build routing resource graph took 286.65 seconds (max_rss 6660.2 MiB, delta_rss +4318.8 MiB)
+  RR Graph Nodes: 11550372
+  RR Graph Edges: 198836988
+## Computing router lookahead map
+### Computing wire lookahead
+### Computing wire lookahead took 110.00 seconds (max_rss 6660.2 MiB, delta_rss +0.0 MiB)
+### Computing src/opin lookahead
+Warning 140: Found no more sample locations for SOURCE in io
+Warning 141: Found no more sample locations for OPIN in io
+Warning 142: Found no more sample locations for SOURCE in clb
+Warning 143: Found no more sample locations for OPIN in clb
+Warning 144: Found no more sample locations for SOURCE in dsp_top
+Warning 145: Found no more sample locations for OPIN in dsp_top
+Warning 146: Found no more sample locations for SOURCE in memory
+Warning 147: Found no more sample locations for OPIN in memory
+### Computing src/opin lookahead took 3.29 seconds (max_rss 6660.2 MiB, delta_rss +0.0 MiB)
+## Computing router lookahead map took 113.51 seconds (max_rss 6660.2 MiB, delta_rss +0.0 MiB)
+Serial Connection Router is being destroyed. Time spent on path search: 0.000 seconds.
+# Computing placement delta delay look-up took 414.96 seconds (max_rss 6660.2 MiB, delta_rss +4318.8 MiB)
+
+Bounding box mode is Cube
+
+# Compressed grid construction
+# Compressed grid construction took 0.01 seconds (max_rss 6660.2 MiB, delta_rss +0.0 MiB)
+# Placement
+## Initial Placement
+Initial placement iteration 0 has finished with 128 unplaced blocks
+Initial placement iteration 1 has finished with 48 unplaced blocks
+Block int_sop_2~3206^chainout~0 (# 7) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~3208^chainout~0 (# 8) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~3210^chainout~0 (# 9) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~3212^chainout~0 (# 10) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~3214^chainout~0 (# 11) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~3216^chainout~0 (# 12) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~3218^chainout~0 (# 13) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4204^chainout~0 (# 322) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4206^chainout~0 (# 323) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4208^chainout~0 (# 324) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4210^chainout~0 (# 325) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4212^chainout~0 (# 326) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4214^chainout~0 (# 327) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4216^chainout~0 (# 328) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4318^chainout~0 (# 357) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4320^chainout~0 (# 358) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4322^chainout~0 (# 359) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4324^chainout~0 (# 360) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4326^chainout~0 (# 361) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4328^chainout~0 (# 362) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4330^chainout~0 (# 363) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4340^chainout~0 (# 364) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4342^chainout~0 (# 365) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4344^chainout~0 (# 366) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4346^chainout~0 (# 367) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4348^chainout~0 (# 368) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4350^chainout~0 (# 369) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4352^chainout~0 (# 370) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4384^chainout~0 (# 378) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4386^chainout~0 (# 379) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4388^chainout~0 (# 380) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4390^chainout~0 (# 381) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4392^chainout~0 (# 382) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4394^chainout~0 (# 383) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4396^chainout~0 (# 384) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4494^chainout~0 (# 413) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4496^chainout~0 (# 414) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4498^chainout~0 (# 415) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4500^chainout~0 (# 416) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4502^chainout~0 (# 417) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4504^chainout~0 (# 418) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4506^chainout~0 (# 419) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~3204^chainout~0 (# 449) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4202^chainout~0 (# 494) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4316^chainout~0 (# 499) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4338^chainout~0 (# 500) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4382^chainout~0 (# 502) of type dsp_top could not be placed during initial placement iteration 1
+Block int_sop_2~4492^chainout~0 (# 507) of type dsp_top could not be placed during initial placement iteration 1
+## Initial Placement took 0.05 seconds (max_rss 6660.2 MiB, delta_rss +0.0 MiB)
+# Placement took 2.47 seconds (max_rss 6660.2 MiB, delta_rss +0.0 MiB)
+Error 1: 
+Type: Placement
+File: /home/elgamma8/research/release/vtr-verilog-to-routing/vpr/src/place/initial_placement.cpp
+Line: 268
+Message: 48 blocks could not be placed during initial placement; no spaces were available for them on the grid.
+If VPR was run with floorplan constraints, the constraints may be too tight.

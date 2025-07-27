@@ -1,0 +1,60 @@
+#Timing report of worst 2 path(s)
+# Unit scale: 1e-09 seconds
+# Output precision: 3
+
+#Path 1
+Startpoint: in.inpad[0] (.input clocked by clock)
+Endpoint  : out.D[0] (.latch clocked by clock)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clock (rise edge)                                          0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+in.inpad[0] (.input)                                             0.000     0.000
+out.D[0] (.latch)                                                0.156     0.156
+data arrival time                                                          0.156
+
+clock clock (rise edge)                                          0.000     0.000
+clock source latency                                             0.000     0.000
+clock.inpad[0] (.input)                                          0.000     0.000
+out.clk[0] (.latch)                                              0.000     0.000
+clock uncertainty                                                0.000     0.000
+cell hold time                                                   0.066     0.066
+data required time                                                         0.066
+--------------------------------------------------------------------------------
+data required time                                                        -0.066
+data arrival time                                                          0.156
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.090
+
+
+#Path 2
+Startpoint: out.Q[0] (.latch clocked by clock)
+Endpoint  : out:out.outpad[0] (.output clocked by clock)
+Path Type : hold
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clock (rise edge)                                          0.000     0.000
+clock source latency                                             0.000     0.000
+clock.inpad[0] (.input)                                          0.000     0.000
+out.clk[0] (.latch)                                              0.000     0.000
+out.Q[0] (.latch) [clock-to-output]                              0.124     0.124
+out:out.outpad[0] (.output)                                      0.156     0.280
+data arrival time                                                          0.280
+
+clock clock (rise edge)                                          0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                        -0.000
+data arrival time                                                          0.280
+--------------------------------------------------------------------------------
+slack (MET)                                                                0.280
+
+
+#End of timing report

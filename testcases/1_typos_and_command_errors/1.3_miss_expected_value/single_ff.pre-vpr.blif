@@ -1,0 +1,30 @@
+# Benchmark "top" written by ABC on Sun Jan 12 15:56:39 2025 
+
+
+.model top 
+
+
+.inputs clock in 
+
+
+.outputs out 
+
+
+
+.latch n6 out re clock 0 
+
+
+
+
+
+
+.names in n6 
+1 1 
+
+
+
+.end 
+
+
+
+

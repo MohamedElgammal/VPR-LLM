@@ -1,0 +1,299 @@
+VPR FPGA Placement and Routing.
+Version: 9.0.0-dev+v8.0.0-11925-ga544f5fea-dirty
+Revision: v8.0.0-11925-ga544f5fea-dirty
+Compiled: 2025-01-14T21:35:49
+Compiler: GNU 9.4.0 on Linux-4.15.0-213-generic x86_64
+Build Info: release IPO VTR_ASSERT_LEVEL=2
+
+University of Toronto
+verilogtorouting.org
+vtr-users@googlegroups.com
+This is free open source code under MIT license.
+
+VPR was run with the following command-line:
+./vpr/vpr k6_frac_N10_40nm.xml ex1010.pre-vpr.blif --device mcnc_medium
+
+Using up to 1 parallel worker(s)
+
+Architecture file: k6_frac_N10_40nm.xml
+Circuit name: ex1010.pre-vpr
+
+# Loading Architecture Description
+# Loading Architecture Description took 0.01 seconds (max_rss 14.8 MiB, delta_rss +2.0 MiB)
+
+Timing analysis: ON
+Circuit netlist file: ex1010.pre-vpr.net
+Circuit placement file: ex1010.pre-vpr.place
+Circuit routing file: ex1010.pre-vpr.route
+Circuit SDC file: ex1010.pre-vpr.sdc
+Vpr floorplanning constraints file: not specified
+
+Packer: ENABLED
+Placer: ENABLED
+Analytical Placer: DISABLED
+Router: ENABLED
+Analysis: ENABLED
+
+VPR was run with the following options:
+
+NetlistOpts.absorb_buffer_luts            : true
+NetlistOpts.sweep_dangling_primary_ios    : true
+NetlistOpts.sweep_dangling_nets           : true
+NetlistOpts.sweep_dangling_blocks         : true
+NetlistOpts.sweep_constant_primary_outputs: false
+NetlistOpts.netlist_verbosity             : 1
+NetlistOpts.const_gen_inference           : COMB_SEQ
+
+PackerOpts.allow_unrelated_clustering: auto
+PackerOpts.alpha_clustering: 0.750000
+PackerOpts.beta_clustering: 0.900000
+PackerOpts.cluster_seed_type: BLEND2
+PackerOpts.connection_driven: true
+PackerOpts.global_clocks: true
+PackerOpts.inter_cluster_net_delay: 1.000000
+PackerOpts.timing_driven: true
+PackerOpts.target_external_pin_util: auto
+
+PlacerOpts.place_freq: PLACE_ONCE
+PlacerOpts.place_algorithm: CRITICALITY_TIMING_PLACE
+PlacerOpts.pad_loc_type: FREE
+PlacerOpts.constraints_file: No constraints file given
+PlacerOpts.place_chan_width: 100
+PlacerOpts.inner_loop_recompute_divider: 0
+PlacerOpts.recompute_crit_iter: 1
+PlacerOpts.timing_tradeoff: 0.500000
+PlacerOpts.td_place_exp_first: 1.000000
+PlacerOpts.td_place_exp_last: 8.000000
+PlacerOpts.delay_offset: 0.000000
+PlacerOpts.delay_ramp_delta_threshold: -1
+PlacerOpts.delay_ramp_slope: 0.000000
+PlacerOpts.tsu_rel_margin: 1.000000
+PlacerOpts.tsu_abs_margin: 0.000000
+PlacerOpts.post_place_timing_report_file: 
+PlacerOpts.allowed_tiles_for_delay_model: 
+PlacerOpts.delay_model_reducer: MIN
+PlacerOpts.delay_model_type: SIMPLE
+PlacerOpts.rlim_escape_fraction: 0.000000
+PlacerOpts.move_stats_file: 
+PlacerOpts.placement_saves_per_temperature: 0
+PlacerOpts.effort_scaling: CIRCUIT
+PlacerOpts.place_delta_delay_matrix_calculation_method: ASTAR_ROUTE
+PlaceOpts.seed: 1
+AnnealSched.type: AUTO_SCHED
+AnnealSched.inner_num: 0.500000
+
+RouterOpts.route_type: DETAILED
+RouterOpts.flat_routing: false
+RouterOpts.choke_points: on
+RouterOpts.router_algorithm: TIMING_DRIVEN
+RouterOpts.base_cost_type: DELAY_NORMALIZED_LENGTH
+RouterOpts.fixed_channel_width: NO_FIXED_CHANNEL_WIDTH
+RouterOpts.check_route: FULL
+RouterOpts.acc_fac: 1.000000
+RouterOpts.bb_factor: 3
+RouterOpts.bend_cost: 0.000000
+RouterOpts.first_iter_pres_fac: 0.000000
+RouterOpts.initial_pres_fac: 0.500000
+RouterOpts.pres_fac_mult: 1.300000
+RouterOpts.max_pres_fac: 1000.000000
+RouterOpts.max_router_iterations: 50
+RouterOpts.min_incremental_reroute_fanout: 16
+RouterOpts.do_check_rr_graph: true
+RouterOpts.verify_binary_search: false
+RouterOpts.min_channel_width_hint: 0
+RouterOpts.read_rr_edge_metadata: false
+RouterOpts.exit_after_first_routing_iteration: false
+RouterOpts.astar_fac: 1.200000
+RouterOpts.astar_offset: 0.000000
+RouterOpts.router_profiler_astar_fac: 1.200000
+RouterOpts.criticality_exp: 1.000000
+RouterOpts.max_criticality: 0.990000
+RouterOpts.init_wirelength_abort_threshold: 0.850000
+RouterOpts.incr_reroute_delay_ripup: AUTO
+RouterOpts.save_routing_per_iteration: false
+RouterOpts.congested_routing_iteration_threshold_frac: 1.000000
+RouterOpts.high_fanout_threshold: 64
+RouterOpts.router_debug_net: -2
+RouterOpts.router_debug_sink_rr: -2
+RouterOpts.router_debug_iteration: -2
+RouterOpts.max_convergence_count: 1
+RouterOpts.reconvergence_cpd_threshold: 0.990000
+RouterOpts.update_lower_bound_delays: true
+RouterOpts.first_iteration_timing_report_file: 
+RouterOpts.route_bb_update: DYNAMIC
+RouterOpts.lookahead_type: MAP
+RouterOpts.initial_timing: LOOKAHEAD
+RouterOpts.router_heap: FOUR_ARY_HEAP
+RouterOpts.routing_failure_predictor = SAFE
+RouterOpts.routing_budgets_algorithm = DISABLE
+
+AnalysisOpts.gen_post_synthesis_netlist: false
+AnalysisOpts.timing_report_npaths: 100
+AnalysisOpts.timing_report_skew: false
+AnalysisOpts.echo_dot_timing_graph_node: -1
+AnalysisOpts.timing_report_detail: NETLIST
+AnalysisOpts.post_synth_netlist_unconn_input_handling: UNCONNECTED
+AnalysisOpts.post_synth_netlist_unconn_output_handling: UNCONNECTED
+
+# Building complex block graph
+Warning 1: io[0].clock[0] unconnected pin in architecture.
+# Building complex block graph took 0.01 seconds (max_rss 15.7 MiB, delta_rss +0.9 MiB)
+Circuit file: ex1010.pre-vpr.blif
+# Load circuit
+# Load circuit took 0.04 seconds (max_rss 21.0 MiB, delta_rss +5.3 MiB)
+# Clean circuit
+Absorbed 0 LUT buffers
+Inferred    0 additional primitive pins as constant generators since they have no combinationally connected inputs
+Inferred    0 additional primitive pins as constant generators due to constant inputs
+Swept input(s)      : 0
+Swept output(s)     : 0 (0 dangling, 0 constant)
+Swept net(s)        : 0
+Swept block(s)      : 0
+Constant Pins Marked: 0
+# Clean circuit took 0.00 seconds (max_rss 21.0 MiB, delta_rss +0.0 MiB)
+# Compress circuit
+# Compress circuit took 0.01 seconds (max_rss 21.0 MiB, delta_rss +0.0 MiB)
+# Verify circuit
+# Verify circuit took 0.00 seconds (max_rss 21.0 MiB, delta_rss +0.0 MiB)
+Circuit Statistics:
+  Blocks: 2669
+    .input :      10
+    .names :    2649
+        1-LUT:      10
+        2-LUT:      60
+        3-LUT:     120
+        4-LUT:     737
+        5-LUT:     773
+        6-LUT:     949
+    .output:      10
+  Nets  : 2659
+    Avg Fanout:     4.9
+    Max Fanout:   689.0
+    Min Fanout:     1.0
+  Netlist Clocks: 0
+# Build Timing Graph
+  Timing Graph Nodes: 15666
+  Timing Graph Edges: 26004
+  Timing Graph Levels: 16
+# Build Timing Graph took 0.02 seconds (max_rss 24.2 MiB, delta_rss +2.9 MiB)
+Netlist contains 0 clocks
+# Load Timing Constraints
+
+SDC file 'ex1010.pre-vpr.sdc' not found
+Setting default timing constraints:
+   * constrain all primay inputs and primary outputs on a virtual external clock 'virtual_io_clock'
+   * optimize virtual clock to run as fast as possible
+Timing constraints created 1 clocks
+  Constrained Clock 'virtual_io_clock' (Virtual Clock)
+
+# Load Timing Constraints took 0.00 seconds (max_rss 24.4 MiB, delta_rss +0.3 MiB)
+# Packing
+Begin packing 'ex1010.pre-vpr.blif'.
+
+After removing unused inputs...
+	total blocks: 2669, total nets: 2659, total inputs: 10, total outputs: 10
+Begin prepacking.
+0 attraction groups were created during prepacking.
+Finish prepacking.
+Using inter-cluster delay: 1.33777e-09
+Packing with pin utilization targets: io:1,1 clb:0.8,0.6
+Packing with high fanout thresholds: io:128 clb:32
+Starting Clustering - Clustering Progress: 
+-------------------   --------------------------   ---------
+Molecules processed   Number of clusters created   FPGA size
+-------------------   --------------------------   ---------
+   116/2669      4%                           10    16 x 16    
+   227/2669      8%                           20    16 x 16    
+   342/2669     12%                           30    16 x 16    
+   450/2669     16%                           40    16 x 16    
+   562/2669     21%                           50    16 x 16    
+   673/2669     25%                           61    16 x 16    
+   783/2669     29%                           72    16 x 16    
+   896/2669     33%                           83    16 x 16    
+  1004/2669     37%                           93    16 x 16    
+  1119/2669     41%                          104    16 x 16    
+  1232/2669     46%                          115    16 x 16    
+  1346/2669     50%                          126    16 x 16    
+  1452/2669     54%                          136    16 x 16    
+  1567/2669     58%                          147    16 x 16    
+  1677/2669     62%                          158    16 x 16    
+  1784/2669     66%                          169    16 x 16    
+  1891/2669     70%                          179    16 x 16    
+  1998/2669     74%                          190    16 x 16    
+  2104/2669     78%                          201    16 x 16    
+  2214/2669     82%                          212    16 x 16    
+  2322/2669     86%                          223    16 x 16    
+  2432/2669     91%                          234    16 x 16    
+  2538/2669     95%                          245    16 x 16    
+  2644/2669     99%                          281    16 x 16    
+  2669/2669    100%                          305    16 x 16    
+
+Logic Element (fle) detailed count:
+  Total number of Logic Elements used : 2503
+  LEs used for logic and registers    : 0
+  LEs used for logic only             : 2503
+  LEs used for registers only         : 0
+
+Incr Slack updates 1 in 0.000347634 sec
+Full Max Req/Worst Slack updates 1 in 2.583e-06 sec
+Incr Max Req/Worst Slack updates 0 in 0 sec
+Incr Criticality updates 0 in 0 sec
+Full Criticality updates 1 in 0.000535006 sec
+FPGA sized to 16 x 16 (mcnc_medium)
+Device Utilization: 1.12 (target 1.00)
+	Block Utilization: 0.04 Type: io
+	Block Utilization: 1.45 Type: clb
+
+Packing failed to fit on device. Re-packing with: unrelated_logic_clustering=true balance_block_type_util=true
+Starting Clustering - Clustering Progress: 
+-------------------   --------------------------   ---------
+Molecules processed   Number of clusters created   FPGA size
+-------------------   --------------------------   ---------
+   116/2669      4%                           10    16 x 16    
+   227/2669      8%                           20    16 x 16    
+   342/2669     12%                           30    16 x 16    
+   450/2669     16%                           40    16 x 16    
+   562/2669     21%                           50    16 x 16    
+   673/2669     25%                           61    16 x 16    
+   783/2669     29%                           72    16 x 16    
+   896/2669     33%                           83    16 x 16    
+  1005/2669     37%                           93    16 x 16    
+  1120/2669     41%                          104    16 x 16    
+  1234/2669     46%                          115    16 x 16    
+  1348/2669     50%                          126    16 x 16    
+  1454/2669     54%                          136    16 x 16    
+  1567/2669     58%                          147    16 x 16    
+  1677/2669     62%                          158    16 x 16    
+  1784/2669     66%                          169    16 x 16    
+  1891/2669     70%                          179    16 x 16    
+  1998/2669     74%                          190    16 x 16    
+  2105/2669     78%                          201    16 x 16    
+  2216/2669     83%                          212    16 x 16    
+  2326/2669     87%                          223    16 x 16    
+  2434/2669     91%                          234    16 x 16    
+  2546/2669     95%                          245    16 x 16    
+  2652/2669     99%                          258    16 x 16    
+  2669/2669    100%                          275    16 x 16    
+
+Logic Element (fle) detailed count:
+  Total number of Logic Elements used : 2491
+  LEs used for logic and registers    : 0
+  LEs used for logic only             : 2491
+  LEs used for registers only         : 0
+
+Incr Slack updates 1 in 0.00043901 sec
+Full Max Req/Worst Slack updates 1 in 3.621e-06 sec
+Incr Max Req/Worst Slack updates 0 in 0 sec
+Incr Criticality updates 0 in 0 sec
+Full Criticality updates 1 in 0.000679962 sec
+FPGA sized to 16 x 16 (mcnc_medium)
+Device Utilization: 1.01 (target 1.00)
+	Block Utilization: 0.04 Type: io
+	Block Utilization: 1.30 Type: clb
+
+# Packing took 8.70 seconds (max_rss 34.7 MiB, delta_rss +10.2 MiB)
+Error 1: 
+Type: Other
+File: /home/elgamma8/research/release/vtr-verilog-to-routing/vpr/src/pack/pack.cpp
+Line: 228
+Message: Failed to find device which satisfies resource requirements required: io: 20, clb: 255 (available io: 448, clb: 196)

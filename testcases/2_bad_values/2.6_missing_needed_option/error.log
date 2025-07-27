@@ -1,0 +1,20 @@
+VPR FPGA Placement and Routing.
+Version: 9.0.0-dev+v8.0.0-11925-ga544f5fea-dirty
+Revision: v8.0.0-11925-ga544f5fea-dirty
+Compiled: 2025-01-14T21:35:49
+Compiler: GNU 9.4.0 on Linux-4.15.0-213-generic x86_64
+Build Info: release IPO VTR_ASSERT_LEVEL=2
+
+University of Toronto
+verilogtorouting.org
+vtr-users@googlegroups.com
+This is free open source code under MIT license.
+
+VPR was run with the following command-line:
+./vpr/vpr k6_frac_N10_frac_chain_mem32K_40nm.xml stereovision0.pre-vpr.blif --read_rr_graph rr.xml
+
+Error 1: 
+Type: Other
+File: /home/elgamma8/research/release/vtr-verilog-to-routing/vpr/src/base/read_options.cpp
+Line: 3157
+Message: --route_chan_width option must be specified if --read_rr_graph is requested (--read_rr_graph)

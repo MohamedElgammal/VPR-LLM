@@ -1,0 +1,1607 @@
+VPR FPGA Placement and Routing.
+Version: 9.0.0-dev+v8.0.0-11925-ga544f5fea-dirty
+Revision: v8.0.0-11925-ga544f5fea-dirty
+Compiled: 2025-01-14T21:35:49
+Compiler: GNU 9.4.0 on Linux-4.15.0-213-generic x86_64
+Build Info: release IPO VTR_ASSERT_LEVEL=2
+
+University of Toronto
+verilogtorouting.org
+vtr-users@googlegroups.com
+This is free open source code under MIT license.
+
+VPR was run with the following command-line:
+./vpr/vpr k6_frac_N10_frac_chain_mem32K_40nm.xml stereovision0.pre-vpr.blif --route_chan_width 10
+
+Using up to 1 parallel worker(s)
+
+Architecture file: k6_frac_N10_frac_chain_mem32K_40nm.xml
+Circuit name: stereovision0.pre-vpr
+
+# Loading Architecture Description
+# Loading Architecture Description took 0.02 seconds (max_rss 15.2 MiB, delta_rss +1.2 MiB)
+
+Timing analysis: ON
+Circuit netlist file: stereovision0.pre-vpr.net
+Circuit placement file: stereovision0.pre-vpr.place
+Circuit routing file: stereovision0.pre-vpr.route
+Circuit SDC file: stereovision0.pre-vpr.sdc
+Vpr floorplanning constraints file: not specified
+
+Packer: ENABLED
+Placer: ENABLED
+Analytical Placer: DISABLED
+Router: ENABLED
+Analysis: ENABLED
+
+VPR was run with the following options:
+
+NetlistOpts.absorb_buffer_luts            : true
+NetlistOpts.sweep_dangling_primary_ios    : true
+NetlistOpts.sweep_dangling_nets           : true
+NetlistOpts.sweep_dangling_blocks         : true
+NetlistOpts.sweep_constant_primary_outputs: false
+NetlistOpts.netlist_verbosity             : 1
+NetlistOpts.const_gen_inference           : COMB_SEQ
+
+PackerOpts.allow_unrelated_clustering: auto
+PackerOpts.alpha_clustering: 0.750000
+PackerOpts.beta_clustering: 0.900000
+PackerOpts.cluster_seed_type: BLEND2
+PackerOpts.connection_driven: true
+PackerOpts.global_clocks: true
+PackerOpts.inter_cluster_net_delay: 1.000000
+PackerOpts.timing_driven: true
+PackerOpts.target_external_pin_util: auto
+
+PlacerOpts.place_freq: PLACE_ONCE
+PlacerOpts.place_algorithm: CRITICALITY_TIMING_PLACE
+PlacerOpts.pad_loc_type: FREE
+PlacerOpts.constraints_file: No constraints file given
+PlacerOpts.place_chan_width: 10
+PlacerOpts.inner_loop_recompute_divider: 0
+PlacerOpts.recompute_crit_iter: 1
+PlacerOpts.timing_tradeoff: 0.500000
+PlacerOpts.td_place_exp_first: 1.000000
+PlacerOpts.td_place_exp_last: 8.000000
+PlacerOpts.delay_offset: 0.000000
+PlacerOpts.delay_ramp_delta_threshold: -1
+PlacerOpts.delay_ramp_slope: 0.000000
+PlacerOpts.tsu_rel_margin: 1.000000
+PlacerOpts.tsu_abs_margin: 0.000000
+PlacerOpts.post_place_timing_report_file: 
+PlacerOpts.allowed_tiles_for_delay_model: 
+PlacerOpts.delay_model_reducer: MIN
+PlacerOpts.delay_model_type: SIMPLE
+PlacerOpts.rlim_escape_fraction: 0.000000
+PlacerOpts.move_stats_file: 
+PlacerOpts.placement_saves_per_temperature: 0
+PlacerOpts.effort_scaling: CIRCUIT
+PlacerOpts.place_delta_delay_matrix_calculation_method: ASTAR_ROUTE
+PlaceOpts.seed: 1
+AnnealSched.type: AUTO_SCHED
+AnnealSched.inner_num: 0.500000
+
+RouterOpts.route_type: DETAILED
+RouterOpts.flat_routing: false
+RouterOpts.choke_points: on
+RouterOpts.router_algorithm: TIMING_DRIVEN
+RouterOpts.base_cost_type: DELAY_NORMALIZED_LENGTH
+RouterOpts.fixed_channel_width: 10
+RouterOpts.check_route: FULL
+RouterOpts.acc_fac: 1.000000
+RouterOpts.bb_factor: 3
+RouterOpts.bend_cost: 0.000000
+RouterOpts.first_iter_pres_fac: 0.000000
+RouterOpts.initial_pres_fac: 0.500000
+RouterOpts.pres_fac_mult: 1.300000
+RouterOpts.max_pres_fac: 1000.000000
+RouterOpts.max_router_iterations: 50
+RouterOpts.min_incremental_reroute_fanout: 16
+RouterOpts.do_check_rr_graph: true
+RouterOpts.verify_binary_search: false
+RouterOpts.min_channel_width_hint: 0
+RouterOpts.read_rr_edge_metadata: false
+RouterOpts.exit_after_first_routing_iteration: false
+RouterOpts.astar_fac: 1.200000
+RouterOpts.astar_offset: 0.000000
+RouterOpts.router_profiler_astar_fac: 1.200000
+RouterOpts.criticality_exp: 1.000000
+RouterOpts.max_criticality: 0.990000
+RouterOpts.init_wirelength_abort_threshold: 0.850000
+RouterOpts.incr_reroute_delay_ripup: AUTO
+RouterOpts.save_routing_per_iteration: false
+RouterOpts.congested_routing_iteration_threshold_frac: 1.000000
+RouterOpts.high_fanout_threshold: 64
+RouterOpts.router_debug_net: -2
+RouterOpts.router_debug_sink_rr: -2
+RouterOpts.router_debug_iteration: -2
+RouterOpts.max_convergence_count: 1
+RouterOpts.reconvergence_cpd_threshold: 0.990000
+RouterOpts.update_lower_bound_delays: true
+RouterOpts.first_iteration_timing_report_file: 
+RouterOpts.route_bb_update: DYNAMIC
+RouterOpts.lookahead_type: MAP
+RouterOpts.initial_timing: LOOKAHEAD
+RouterOpts.router_heap: FOUR_ARY_HEAP
+RouterOpts.routing_failure_predictor = SAFE
+RouterOpts.routing_budgets_algorithm = DISABLE
+
+AnalysisOpts.gen_post_synthesis_netlist: false
+AnalysisOpts.timing_report_npaths: 100
+AnalysisOpts.timing_report_skew: false
+AnalysisOpts.echo_dot_timing_graph_node: -1
+AnalysisOpts.timing_report_detail: NETLIST
+AnalysisOpts.post_synth_netlist_unconn_input_handling: UNCONNECTED
+AnalysisOpts.post_synth_netlist_unconn_output_handling: UNCONNECTED
+
+# Building complex block graph
+Warning 1: io[0].clock[0] unconnected pin in architecture.
+# Building complex block graph took 0.05 seconds (max_rss 23.2 MiB, delta_rss +8.0 MiB)
+Circuit file: stereovision0.pre-vpr.blif
+# Load circuit
+Found constant-one generator 'offchip_sram_oe~1'
+Found constant-zero generator 'offchip_sram_addr~18'
+Found constant-zero generator 'offchip_sram_addr~17'
+Found constant-zero generator 'depth_out~15'
+Found constant-zero generator 'depth_out~14'
+Found constant-zero generator 'depth_out~13'
+Found constant-zero generator 'depth_out~12'
+Found constant-zero generator 'depth_out~11'
+Found constant-zero generator 'depth_out~10'
+Found constant-zero generator 'depth_out~9'
+Found constant-zero generator 'depth_out~8'
+Found constant-zero generator 'tm3_vidout_blue~1'
+Found constant-zero generator 'tm3_vidout_blue~0'
+Found constant-zero generator 'tm3_vidout_green~1'
+Found constant-zero generator 'tm3_vidout_green~0'
+Found constant-zero generator 'gnd'
+Found constant-one generator 'vcc'
+Found constant-zero generator 'unconn'
+# Load circuit took 0.35 seconds (max_rss 73.9 MiB, delta_rss +50.7 MiB)
+# Clean circuit
+Absorbed 8953 LUT buffers
+Inferred    0 additional primitive pins as constant generators since they have no combinationally connected inputs
+Inferred  510 additional primitive pins as constant generators due to constant inputs
+Inferred    0 additional primitive pins as constant generators since they have no combinationally connected inputs
+Inferred    0 additional primitive pins as constant generators due to constant inputs
+Swept input(s)      : 0
+Swept output(s)     : 0 (0 dangling, 0 constant)
+Swept net(s)        : 666
+Swept block(s)      : 0
+Constant Pins Marked: 510
+# Clean circuit took 0.04 seconds (max_rss 73.9 MiB, delta_rss +0.0 MiB)
+# Compress circuit
+# Compress circuit took 0.07 seconds (max_rss 73.9 MiB, delta_rss +0.0 MiB)
+# Verify circuit
+# Verify circuit took 0.01 seconds (max_rss 73.9 MiB, delta_rss +0.0 MiB)
+Circuit Statistics:
+  Blocks: 21365
+    .input :     169
+    .latch :   11497
+    .names :    6779
+        0-LUT:      17
+        1-LUT:      47
+        2-LUT:     130
+        3-LUT:    5652
+        4-LUT:     130
+        5-LUT:     565
+        6-LUT:     238
+    .output:     197
+    adder  :    2723
+  Nets  : 23225
+    Avg Fanout:     2.3
+    Max Fanout: 11497.0
+    Min Fanout:     1.0
+  Netlist Clocks: 1
+# Build Timing Graph
+  Timing Graph Nodes: 76534
+  Timing Graph Edges: 112526
+  Timing Graph Levels: 34
+# Build Timing Graph took 0.12 seconds (max_rss 75.4 MiB, delta_rss +1.5 MiB)
+Netlist contains 1 clocks
+  Netlist Clock 'tm3_clk_v0' Fanout: 11497 pins (15.0%), 11497 blocks (53.8%)
+# Load Timing Constraints
+
+SDC file 'stereovision0.pre-vpr.sdc' not found
+Setting default timing constraints:
+   * constrain all primay inputs and primary outputs on netlist clock 'tm3_clk_v0'
+   * optimize netlist clock to run as fast as possible
+Timing constraints created 1 clocks
+  Constrained Clock 'tm3_clk_v0' Source: 'tm3_clk_v0.inpad[0]'
+
+# Load Timing Constraints took 0.01 seconds (max_rss 75.4 MiB, delta_rss +0.0 MiB)
+# Packing
+Begin packing 'stereovision0.pre-vpr.blif'.
+
+After removing unused inputs...
+	total blocks: 21365, total nets: 23225, total inputs: 169, total outputs: 197
+Begin prepacking.
+
+There is one chain in this architecture called "chain" with the following starting points:
+	clb[0]/fle[0]/lut5inter[0]/ble5[0]/arithmetic[0]/adder[0].cin[0]
+
+0 attraction groups were created during prepacking.
+Finish prepacking.
+Using inter-cluster delay: 1.33777e-09
+Packing with pin utilization targets: io:1,1 clb:0.8,0.6 mult_36:1,1 memory:1,1
+Packing with high fanout thresholds: io:128 clb:32 mult_36:128 memory:128
+Starting Clustering - Clustering Progress: 
+-------------------   --------------------------   ---------
+Molecules processed   Number of clusters created   FPGA size
+-------------------   --------------------------   ---------
+   409/10249     3%                           49    11 x 11    
+   826/10249     8%                           96    14 x 14    
+  1242/10249    12%                          134    16 x 16    
+  1659/10249    16%                          173    18 x 18    
+  2076/10249    20%                          212    19 x 19    
+  2496/10249    24%                          250    21 x 21    
+  2906/10249    28%                          281    22 x 22    
+  3330/10249    32%                          309    23 x 23    
+  3746/10249    36%                          338    24 x 24    
+  4165/10249    40%                          367    25 x 25    
+  4574/10249    44%                          391    25 x 25    
+  4986/10249    48%                          415    26 x 26    
+  5409/10249    52%                          440    27 x 27    
+  5827/10249    56%                          465    27 x 27    
+  6239/10249    60%                          486    28 x 28    
+  6652/10249    64%                          508    29 x 29    
+  7070/10249    68%                          529    29 x 29    
+  7490/10249    73%                          550    30 x 30    
+  7903/10249    77%                          571    30 x 30    
+  8318/10249    81%                          593    31 x 31    
+  8733/10249    85%                          614    31 x 31    
+  9160/10249    89%                          637    31 x 31    
+  9579/10249    93%                          658    32 x 32    
+  9988/10249    97%                          826    34 x 34    
+ 10249/10249   100%                         1087    34 x 34    
+
+Logic Element (fle) detailed count:
+  Total number of Logic Elements used : 6601
+  LEs used for logic and registers    : 5155
+  LEs used for logic only             : 385
+  LEs used for registers only         : 1061
+
+Incr Slack updates 1 in 0.00176333 sec
+Full Max Req/Worst Slack updates 1 in 0.000570788 sec
+Incr Max Req/Worst Slack updates 0 in 0 sec
+Incr Criticality updates 0 in 0 sec
+Full Criticality updates 1 in 0.00343979 sec
+FPGA sized to 34 x 34 (auto)
+Device Utilization: 0.66 (target 1.00)
+	Block Utilization: 0.36 Type: io
+	Block Utilization: 0.94 Type: clb
+
+Start the iterative improvement process
+the iterative improvement process is done
+Final Clustering Statistics: 
+----------   --------   ------------------------------------   --------------------------
+Block Type   # Blocks   Avg. # of input clocks and pins used   Avg. # of output pins used
+----------   --------   ------------------------------------   --------------------------
+     EMPTY          0                                      0                            0   
+        io        366                               0.538251                     0.461749   
+       clb        721                                13.4993                      8.17198   
+   mult_36          0                                      0                            0   
+    memory          0                                      0                            0   
+Absorbed logical nets 17164 out of 23225 nets, 6061 nets not absorbed.
+
+Netlist conversion complete.
+
+# Packing took 11.30 seconds (max_rss 145.3 MiB, delta_rss +69.6 MiB)
+# Load packing
+Begin loading packed FPGA netlist file.
+Netlist generated from file 'stereovision0.pre-vpr.net'.
+Detected 17 constant generators (to see names run with higher pack verbosity)
+Finished loading packed FPGA netlist file (took 2.05942 seconds).
+Warning 2: Treated 17 constant nets as global which will not be routed (to see net names increase packer verbosity).
+Warning 3: Netlist contains 771 global net to non-global architecture pin connections
+Warning 4: Logic block #671 (offchip_sram_oe~1) has only 1 output pin 'offchip_sram_oe~1.O[19]'. It may be a constant generator.
+Warning 5: Logic block #672 (offchip_sram_addr~18) has only 1 output pin 'offchip_sram_addr~18.O[19]'. It may be a constant generator.
+Warning 6: Logic block #673 (offchip_sram_addr~17) has only 1 output pin 'offchip_sram_addr~17.O[19]'. It may be a constant generator.
+Warning 7: Logic block #674 (depth_out~15) has only 1 output pin 'depth_out~15.O[19]'. It may be a constant generator.
+Warning 8: Logic block #675 (depth_out~14) has only 1 output pin 'depth_out~14.O[19]'. It may be a constant generator.
+Warning 9: Logic block #676 (depth_out~13) has only 1 output pin 'depth_out~13.O[19]'. It may be a constant generator.
+Warning 10: Logic block #677 (depth_out~12) has only 1 output pin 'depth_out~12.O[19]'. It may be a constant generator.
+Warning 11: Logic block #678 (depth_out~11) has only 1 output pin 'depth_out~11.O[19]'. It may be a constant generator.
+Warning 12: Logic block #679 (depth_out~10) has only 1 output pin 'depth_out~10.O[19]'. It may be a constant generator.
+Warning 13: Logic block #680 (depth_out~9) has only 1 output pin 'depth_out~9.O[19]'. It may be a constant generator.
+Warning 14: Logic block #681 (depth_out~8) has only 1 output pin 'depth_out~8.O[19]'. It may be a constant generator.
+Warning 15: Logic block #682 (tm3_vidout_blue~1) has only 1 output pin 'tm3_vidout_blue~1.O[19]'. It may be a constant generator.
+Warning 16: Logic block #683 (tm3_vidout_blue~0) has only 1 output pin 'tm3_vidout_blue~0.O[19]'. It may be a constant generator.
+Warning 17: Logic block #684 (tm3_vidout_green~1) has only 1 output pin 'tm3_vidout_green~1.O[19]'. It may be a constant generator.
+Warning 18: Logic block #685 (tm3_vidout_green~0) has only 1 output pin 'tm3_vidout_green~0.O[19]'. It may be a constant generator.
+Warning 19: Logic block #686 (gnd) has only 1 output pin 'gnd.O[19]'. It may be a constant generator.
+Warning 20: Logic block #687 (vcc) has only 1 output pin 'vcc.O[19]'. It may be a constant generator.
+Completed clustering consistency check successfully.
+
+Pb types usage...
+  io               : 366
+   inpad           : 169
+   outpad          : 197
+  clb              : 721
+   fle             : 6601
+    lut5inter      : 6363
+     ble5          : 12081
+      flut5        : 9358
+       lut5        : 6509
+        lut        : 6509
+       ff          : 9164
+      arithmetic   : 2723
+       lut4        : 32
+        lut        : 32
+       adder       : 2723
+       ff          : 2266
+    ble6           : 238
+     lut6          : 238
+      lut          : 238
+     ff            : 67
+
+# Load packing took 2.34 seconds (max_rss 203.9 MiB, delta_rss +58.6 MiB)
+# Create Device
+## Build Device Grid
+FPGA sized to 34 x 34: 1156 grid tiles (auto)
+
+Resource usage...
+	Netlist
+		366	blocks of type: io
+	Architecture
+		1024	blocks of type: io
+	Netlist
+		721	blocks of type: clb
+	Architecture
+		768	blocks of type: clb
+	Netlist
+		0	blocks of type: mult_36
+	Architecture
+		32	blocks of type: mult_36
+	Netlist
+		0	blocks of type: memory
+	Architecture
+		20	blocks of type: memory
+
+Device Utilization: 0.66 (target 1.00)
+	Physical Tile io:
+	Block Utilization: 0.36 Logical Block: io
+	Physical Tile clb:
+	Block Utilization: 0.94 Logical Block: clb
+	Physical Tile mult_36:
+	Block Utilization: 0.00 Logical Block: mult_36
+	Physical Tile memory:
+	Block Utilization: 0.00 Logical Block: memory
+
+FPGA size limited by block type(s): clb
+
+## Build Device Grid took 0.01 seconds (max_rss 203.9 MiB, delta_rss +0.0 MiB)
+## Build routing resource graph
+Warning 21: in check_rr_graph: fringe node 4637 IPIN at (2,1) has no fanin.
+	 This is possible on a fringe node based on low Fc_out, N, and certain lengths.
+Error 1: in check_rr_graph: node 4638 (IPIN) at (2,2) block=memory side=BOTTOM pin=memory.addr1[13] has no fanin.
+Error 2: in check_rr_graph: node 4639 (IPIN) at (2,3) block=memory side=BOTTOM pin=memory.addr1[14] has no fanin.
+Error 3: in check_rr_graph: node 4652 (IPIN) at (2,4) block=memory side=TOP pin=memory.addr2[12] has no fanin.
+Error 4: in check_rr_graph: node 4653 (IPIN) at (2,5) block=memory side=TOP pin=memory.addr2[13] has no fanin.
+Error 5: in check_rr_graph: node 4654 (IPIN) at (2,6) block=memory side=TOP pin=memory.addr2[14] has no fanin.
+Error 6: in check_rr_graph: node 4704 (IPIN) at (2,2) block=memory side=RIGHT pin=memory.data[49] has no fanin.
+Error 7: in check_rr_graph: node 4705 (IPIN) at (2,3) block=memory side=RIGHT pin=memory.data[50] has no fanin.
+Error 8: in check_rr_graph: node 4706 (IPIN) at (2,4) block=memory side=RIGHT pin=memory.data[51] has no fanin.
+Error 9: in check_rr_graph: node 4707 (IPIN) at (2,5) block=memory side=RIGHT pin=memory.data[52] has no fanin.
+Error 10: in check_rr_graph: node 4708 (IPIN) at (2,6) block=memory side=RIGHT pin=memory.data[53] has no fanin.
+Error 11: in check_rr_graph: node 4710 (IPIN) at (2,2) block=memory side=BOTTOM pin=memory.data[55] has no fanin.
+Error 12: in check_rr_graph: node 4711 (IPIN) at (2,3) block=memory side=BOTTOM pin=memory.data[56] has no fanin.
+Error 13: in check_rr_graph: node 4712 (IPIN) at (2,4) block=memory side=BOTTOM pin=memory.data[57] has no fanin.
+Error 14: in check_rr_graph: node 4713 (IPIN) at (2,5) block=memory side=BOTTOM pin=memory.data[58] has no fanin.
+Error 15: in check_rr_graph: node 4714 (IPIN) at (2,6) block=memory side=BOTTOM pin=memory.data[59] has no fanin.
+Error 16: in check_rr_graph: node 4716 (IPIN) at (2,2) block=memory side=LEFT pin=memory.data[61] has no fanin.
+Error 17: in check_rr_graph: node 4717 (IPIN) at (2,3) block=memory side=LEFT pin=memory.data[62] has no fanin.
+Error 18: in check_rr_graph: node 4718 (IPIN) at (2,4) block=memory side=LEFT pin=memory.data[63] has no fanin.
+Error 19: in check_rr_graph: node 4959 (IPIN) at (2,7) block=memory side=BOTTOM pin=memory.addr1[12] has no fanin.
+Error 20: in check_rr_graph: node 4960 (IPIN) at (2,8) block=memory side=BOTTOM pin=memory.addr1[13] has no fanin.
+Error 21: in check_rr_graph: node 4961 (IPIN) at (2,9) block=memory side=BOTTOM pin=memory.addr1[14] has no fanin.
+Error 22: in check_rr_graph: node 4974 (IPIN) at (2,10) block=memory side=TOP pin=memory.addr2[12] has no fanin.
+Error 23: in check_rr_graph: node 4975 (IPIN) at (2,11) block=memory side=TOP pin=memory.addr2[13] has no fanin.
+Error 24: in check_rr_graph: node 4976 (IPIN) at (2,12) block=memory side=TOP pin=memory.addr2[14] has no fanin.
+Error 25: in check_rr_graph: node 5025 (IPIN) at (2,7) block=memory side=RIGHT pin=memory.data[48] has no fanin.
+Error 26: in check_rr_graph: node 5026 (IPIN) at (2,8) block=memory side=RIGHT pin=memory.data[49] has no fanin.
+Error 27: in check_rr_graph: node 5027 (IPIN) at (2,9) block=memory side=RIGHT pin=memory.data[50] has no fanin.
+Error 28: in check_rr_graph: node 5028 (IPIN) at (2,10) block=memory side=RIGHT pin=memory.data[51] has no fanin.
+Error 29: in check_rr_graph: node 5029 (IPIN) at (2,11) block=memory side=RIGHT pin=memory.data[52] has no fanin.
+Error 30: in check_rr_graph: node 5030 (IPIN) at (2,12) block=memory side=RIGHT pin=memory.data[53] has no fanin.
+Error 31: in check_rr_graph: node 5031 (IPIN) at (2,7) block=memory side=BOTTOM pin=memory.data[54] has no fanin.
+Error 32: in check_rr_graph: node 5032 (IPIN) at (2,8) block=memory side=BOTTOM pin=memory.data[55] has no fanin.
+Error 33: in check_rr_graph: node 5033 (IPIN) at (2,9) block=memory side=BOTTOM pin=memory.data[56] has no fanin.
+Error 34: in check_rr_graph: node 5034 (IPIN) at (2,10) block=memory side=BOTTOM pin=memory.data[57] has no fanin.
+Error 35: in check_rr_graph: node 5035 (IPIN) at (2,11) block=memory side=BOTTOM pin=memory.data[58] has no fanin.
+Error 36: in check_rr_graph: node 5036 (IPIN) at (2,12) block=memory side=BOTTOM pin=memory.data[59] has no fanin.
+Error 37: in check_rr_graph: node 5037 (IPIN) at (2,7) block=memory side=LEFT pin=memory.data[60] has no fanin.
+Error 38: in check_rr_graph: node 5038 (IPIN) at (2,8) block=memory side=LEFT pin=memory.data[61] has no fanin.
+Error 39: in check_rr_graph: node 5039 (IPIN) at (2,9) block=memory side=LEFT pin=memory.data[62] has no fanin.
+Error 40: in check_rr_graph: node 5040 (IPIN) at (2,10) block=memory side=LEFT pin=memory.data[63] has no fanin.
+Error 41: in check_rr_graph: node 5281 (IPIN) at (2,13) block=memory side=BOTTOM pin=memory.addr1[12] has no fanin.
+Error 42: in check_rr_graph: node 5282 (IPIN) at (2,14) block=memory side=BOTTOM pin=memory.addr1[13] has no fanin.
+Error 43: in check_rr_graph: node 5283 (IPIN) at (2,15) block=memory side=BOTTOM pin=memory.addr1[14] has no fanin.
+Error 44: in check_rr_graph: node 5296 (IPIN) at (2,16) block=memory side=TOP pin=memory.addr2[12] has no fanin.
+Error 45: in check_rr_graph: node 5297 (IPIN) at (2,17) block=memory side=TOP pin=memory.addr2[13] has no fanin.
+Error 46: in check_rr_graph: node 5298 (IPIN) at (2,18) block=memory side=TOP pin=memory.addr2[14] has no fanin.
+Error 47: in check_rr_graph: node 5347 (IPIN) at (2,13) block=memory side=RIGHT pin=memory.data[48] has no fanin.
+Error 48: in check_rr_graph: node 5348 (IPIN) at (2,14) block=memory side=RIGHT pin=memory.data[49] has no fanin.
+Error 49: in check_rr_graph: node 5349 (IPIN) at (2,15) block=memory side=RIGHT pin=memory.data[50] has no fanin.
+Error 50: in check_rr_graph: node 5350 (IPIN) at (2,16) block=memory side=RIGHT pin=memory.data[51] has no fanin.
+Error 51: in check_rr_graph: node 5351 (IPIN) at (2,17) block=memory side=RIGHT pin=memory.data[52] has no fanin.
+Error 52: in check_rr_graph: node 5352 (IPIN) at (2,18) block=memory side=RIGHT pin=memory.data[53] has no fanin.
+Error 53: in check_rr_graph: node 5353 (IPIN) at (2,13) block=memory side=BOTTOM pin=memory.data[54] has no fanin.
+Error 54: in check_rr_graph: node 5354 (IPIN) at (2,14) block=memory side=BOTTOM pin=memory.data[55] has no fanin.
+Error 55: in check_rr_graph: node 5355 (IPIN) at (2,15) block=memory side=BOTTOM pin=memory.data[56] has no fanin.
+Error 56: in check_rr_graph: node 5356 (IPIN) at (2,16) block=memory side=BOTTOM pin=memory.data[57] has no fanin.
+Error 57: in check_rr_graph: node 5357 (IPIN) at (2,17) block=memory side=BOTTOM pin=memory.data[58] has no fanin.
+Error 58: in check_rr_graph: node 5358 (IPIN) at (2,18) block=memory side=BOTTOM pin=memory.data[59] has no fanin.
+Error 59: in check_rr_graph: node 5359 (IPIN) at (2,13) block=memory side=LEFT pin=memory.data[60] has no fanin.
+Error 60: in check_rr_graph: node 5360 (IPIN) at (2,14) block=memory side=LEFT pin=memory.data[61] has no fanin.
+Error 61: in check_rr_graph: node 5361 (IPIN) at (2,15) block=memory side=LEFT pin=memory.data[62] has no fanin.
+Error 62: in check_rr_graph: node 5362 (IPIN) at (2,16) block=memory side=LEFT pin=memory.data[63] has no fanin.
+Error 63: in check_rr_graph: node 5603 (IPIN) at (2,19) block=memory side=BOTTOM pin=memory.addr1[12] has no fanin.
+Error 64: in check_rr_graph: node 5604 (IPIN) at (2,20) block=memory side=BOTTOM pin=memory.addr1[13] has no fanin.
+Error 65: in check_rr_graph: node 5605 (IPIN) at (2,21) block=memory side=BOTTOM pin=memory.addr1[14] has no fanin.
+Error 66: in check_rr_graph: node 5618 (IPIN) at (2,22) block=memory side=TOP pin=memory.addr2[12] has no fanin.
+Error 67: in check_rr_graph: node 5619 (IPIN) at (2,23) block=memory side=TOP pin=memory.addr2[13] has no fanin.
+Error 68: in check_rr_graph: node 5620 (IPIN) at (2,24) block=memory side=TOP pin=memory.addr2[14] has no fanin.
+Error 69: in check_rr_graph: node 5669 (IPIN) at (2,19) block=memory side=RIGHT pin=memory.data[48] has no fanin.
+Error 70: in check_rr_graph: node 5670 (IPIN) at (2,20) block=memory side=RIGHT pin=memory.data[49] has no fanin.
+Error 71: in check_rr_graph: node 5671 (IPIN) at (2,21) block=memory side=RIGHT pin=memory.data[50] has no fanin.
+Error 72: in check_rr_graph: node 5672 (IPIN) at (2,22) block=memory side=RIGHT pin=memory.data[51] has no fanin.
+Error 73: in check_rr_graph: node 5673 (IPIN) at (2,23) block=memory side=RIGHT pin=memory.data[52] has no fanin.
+Error 74: in check_rr_graph: node 5674 (IPIN) at (2,24) block=memory side=RIGHT pin=memory.data[53] has no fanin.
+Error 75: in check_rr_graph: node 5675 (IPIN) at (2,19) block=memory side=BOTTOM pin=memory.data[54] has no fanin.
+Error 76: in check_rr_graph: node 5676 (IPIN) at (2,20) block=memory side=BOTTOM pin=memory.data[55] has no fanin.
+Error 77: in check_rr_graph: node 5677 (IPIN) at (2,21) block=memory side=BOTTOM pin=memory.data[56] has no fanin.
+Error 78: in check_rr_graph: node 5678 (IPIN) at (2,22) block=memory side=BOTTOM pin=memory.data[57] has no fanin.
+Error 79: in check_rr_graph: node 5679 (IPIN) at (2,23) block=memory side=BOTTOM pin=memory.data[58] has no fanin.
+Error 80: in check_rr_graph: node 5680 (IPIN) at (2,24) block=memory side=BOTTOM pin=memory.data[59] has no fanin.
+Error 81: in check_rr_graph: node 5681 (IPIN) at (2,19) block=memory side=LEFT pin=memory.data[60] has no fanin.
+Error 82: in check_rr_graph: node 5682 (IPIN) at (2,20) block=memory side=LEFT pin=memory.data[61] has no fanin.
+Error 83: in check_rr_graph: node 5683 (IPIN) at (2,21) block=memory side=LEFT pin=memory.data[62] has no fanin.
+Error 84: in check_rr_graph: node 5684 (IPIN) at (2,22) block=memory side=LEFT pin=memory.data[63] has no fanin.
+Error 85: in check_rr_graph: node 5925 (IPIN) at (2,25) block=memory side=BOTTOM pin=memory.addr1[12] has no fanin.
+Error 86: in check_rr_graph: node 5926 (IPIN) at (2,26) block=memory side=BOTTOM pin=memory.addr1[13] has no fanin.
+Error 87: in check_rr_graph: node 5927 (IPIN) at (2,27) block=memory side=BOTTOM pin=memory.addr1[14] has no fanin.
+Error 88: in check_rr_graph: node 5940 (IPIN) at (2,28) block=memory side=TOP pin=memory.addr2[12] has no fanin.
+Error 89: in check_rr_graph: node 5941 (IPIN) at (2,29) block=memory side=TOP pin=memory.addr2[13] has no fanin.
+Error 90: in check_rr_graph: node 5942 (IPIN) at (2,30) block=memory side=TOP pin=memory.addr2[14] has no fanin.
+Error 91: in check_rr_graph: node 5991 (IPIN) at (2,25) block=memory side=RIGHT pin=memory.data[48] has no fanin.
+Error 92: in check_rr_graph: node 5992 (IPIN) at (2,26) block=memory side=RIGHT pin=memory.data[49] has no fanin.
+Error 93: in check_rr_graph: node 5993 (IPIN) at (2,27) block=memory side=RIGHT pin=memory.data[50] has no fanin.
+Error 94: in check_rr_graph: node 5994 (IPIN) at (2,28) block=memory side=RIGHT pin=memory.data[51] has no fanin.
+Error 95: in check_rr_graph: node 5995 (IPIN) at (2,29) block=memory side=RIGHT pin=memory.data[52] has no fanin.
+Error 96: in check_rr_graph: node 5996 (IPIN) at (2,30) block=memory side=RIGHT pin=memory.data[53] has no fanin.
+Error 97: in check_rr_graph: node 5997 (IPIN) at (2,25) block=memory side=BOTTOM pin=memory.data[54] has no fanin.
+Error 98: in check_rr_graph: node 5998 (IPIN) at (2,26) block=memory side=BOTTOM pin=memory.data[55] has no fanin.
+Error 99: in check_rr_graph: node 5999 (IPIN) at (2,27) block=memory side=BOTTOM pin=memory.data[56] has no fanin.
+Error 100: in check_rr_graph: node 6000 (IPIN) at (2,28) block=memory side=BOTTOM pin=memory.data[57] has no fanin.
+Error 101: in check_rr_graph: node 6001 (IPIN) at (2,29) block=memory side=BOTTOM pin=memory.data[58] has no fanin.
+Error 102: in check_rr_graph: node 6002 (IPIN) at (2,30) block=memory side=BOTTOM pin=memory.data[59] has no fanin.
+Error 103: in check_rr_graph: node 6003 (IPIN) at (2,25) block=memory side=LEFT pin=memory.data[60] has no fanin.
+Error 104: in check_rr_graph: node 6004 (IPIN) at (2,26) block=memory side=LEFT pin=memory.data[61] has no fanin.
+Error 105: in check_rr_graph: node 6005 (IPIN) at (2,27) block=memory side=LEFT pin=memory.data[62] has no fanin.
+Error 106: in check_rr_graph: node 6006 (IPIN) at (2,28) block=memory side=LEFT pin=memory.data[63] has no fanin.
+Error 107: in check_rr_graph: node 14981 (IPIN) at (6,4) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 108: in check_rr_graph: node 14983 (IPIN) at (6,2) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 109: in check_rr_graph: node 14984 (IPIN) at (6,3) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 110: in check_rr_graph: node 14985 (IPIN) at (6,4) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 111: in check_rr_graph: node 14987 (IPIN) at (6,2) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 112: in check_rr_graph: node 14988 (IPIN) at (6,3) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 113: in check_rr_graph: node 14989 (IPIN) at (6,4) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 114: in check_rr_graph: node 15017 (IPIN) at (6,4) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 115: in check_rr_graph: node 15019 (IPIN) at (6,2) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 116: in check_rr_graph: node 15020 (IPIN) at (6,3) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 117: in check_rr_graph: node 15021 (IPIN) at (6,4) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 118: in check_rr_graph: node 15023 (IPIN) at (6,2) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 119: in check_rr_graph: node 15024 (IPIN) at (6,3) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 120: in check_rr_graph: node 15025 (IPIN) at (6,4) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 121: in check_rr_graph: node 15269 (IPIN) at (6,8) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 122: in check_rr_graph: node 15270 (IPIN) at (6,5) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 123: in check_rr_graph: node 15271 (IPIN) at (6,6) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 124: in check_rr_graph: node 15272 (IPIN) at (6,7) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 125: in check_rr_graph: node 15273 (IPIN) at (6,8) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 126: in check_rr_graph: node 15274 (IPIN) at (6,5) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 127: in check_rr_graph: node 15275 (IPIN) at (6,6) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 128: in check_rr_graph: node 15276 (IPIN) at (6,7) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 129: in check_rr_graph: node 15277 (IPIN) at (6,8) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 130: in check_rr_graph: node 15305 (IPIN) at (6,8) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 131: in check_rr_graph: node 15306 (IPIN) at (6,5) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 132: in check_rr_graph: node 15307 (IPIN) at (6,6) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 133: in check_rr_graph: node 15308 (IPIN) at (6,7) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 134: in check_rr_graph: node 15309 (IPIN) at (6,8) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 135: in check_rr_graph: node 15310 (IPIN) at (6,5) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 136: in check_rr_graph: node 15311 (IPIN) at (6,6) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 137: in check_rr_graph: node 15312 (IPIN) at (6,7) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 138: in check_rr_graph: node 15313 (IPIN) at (6,8) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 139: in check_rr_graph: node 15557 (IPIN) at (6,12) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 140: in check_rr_graph: node 15558 (IPIN) at (6,9) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 141: in check_rr_graph: node 15559 (IPIN) at (6,10) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 142: in check_rr_graph: node 15560 (IPIN) at (6,11) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 143: in check_rr_graph: node 15561 (IPIN) at (6,12) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 144: in check_rr_graph: node 15562 (IPIN) at (6,9) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 145: in check_rr_graph: node 15563 (IPIN) at (6,10) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 146: in check_rr_graph: node 15564 (IPIN) at (6,11) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 147: in check_rr_graph: node 15565 (IPIN) at (6,12) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 148: in check_rr_graph: node 15593 (IPIN) at (6,12) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 149: in check_rr_graph: node 15594 (IPIN) at (6,9) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 150: in check_rr_graph: node 15595 (IPIN) at (6,10) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 151: in check_rr_graph: node 15596 (IPIN) at (6,11) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 152: in check_rr_graph: node 15597 (IPIN) at (6,12) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 153: in check_rr_graph: node 15598 (IPIN) at (6,9) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 154: in check_rr_graph: node 15599 (IPIN) at (6,10) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 155: in check_rr_graph: node 15600 (IPIN) at (6,11) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 156: in check_rr_graph: node 15601 (IPIN) at (6,12) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 157: in check_rr_graph: node 15845 (IPIN) at (6,16) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 158: in check_rr_graph: node 15846 (IPIN) at (6,13) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 159: in check_rr_graph: node 15847 (IPIN) at (6,14) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 160: in check_rr_graph: node 15848 (IPIN) at (6,15) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 161: in check_rr_graph: node 15849 (IPIN) at (6,16) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 162: in check_rr_graph: node 15850 (IPIN) at (6,13) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 163: in check_rr_graph: node 15851 (IPIN) at (6,14) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 164: in check_rr_graph: node 15852 (IPIN) at (6,15) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 165: in check_rr_graph: node 15853 (IPIN) at (6,16) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 166: in check_rr_graph: node 15881 (IPIN) at (6,16) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 167: in check_rr_graph: node 15882 (IPIN) at (6,13) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 168: in check_rr_graph: node 15883 (IPIN) at (6,14) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 169: in check_rr_graph: node 15884 (IPIN) at (6,15) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 170: in check_rr_graph: node 15885 (IPIN) at (6,16) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 171: in check_rr_graph: node 15886 (IPIN) at (6,13) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 172: in check_rr_graph: node 15887 (IPIN) at (6,14) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 173: in check_rr_graph: node 15888 (IPIN) at (6,15) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 174: in check_rr_graph: node 15889 (IPIN) at (6,16) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 175: in check_rr_graph: node 16133 (IPIN) at (6,20) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 176: in check_rr_graph: node 16134 (IPIN) at (6,17) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 177: in check_rr_graph: node 16135 (IPIN) at (6,18) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 178: in check_rr_graph: node 16136 (IPIN) at (6,19) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 179: in check_rr_graph: node 16137 (IPIN) at (6,20) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 180: in check_rr_graph: node 16138 (IPIN) at (6,17) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 181: in check_rr_graph: node 16139 (IPIN) at (6,18) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 182: in check_rr_graph: node 16140 (IPIN) at (6,19) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 183: in check_rr_graph: node 16141 (IPIN) at (6,20) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 184: in check_rr_graph: node 16169 (IPIN) at (6,20) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 185: in check_rr_graph: node 16170 (IPIN) at (6,17) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 186: in check_rr_graph: node 16171 (IPIN) at (6,18) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 187: in check_rr_graph: node 16172 (IPIN) at (6,19) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 188: in check_rr_graph: node 16173 (IPIN) at (6,20) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 189: in check_rr_graph: node 16174 (IPIN) at (6,17) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 190: in check_rr_graph: node 16175 (IPIN) at (6,18) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 191: in check_rr_graph: node 16176 (IPIN) at (6,19) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 192: in check_rr_graph: node 16177 (IPIN) at (6,20) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 193: in check_rr_graph: node 16421 (IPIN) at (6,24) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 194: in check_rr_graph: node 16422 (IPIN) at (6,21) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 195: in check_rr_graph: node 16423 (IPIN) at (6,22) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 196: in check_rr_graph: node 16424 (IPIN) at (6,23) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 197: in check_rr_graph: node 16425 (IPIN) at (6,24) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 198: in check_rr_graph: node 16426 (IPIN) at (6,21) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 199: in check_rr_graph: node 16427 (IPIN) at (6,22) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 200: in check_rr_graph: node 16428 (IPIN) at (6,23) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 201: in check_rr_graph: node 16429 (IPIN) at (6,24) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 202: in check_rr_graph: node 16457 (IPIN) at (6,24) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 203: in check_rr_graph: node 16458 (IPIN) at (6,21) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 204: in check_rr_graph: node 16459 (IPIN) at (6,22) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 205: in check_rr_graph: node 16460 (IPIN) at (6,23) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 206: in check_rr_graph: node 16461 (IPIN) at (6,24) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 207: in check_rr_graph: node 16462 (IPIN) at (6,21) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 208: in check_rr_graph: node 16463 (IPIN) at (6,22) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 209: in check_rr_graph: node 16464 (IPIN) at (6,23) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 210: in check_rr_graph: node 16465 (IPIN) at (6,24) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 211: in check_rr_graph: node 16709 (IPIN) at (6,28) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 212: in check_rr_graph: node 16710 (IPIN) at (6,25) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 213: in check_rr_graph: node 16711 (IPIN) at (6,26) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 214: in check_rr_graph: node 16712 (IPIN) at (6,27) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 215: in check_rr_graph: node 16713 (IPIN) at (6,28) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 216: in check_rr_graph: node 16714 (IPIN) at (6,25) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 217: in check_rr_graph: node 16715 (IPIN) at (6,26) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 218: in check_rr_graph: node 16716 (IPIN) at (6,27) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 219: in check_rr_graph: node 16717 (IPIN) at (6,28) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 220: in check_rr_graph: node 16745 (IPIN) at (6,28) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 221: in check_rr_graph: node 16746 (IPIN) at (6,25) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 222: in check_rr_graph: node 16747 (IPIN) at (6,26) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 223: in check_rr_graph: node 16748 (IPIN) at (6,27) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 224: in check_rr_graph: node 16749 (IPIN) at (6,28) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 225: in check_rr_graph: node 16750 (IPIN) at (6,25) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 226: in check_rr_graph: node 16751 (IPIN) at (6,26) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 227: in check_rr_graph: node 16752 (IPIN) at (6,27) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 228: in check_rr_graph: node 16753 (IPIN) at (6,28) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 229: in check_rr_graph: node 16998 (IPIN) at (6,29) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 230: in check_rr_graph: node 16999 (IPIN) at (6,30) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 231: in check_rr_graph: node 17000 (IPIN) at (6,31) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 232: in check_rr_graph: node 17002 (IPIN) at (6,29) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 233: in check_rr_graph: node 17003 (IPIN) at (6,30) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 234: in check_rr_graph: node 17004 (IPIN) at (6,31) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 235: in check_rr_graph: node 17034 (IPIN) at (6,29) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 236: in check_rr_graph: node 17035 (IPIN) at (6,30) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 237: in check_rr_graph: node 17036 (IPIN) at (6,31) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 238: in check_rr_graph: node 17038 (IPIN) at (6,29) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 239: in check_rr_graph: node 17039 (IPIN) at (6,30) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 240: in check_rr_graph: node 17040 (IPIN) at (6,31) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 241: in check_rr_graph: node 26024 (IPIN) at (10,2) block=memory side=BOTTOM pin=memory.addr1[13] has no fanin.
+Error 242: in check_rr_graph: node 26025 (IPIN) at (10,3) block=memory side=BOTTOM pin=memory.addr1[14] has no fanin.
+Error 243: in check_rr_graph: node 26038 (IPIN) at (10,4) block=memory side=TOP pin=memory.addr2[12] has no fanin.
+Error 244: in check_rr_graph: node 26039 (IPIN) at (10,5) block=memory side=TOP pin=memory.addr2[13] has no fanin.
+Error 245: in check_rr_graph: node 26040 (IPIN) at (10,6) block=memory side=TOP pin=memory.addr2[14] has no fanin.
+Error 246: in check_rr_graph: node 26090 (IPIN) at (10,2) block=memory side=RIGHT pin=memory.data[49] has no fanin.
+Error 247: in check_rr_graph: node 26091 (IPIN) at (10,3) block=memory side=RIGHT pin=memory.data[50] has no fanin.
+Error 248: in check_rr_graph: node 26092 (IPIN) at (10,4) block=memory side=RIGHT pin=memory.data[51] has no fanin.
+Error 249: in check_rr_graph: node 26093 (IPIN) at (10,5) block=memory side=RIGHT pin=memory.data[52] has no fanin.
+Error 250: in check_rr_graph: node 26094 (IPIN) at (10,6) block=memory side=RIGHT pin=memory.data[53] has no fanin.
+Error 251: in check_rr_graph: node 26096 (IPIN) at (10,2) block=memory side=BOTTOM pin=memory.data[55] has no fanin.
+Error 252: in check_rr_graph: node 26097 (IPIN) at (10,3) block=memory side=BOTTOM pin=memory.data[56] has no fanin.
+Error 253: in check_rr_graph: node 26098 (IPIN) at (10,4) block=memory side=BOTTOM pin=memory.data[57] has no fanin.
+Error 254: in check_rr_graph: node 26099 (IPIN) at (10,5) block=memory side=BOTTOM pin=memory.data[58] has no fanin.
+Error 255: in check_rr_graph: node 26100 (IPIN) at (10,6) block=memory side=BOTTOM pin=memory.data[59] has no fanin.
+Error 256: in check_rr_graph: node 26102 (IPIN) at (10,2) block=memory side=LEFT pin=memory.data[61] has no fanin.
+Error 257: in check_rr_graph: node 26103 (IPIN) at (10,3) block=memory side=LEFT pin=memory.data[62] has no fanin.
+Error 258: in check_rr_graph: node 26104 (IPIN) at (10,4) block=memory side=LEFT pin=memory.data[63] has no fanin.
+Error 259: in check_rr_graph: node 26345 (IPIN) at (10,7) block=memory side=BOTTOM pin=memory.addr1[12] has no fanin.
+Error 260: in check_rr_graph: node 26346 (IPIN) at (10,8) block=memory side=BOTTOM pin=memory.addr1[13] has no fanin.
+Error 261: in check_rr_graph: node 26347 (IPIN) at (10,9) block=memory side=BOTTOM pin=memory.addr1[14] has no fanin.
+Error 262: in check_rr_graph: node 26360 (IPIN) at (10,10) block=memory side=TOP pin=memory.addr2[12] has no fanin.
+Error 263: in check_rr_graph: node 26361 (IPIN) at (10,11) block=memory side=TOP pin=memory.addr2[13] has no fanin.
+Error 264: in check_rr_graph: node 26362 (IPIN) at (10,12) block=memory side=TOP pin=memory.addr2[14] has no fanin.
+Error 265: in check_rr_graph: node 26411 (IPIN) at (10,7) block=memory side=RIGHT pin=memory.data[48] has no fanin.
+Error 266: in check_rr_graph: node 26412 (IPIN) at (10,8) block=memory side=RIGHT pin=memory.data[49] has no fanin.
+Error 267: in check_rr_graph: node 26413 (IPIN) at (10,9) block=memory side=RIGHT pin=memory.data[50] has no fanin.
+Error 268: in check_rr_graph: node 26414 (IPIN) at (10,10) block=memory side=RIGHT pin=memory.data[51] has no fanin.
+Error 269: in check_rr_graph: node 26415 (IPIN) at (10,11) block=memory side=RIGHT pin=memory.data[52] has no fanin.
+Error 270: in check_rr_graph: node 26416 (IPIN) at (10,12) block=memory side=RIGHT pin=memory.data[53] has no fanin.
+Error 271: in check_rr_graph: node 26417 (IPIN) at (10,7) block=memory side=BOTTOM pin=memory.data[54] has no fanin.
+Error 272: in check_rr_graph: node 26418 (IPIN) at (10,8) block=memory side=BOTTOM pin=memory.data[55] has no fanin.
+Error 273: in check_rr_graph: node 26419 (IPIN) at (10,9) block=memory side=BOTTOM pin=memory.data[56] has no fanin.
+Error 274: in check_rr_graph: node 26420 (IPIN) at (10,10) block=memory side=BOTTOM pin=memory.data[57] has no fanin.
+Error 275: in check_rr_graph: node 26421 (IPIN) at (10,11) block=memory side=BOTTOM pin=memory.data[58] has no fanin.
+Error 276: in check_rr_graph: node 26422 (IPIN) at (10,12) block=memory side=BOTTOM pin=memory.data[59] has no fanin.
+Error 277: in check_rr_graph: node 26423 (IPIN) at (10,7) block=memory side=LEFT pin=memory.data[60] has no fanin.
+Error 278: in check_rr_graph: node 26424 (IPIN) at (10,8) block=memory side=LEFT pin=memory.data[61] has no fanin.
+Error 279: in check_rr_graph: node 26425 (IPIN) at (10,9) block=memory side=LEFT pin=memory.data[62] has no fanin.
+Error 280: in check_rr_graph: node 26426 (IPIN) at (10,10) block=memory side=LEFT pin=memory.data[63] has no fanin.
+Error 281: in check_rr_graph: node 26667 (IPIN) at (10,13) block=memory side=BOTTOM pin=memory.addr1[12] has no fanin.
+Error 282: in check_rr_graph: node 26668 (IPIN) at (10,14) block=memory side=BOTTOM pin=memory.addr1[13] has no fanin.
+Error 283: in check_rr_graph: node 26669 (IPIN) at (10,15) block=memory side=BOTTOM pin=memory.addr1[14] has no fanin.
+Error 284: in check_rr_graph: node 26682 (IPIN) at (10,16) block=memory side=TOP pin=memory.addr2[12] has no fanin.
+Error 285: in check_rr_graph: node 26683 (IPIN) at (10,17) block=memory side=TOP pin=memory.addr2[13] has no fanin.
+Error 286: in check_rr_graph: node 26684 (IPIN) at (10,18) block=memory side=TOP pin=memory.addr2[14] has no fanin.
+Error 287: in check_rr_graph: node 26733 (IPIN) at (10,13) block=memory side=RIGHT pin=memory.data[48] has no fanin.
+Error 288: in check_rr_graph: node 26734 (IPIN) at (10,14) block=memory side=RIGHT pin=memory.data[49] has no fanin.
+Error 289: in check_rr_graph: node 26735 (IPIN) at (10,15) block=memory side=RIGHT pin=memory.data[50] has no fanin.
+Error 290: in check_rr_graph: node 26736 (IPIN) at (10,16) block=memory side=RIGHT pin=memory.data[51] has no fanin.
+Error 291: in check_rr_graph: node 26737 (IPIN) at (10,17) block=memory side=RIGHT pin=memory.data[52] has no fanin.
+Error 292: in check_rr_graph: node 26738 (IPIN) at (10,18) block=memory side=RIGHT pin=memory.data[53] has no fanin.
+Error 293: in check_rr_graph: node 26739 (IPIN) at (10,13) block=memory side=BOTTOM pin=memory.data[54] has no fanin.
+Error 294: in check_rr_graph: node 26740 (IPIN) at (10,14) block=memory side=BOTTOM pin=memory.data[55] has no fanin.
+Error 295: in check_rr_graph: node 26741 (IPIN) at (10,15) block=memory side=BOTTOM pin=memory.data[56] has no fanin.
+Error 296: in check_rr_graph: node 26742 (IPIN) at (10,16) block=memory side=BOTTOM pin=memory.data[57] has no fanin.
+Error 297: in check_rr_graph: node 26743 (IPIN) at (10,17) block=memory side=BOTTOM pin=memory.data[58] has no fanin.
+Error 298: in check_rr_graph: node 26744 (IPIN) at (10,18) block=memory side=BOTTOM pin=memory.data[59] has no fanin.
+Error 299: in check_rr_graph: node 26745 (IPIN) at (10,13) block=memory side=LEFT pin=memory.data[60] has no fanin.
+Error 300: in check_rr_graph: node 26746 (IPIN) at (10,14) block=memory side=LEFT pin=memory.data[61] has no fanin.
+Error 301: in check_rr_graph: node 26747 (IPIN) at (10,15) block=memory side=LEFT pin=memory.data[62] has no fanin.
+Error 302: in check_rr_graph: node 26748 (IPIN) at (10,16) block=memory side=LEFT pin=memory.data[63] has no fanin.
+Error 303: in check_rr_graph: node 26989 (IPIN) at (10,19) block=memory side=BOTTOM pin=memory.addr1[12] has no fanin.
+Error 304: in check_rr_graph: node 26990 (IPIN) at (10,20) block=memory side=BOTTOM pin=memory.addr1[13] has no fanin.
+Error 305: in check_rr_graph: node 26991 (IPIN) at (10,21) block=memory side=BOTTOM pin=memory.addr1[14] has no fanin.
+Error 306: in check_rr_graph: node 27004 (IPIN) at (10,22) block=memory side=TOP pin=memory.addr2[12] has no fanin.
+Error 307: in check_rr_graph: node 27005 (IPIN) at (10,23) block=memory side=TOP pin=memory.addr2[13] has no fanin.
+Error 308: in check_rr_graph: node 27006 (IPIN) at (10,24) block=memory side=TOP pin=memory.addr2[14] has no fanin.
+Error 309: in check_rr_graph: node 27055 (IPIN) at (10,19) block=memory side=RIGHT pin=memory.data[48] has no fanin.
+Error 310: in check_rr_graph: node 27056 (IPIN) at (10,20) block=memory side=RIGHT pin=memory.data[49] has no fanin.
+Error 311: in check_rr_graph: node 27057 (IPIN) at (10,21) block=memory side=RIGHT pin=memory.data[50] has no fanin.
+Error 312: in check_rr_graph: node 27058 (IPIN) at (10,22) block=memory side=RIGHT pin=memory.data[51] has no fanin.
+Error 313: in check_rr_graph: node 27059 (IPIN) at (10,23) block=memory side=RIGHT pin=memory.data[52] has no fanin.
+Error 314: in check_rr_graph: node 27060 (IPIN) at (10,24) block=memory side=RIGHT pin=memory.data[53] has no fanin.
+Error 315: in check_rr_graph: node 27061 (IPIN) at (10,19) block=memory side=BOTTOM pin=memory.data[54] has no fanin.
+Error 316: in check_rr_graph: node 27062 (IPIN) at (10,20) block=memory side=BOTTOM pin=memory.data[55] has no fanin.
+Error 317: in check_rr_graph: node 27063 (IPIN) at (10,21) block=memory side=BOTTOM pin=memory.data[56] has no fanin.
+Error 318: in check_rr_graph: node 27064 (IPIN) at (10,22) block=memory side=BOTTOM pin=memory.data[57] has no fanin.
+Error 319: in check_rr_graph: node 27065 (IPIN) at (10,23) block=memory side=BOTTOM pin=memory.data[58] has no fanin.
+Error 320: in check_rr_graph: node 27066 (IPIN) at (10,24) block=memory side=BOTTOM pin=memory.data[59] has no fanin.
+Error 321: in check_rr_graph: node 27067 (IPIN) at (10,19) block=memory side=LEFT pin=memory.data[60] has no fanin.
+Error 322: in check_rr_graph: node 27068 (IPIN) at (10,20) block=memory side=LEFT pin=memory.data[61] has no fanin.
+Error 323: in check_rr_graph: node 27069 (IPIN) at (10,21) block=memory side=LEFT pin=memory.data[62] has no fanin.
+Error 324: in check_rr_graph: node 27070 (IPIN) at (10,22) block=memory side=LEFT pin=memory.data[63] has no fanin.
+Error 325: in check_rr_graph: node 27311 (IPIN) at (10,25) block=memory side=BOTTOM pin=memory.addr1[12] has no fanin.
+Error 326: in check_rr_graph: node 27312 (IPIN) at (10,26) block=memory side=BOTTOM pin=memory.addr1[13] has no fanin.
+Error 327: in check_rr_graph: node 27313 (IPIN) at (10,27) block=memory side=BOTTOM pin=memory.addr1[14] has no fanin.
+Error 328: in check_rr_graph: node 27326 (IPIN) at (10,28) block=memory side=TOP pin=memory.addr2[12] has no fanin.
+Error 329: in check_rr_graph: node 27327 (IPIN) at (10,29) block=memory side=TOP pin=memory.addr2[13] has no fanin.
+Error 330: in check_rr_graph: node 27328 (IPIN) at (10,30) block=memory side=TOP pin=memory.addr2[14] has no fanin.
+Error 331: in check_rr_graph: node 27377 (IPIN) at (10,25) block=memory side=RIGHT pin=memory.data[48] has no fanin.
+Error 332: in check_rr_graph: node 27378 (IPIN) at (10,26) block=memory side=RIGHT pin=memory.data[49] has no fanin.
+Error 333: in check_rr_graph: node 27379 (IPIN) at (10,27) block=memory side=RIGHT pin=memory.data[50] has no fanin.
+Error 334: in check_rr_graph: node 27380 (IPIN) at (10,28) block=memory side=RIGHT pin=memory.data[51] has no fanin.
+Error 335: in check_rr_graph: node 27381 (IPIN) at (10,29) block=memory side=RIGHT pin=memory.data[52] has no fanin.
+Error 336: in check_rr_graph: node 27382 (IPIN) at (10,30) block=memory side=RIGHT pin=memory.data[53] has no fanin.
+Error 337: in check_rr_graph: node 27383 (IPIN) at (10,25) block=memory side=BOTTOM pin=memory.data[54] has no fanin.
+Error 338: in check_rr_graph: node 27384 (IPIN) at (10,26) block=memory side=BOTTOM pin=memory.data[55] has no fanin.
+Error 339: in check_rr_graph: node 27385 (IPIN) at (10,27) block=memory side=BOTTOM pin=memory.data[56] has no fanin.
+Error 340: in check_rr_graph: node 27386 (IPIN) at (10,28) block=memory side=BOTTOM pin=memory.data[57] has no fanin.
+Error 341: in check_rr_graph: node 27387 (IPIN) at (10,29) block=memory side=BOTTOM pin=memory.data[58] has no fanin.
+Error 342: in check_rr_graph: node 27388 (IPIN) at (10,30) block=memory side=BOTTOM pin=memory.data[59] has no fanin.
+Error 343: in check_rr_graph: node 27389 (IPIN) at (10,25) block=memory side=LEFT pin=memory.data[60] has no fanin.
+Error 344: in check_rr_graph: node 27390 (IPIN) at (10,26) block=memory side=LEFT pin=memory.data[61] has no fanin.
+Error 345: in check_rr_graph: node 27391 (IPIN) at (10,27) block=memory side=LEFT pin=memory.data[62] has no fanin.
+Error 346: in check_rr_graph: node 27392 (IPIN) at (10,28) block=memory side=LEFT pin=memory.data[63] has no fanin.
+Error 347: in check_rr_graph: node 36367 (IPIN) at (14,4) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 348: in check_rr_graph: node 36369 (IPIN) at (14,2) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 349: in check_rr_graph: node 36370 (IPIN) at (14,3) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 350: in check_rr_graph: node 36371 (IPIN) at (14,4) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 351: in check_rr_graph: node 36373 (IPIN) at (14,2) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 352: in check_rr_graph: node 36374 (IPIN) at (14,3) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 353: in check_rr_graph: node 36375 (IPIN) at (14,4) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 354: in check_rr_graph: node 36403 (IPIN) at (14,4) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 355: in check_rr_graph: node 36405 (IPIN) at (14,2) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 356: in check_rr_graph: node 36406 (IPIN) at (14,3) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 357: in check_rr_graph: node 36407 (IPIN) at (14,4) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 358: in check_rr_graph: node 36409 (IPIN) at (14,2) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 359: in check_rr_graph: node 36410 (IPIN) at (14,3) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 360: in check_rr_graph: node 36411 (IPIN) at (14,4) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 361: in check_rr_graph: node 36655 (IPIN) at (14,8) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 362: in check_rr_graph: node 36656 (IPIN) at (14,5) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 363: in check_rr_graph: node 36657 (IPIN) at (14,6) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 364: in check_rr_graph: node 36658 (IPIN) at (14,7) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 365: in check_rr_graph: node 36659 (IPIN) at (14,8) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 366: in check_rr_graph: node 36660 (IPIN) at (14,5) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 367: in check_rr_graph: node 36661 (IPIN) at (14,6) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 368: in check_rr_graph: node 36662 (IPIN) at (14,7) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 369: in check_rr_graph: node 36663 (IPIN) at (14,8) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 370: in check_rr_graph: node 36691 (IPIN) at (14,8) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 371: in check_rr_graph: node 36692 (IPIN) at (14,5) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 372: in check_rr_graph: node 36693 (IPIN) at (14,6) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 373: in check_rr_graph: node 36694 (IPIN) at (14,7) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 374: in check_rr_graph: node 36695 (IPIN) at (14,8) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 375: in check_rr_graph: node 36696 (IPIN) at (14,5) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 376: in check_rr_graph: node 36697 (IPIN) at (14,6) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 377: in check_rr_graph: node 36698 (IPIN) at (14,7) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 378: in check_rr_graph: node 36699 (IPIN) at (14,8) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 379: in check_rr_graph: node 36943 (IPIN) at (14,12) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 380: in check_rr_graph: node 36944 (IPIN) at (14,9) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 381: in check_rr_graph: node 36945 (IPIN) at (14,10) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 382: in check_rr_graph: node 36946 (IPIN) at (14,11) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 383: in check_rr_graph: node 36947 (IPIN) at (14,12) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 384: in check_rr_graph: node 36948 (IPIN) at (14,9) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 385: in check_rr_graph: node 36949 (IPIN) at (14,10) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 386: in check_rr_graph: node 36950 (IPIN) at (14,11) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 387: in check_rr_graph: node 36951 (IPIN) at (14,12) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 388: in check_rr_graph: node 36979 (IPIN) at (14,12) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 389: in check_rr_graph: node 36980 (IPIN) at (14,9) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 390: in check_rr_graph: node 36981 (IPIN) at (14,10) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 391: in check_rr_graph: node 36982 (IPIN) at (14,11) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 392: in check_rr_graph: node 36983 (IPIN) at (14,12) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 393: in check_rr_graph: node 36984 (IPIN) at (14,9) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 394: in check_rr_graph: node 36985 (IPIN) at (14,10) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 395: in check_rr_graph: node 36986 (IPIN) at (14,11) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 396: in check_rr_graph: node 36987 (IPIN) at (14,12) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 397: in check_rr_graph: node 37231 (IPIN) at (14,16) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 398: in check_rr_graph: node 37232 (IPIN) at (14,13) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 399: in check_rr_graph: node 37233 (IPIN) at (14,14) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 400: in check_rr_graph: node 37234 (IPIN) at (14,15) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 401: in check_rr_graph: node 37235 (IPIN) at (14,16) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 402: in check_rr_graph: node 37236 (IPIN) at (14,13) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 403: in check_rr_graph: node 37237 (IPIN) at (14,14) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 404: in check_rr_graph: node 37238 (IPIN) at (14,15) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 405: in check_rr_graph: node 37239 (IPIN) at (14,16) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 406: in check_rr_graph: node 37267 (IPIN) at (14,16) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 407: in check_rr_graph: node 37268 (IPIN) at (14,13) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 408: in check_rr_graph: node 37269 (IPIN) at (14,14) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 409: in check_rr_graph: node 37270 (IPIN) at (14,15) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 410: in check_rr_graph: node 37271 (IPIN) at (14,16) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 411: in check_rr_graph: node 37272 (IPIN) at (14,13) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 412: in check_rr_graph: node 37273 (IPIN) at (14,14) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 413: in check_rr_graph: node 37274 (IPIN) at (14,15) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 414: in check_rr_graph: node 37275 (IPIN) at (14,16) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 415: in check_rr_graph: node 37519 (IPIN) at (14,20) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 416: in check_rr_graph: node 37520 (IPIN) at (14,17) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 417: in check_rr_graph: node 37521 (IPIN) at (14,18) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 418: in check_rr_graph: node 37522 (IPIN) at (14,19) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 419: in check_rr_graph: node 37523 (IPIN) at (14,20) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 420: in check_rr_graph: node 37524 (IPIN) at (14,17) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 421: in check_rr_graph: node 37525 (IPIN) at (14,18) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 422: in check_rr_graph: node 37526 (IPIN) at (14,19) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 423: in check_rr_graph: node 37527 (IPIN) at (14,20) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 424: in check_rr_graph: node 37555 (IPIN) at (14,20) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 425: in check_rr_graph: node 37556 (IPIN) at (14,17) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 426: in check_rr_graph: node 37557 (IPIN) at (14,18) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 427: in check_rr_graph: node 37558 (IPIN) at (14,19) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 428: in check_rr_graph: node 37559 (IPIN) at (14,20) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 429: in check_rr_graph: node 37560 (IPIN) at (14,17) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 430: in check_rr_graph: node 37561 (IPIN) at (14,18) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 431: in check_rr_graph: node 37562 (IPIN) at (14,19) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 432: in check_rr_graph: node 37563 (IPIN) at (14,20) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 433: in check_rr_graph: node 37807 (IPIN) at (14,24) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 434: in check_rr_graph: node 37808 (IPIN) at (14,21) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 435: in check_rr_graph: node 37809 (IPIN) at (14,22) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 436: in check_rr_graph: node 37810 (IPIN) at (14,23) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 437: in check_rr_graph: node 37811 (IPIN) at (14,24) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 438: in check_rr_graph: node 37812 (IPIN) at (14,21) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 439: in check_rr_graph: node 37813 (IPIN) at (14,22) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 440: in check_rr_graph: node 37814 (IPIN) at (14,23) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 441: in check_rr_graph: node 37815 (IPIN) at (14,24) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 442: in check_rr_graph: node 37843 (IPIN) at (14,24) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 443: in check_rr_graph: node 37844 (IPIN) at (14,21) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 444: in check_rr_graph: node 37845 (IPIN) at (14,22) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 445: in check_rr_graph: node 37846 (IPIN) at (14,23) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 446: in check_rr_graph: node 37847 (IPIN) at (14,24) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 447: in check_rr_graph: node 37848 (IPIN) at (14,21) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 448: in check_rr_graph: node 37849 (IPIN) at (14,22) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 449: in check_rr_graph: node 37850 (IPIN) at (14,23) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 450: in check_rr_graph: node 37851 (IPIN) at (14,24) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 451: in check_rr_graph: node 38095 (IPIN) at (14,28) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 452: in check_rr_graph: node 38096 (IPIN) at (14,25) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 453: in check_rr_graph: node 38097 (IPIN) at (14,26) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 454: in check_rr_graph: node 38098 (IPIN) at (14,27) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 455: in check_rr_graph: node 38099 (IPIN) at (14,28) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 456: in check_rr_graph: node 38100 (IPIN) at (14,25) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 457: in check_rr_graph: node 38101 (IPIN) at (14,26) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 458: in check_rr_graph: node 38102 (IPIN) at (14,27) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 459: in check_rr_graph: node 38103 (IPIN) at (14,28) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 460: in check_rr_graph: node 38131 (IPIN) at (14,28) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 461: in check_rr_graph: node 38132 (IPIN) at (14,25) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 462: in check_rr_graph: node 38133 (IPIN) at (14,26) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 463: in check_rr_graph: node 38134 (IPIN) at (14,27) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 464: in check_rr_graph: node 38135 (IPIN) at (14,28) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 465: in check_rr_graph: node 38136 (IPIN) at (14,25) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 466: in check_rr_graph: node 38137 (IPIN) at (14,26) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 467: in check_rr_graph: node 38138 (IPIN) at (14,27) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 468: in check_rr_graph: node 38139 (IPIN) at (14,28) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 469: in check_rr_graph: node 38384 (IPIN) at (14,29) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 470: in check_rr_graph: node 38385 (IPIN) at (14,30) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 471: in check_rr_graph: node 38386 (IPIN) at (14,31) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 472: in check_rr_graph: node 38388 (IPIN) at (14,29) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 473: in check_rr_graph: node 38389 (IPIN) at (14,30) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 474: in check_rr_graph: node 38390 (IPIN) at (14,31) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 475: in check_rr_graph: node 38420 (IPIN) at (14,29) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 476: in check_rr_graph: node 38421 (IPIN) at (14,30) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 477: in check_rr_graph: node 38422 (IPIN) at (14,31) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 478: in check_rr_graph: node 38424 (IPIN) at (14,29) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 479: in check_rr_graph: node 38425 (IPIN) at (14,30) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 480: in check_rr_graph: node 38426 (IPIN) at (14,31) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 481: in check_rr_graph: node 47410 (IPIN) at (18,2) block=memory side=BOTTOM pin=memory.addr1[13] has no fanin.
+Error 482: in check_rr_graph: node 47411 (IPIN) at (18,3) block=memory side=BOTTOM pin=memory.addr1[14] has no fanin.
+Error 483: in check_rr_graph: node 47424 (IPIN) at (18,4) block=memory side=TOP pin=memory.addr2[12] has no fanin.
+Error 484: in check_rr_graph: node 47425 (IPIN) at (18,5) block=memory side=TOP pin=memory.addr2[13] has no fanin.
+Error 485: in check_rr_graph: node 47426 (IPIN) at (18,6) block=memory side=TOP pin=memory.addr2[14] has no fanin.
+Error 486: in check_rr_graph: node 47476 (IPIN) at (18,2) block=memory side=RIGHT pin=memory.data[49] has no fanin.
+Error 487: in check_rr_graph: node 47477 (IPIN) at (18,3) block=memory side=RIGHT pin=memory.data[50] has no fanin.
+Error 488: in check_rr_graph: node 47478 (IPIN) at (18,4) block=memory side=RIGHT pin=memory.data[51] has no fanin.
+Error 489: in check_rr_graph: node 47479 (IPIN) at (18,5) block=memory side=RIGHT pin=memory.data[52] has no fanin.
+Error 490: in check_rr_graph: node 47480 (IPIN) at (18,6) block=memory side=RIGHT pin=memory.data[53] has no fanin.
+Error 491: in check_rr_graph: node 47482 (IPIN) at (18,2) block=memory side=BOTTOM pin=memory.data[55] has no fanin.
+Error 492: in check_rr_graph: node 47483 (IPIN) at (18,3) block=memory side=BOTTOM pin=memory.data[56] has no fanin.
+Error 493: in check_rr_graph: node 47484 (IPIN) at (18,4) block=memory side=BOTTOM pin=memory.data[57] has no fanin.
+Error 494: in check_rr_graph: node 47485 (IPIN) at (18,5) block=memory side=BOTTOM pin=memory.data[58] has no fanin.
+Error 495: in check_rr_graph: node 47486 (IPIN) at (18,6) block=memory side=BOTTOM pin=memory.data[59] has no fanin.
+Error 496: in check_rr_graph: node 47488 (IPIN) at (18,2) block=memory side=LEFT pin=memory.data[61] has no fanin.
+Error 497: in check_rr_graph: node 47489 (IPIN) at (18,3) block=memory side=LEFT pin=memory.data[62] has no fanin.
+Error 498: in check_rr_graph: node 47490 (IPIN) at (18,4) block=memory side=LEFT pin=memory.data[63] has no fanin.
+Error 499: in check_rr_graph: node 47731 (IPIN) at (18,7) block=memory side=BOTTOM pin=memory.addr1[12] has no fanin.
+Error 500: in check_rr_graph: node 47732 (IPIN) at (18,8) block=memory side=BOTTOM pin=memory.addr1[13] has no fanin.
+Error 501: in check_rr_graph: node 47733 (IPIN) at (18,9) block=memory side=BOTTOM pin=memory.addr1[14] has no fanin.
+Error 502: in check_rr_graph: node 47746 (IPIN) at (18,10) block=memory side=TOP pin=memory.addr2[12] has no fanin.
+Error 503: in check_rr_graph: node 47747 (IPIN) at (18,11) block=memory side=TOP pin=memory.addr2[13] has no fanin.
+Error 504: in check_rr_graph: node 47748 (IPIN) at (18,12) block=memory side=TOP pin=memory.addr2[14] has no fanin.
+Error 505: in check_rr_graph: node 47797 (IPIN) at (18,7) block=memory side=RIGHT pin=memory.data[48] has no fanin.
+Error 506: in check_rr_graph: node 47798 (IPIN) at (18,8) block=memory side=RIGHT pin=memory.data[49] has no fanin.
+Error 507: in check_rr_graph: node 47799 (IPIN) at (18,9) block=memory side=RIGHT pin=memory.data[50] has no fanin.
+Error 508: in check_rr_graph: node 47800 (IPIN) at (18,10) block=memory side=RIGHT pin=memory.data[51] has no fanin.
+Error 509: in check_rr_graph: node 47801 (IPIN) at (18,11) block=memory side=RIGHT pin=memory.data[52] has no fanin.
+Error 510: in check_rr_graph: node 47802 (IPIN) at (18,12) block=memory side=RIGHT pin=memory.data[53] has no fanin.
+Error 511: in check_rr_graph: node 47803 (IPIN) at (18,7) block=memory side=BOTTOM pin=memory.data[54] has no fanin.
+Error 512: in check_rr_graph: node 47804 (IPIN) at (18,8) block=memory side=BOTTOM pin=memory.data[55] has no fanin.
+Error 513: in check_rr_graph: node 47805 (IPIN) at (18,9) block=memory side=BOTTOM pin=memory.data[56] has no fanin.
+Error 514: in check_rr_graph: node 47806 (IPIN) at (18,10) block=memory side=BOTTOM pin=memory.data[57] has no fanin.
+Error 515: in check_rr_graph: node 47807 (IPIN) at (18,11) block=memory side=BOTTOM pin=memory.data[58] has no fanin.
+Error 516: in check_rr_graph: node 47808 (IPIN) at (18,12) block=memory side=BOTTOM pin=memory.data[59] has no fanin.
+Error 517: in check_rr_graph: node 47809 (IPIN) at (18,7) block=memory side=LEFT pin=memory.data[60] has no fanin.
+Error 518: in check_rr_graph: node 47810 (IPIN) at (18,8) block=memory side=LEFT pin=memory.data[61] has no fanin.
+Error 519: in check_rr_graph: node 47811 (IPIN) at (18,9) block=memory side=LEFT pin=memory.data[62] has no fanin.
+Error 520: in check_rr_graph: node 47812 (IPIN) at (18,10) block=memory side=LEFT pin=memory.data[63] has no fanin.
+Error 521: in check_rr_graph: node 48053 (IPIN) at (18,13) block=memory side=BOTTOM pin=memory.addr1[12] has no fanin.
+Error 522: in check_rr_graph: node 48054 (IPIN) at (18,14) block=memory side=BOTTOM pin=memory.addr1[13] has no fanin.
+Error 523: in check_rr_graph: node 48055 (IPIN) at (18,15) block=memory side=BOTTOM pin=memory.addr1[14] has no fanin.
+Error 524: in check_rr_graph: node 48068 (IPIN) at (18,16) block=memory side=TOP pin=memory.addr2[12] has no fanin.
+Error 525: in check_rr_graph: node 48069 (IPIN) at (18,17) block=memory side=TOP pin=memory.addr2[13] has no fanin.
+Error 526: in check_rr_graph: node 48070 (IPIN) at (18,18) block=memory side=TOP pin=memory.addr2[14] has no fanin.
+Error 527: in check_rr_graph: node 48119 (IPIN) at (18,13) block=memory side=RIGHT pin=memory.data[48] has no fanin.
+Error 528: in check_rr_graph: node 48120 (IPIN) at (18,14) block=memory side=RIGHT pin=memory.data[49] has no fanin.
+Error 529: in check_rr_graph: node 48121 (IPIN) at (18,15) block=memory side=RIGHT pin=memory.data[50] has no fanin.
+Error 530: in check_rr_graph: node 48122 (IPIN) at (18,16) block=memory side=RIGHT pin=memory.data[51] has no fanin.
+Error 531: in check_rr_graph: node 48123 (IPIN) at (18,17) block=memory side=RIGHT pin=memory.data[52] has no fanin.
+Error 532: in check_rr_graph: node 48124 (IPIN) at (18,18) block=memory side=RIGHT pin=memory.data[53] has no fanin.
+Error 533: in check_rr_graph: node 48125 (IPIN) at (18,13) block=memory side=BOTTOM pin=memory.data[54] has no fanin.
+Error 534: in check_rr_graph: node 48126 (IPIN) at (18,14) block=memory side=BOTTOM pin=memory.data[55] has no fanin.
+Error 535: in check_rr_graph: node 48127 (IPIN) at (18,15) block=memory side=BOTTOM pin=memory.data[56] has no fanin.
+Error 536: in check_rr_graph: node 48128 (IPIN) at (18,16) block=memory side=BOTTOM pin=memory.data[57] has no fanin.
+Error 537: in check_rr_graph: node 48129 (IPIN) at (18,17) block=memory side=BOTTOM pin=memory.data[58] has no fanin.
+Error 538: in check_rr_graph: node 48130 (IPIN) at (18,18) block=memory side=BOTTOM pin=memory.data[59] has no fanin.
+Error 539: in check_rr_graph: node 48131 (IPIN) at (18,13) block=memory side=LEFT pin=memory.data[60] has no fanin.
+Error 540: in check_rr_graph: node 48132 (IPIN) at (18,14) block=memory side=LEFT pin=memory.data[61] has no fanin.
+Error 541: in check_rr_graph: node 48133 (IPIN) at (18,15) block=memory side=LEFT pin=memory.data[62] has no fanin.
+Error 542: in check_rr_graph: node 48134 (IPIN) at (18,16) block=memory side=LEFT pin=memory.data[63] has no fanin.
+Error 543: in check_rr_graph: node 48375 (IPIN) at (18,19) block=memory side=BOTTOM pin=memory.addr1[12] has no fanin.
+Error 544: in check_rr_graph: node 48376 (IPIN) at (18,20) block=memory side=BOTTOM pin=memory.addr1[13] has no fanin.
+Error 545: in check_rr_graph: node 48377 (IPIN) at (18,21) block=memory side=BOTTOM pin=memory.addr1[14] has no fanin.
+Error 546: in check_rr_graph: node 48390 (IPIN) at (18,22) block=memory side=TOP pin=memory.addr2[12] has no fanin.
+Error 547: in check_rr_graph: node 48391 (IPIN) at (18,23) block=memory side=TOP pin=memory.addr2[13] has no fanin.
+Error 548: in check_rr_graph: node 48392 (IPIN) at (18,24) block=memory side=TOP pin=memory.addr2[14] has no fanin.
+Error 549: in check_rr_graph: node 48441 (IPIN) at (18,19) block=memory side=RIGHT pin=memory.data[48] has no fanin.
+Error 550: in check_rr_graph: node 48442 (IPIN) at (18,20) block=memory side=RIGHT pin=memory.data[49] has no fanin.
+Error 551: in check_rr_graph: node 48443 (IPIN) at (18,21) block=memory side=RIGHT pin=memory.data[50] has no fanin.
+Error 552: in check_rr_graph: node 48444 (IPIN) at (18,22) block=memory side=RIGHT pin=memory.data[51] has no fanin.
+Error 553: in check_rr_graph: node 48445 (IPIN) at (18,23) block=memory side=RIGHT pin=memory.data[52] has no fanin.
+Error 554: in check_rr_graph: node 48446 (IPIN) at (18,24) block=memory side=RIGHT pin=memory.data[53] has no fanin.
+Error 555: in check_rr_graph: node 48447 (IPIN) at (18,19) block=memory side=BOTTOM pin=memory.data[54] has no fanin.
+Error 556: in check_rr_graph: node 48448 (IPIN) at (18,20) block=memory side=BOTTOM pin=memory.data[55] has no fanin.
+Error 557: in check_rr_graph: node 48449 (IPIN) at (18,21) block=memory side=BOTTOM pin=memory.data[56] has no fanin.
+Error 558: in check_rr_graph: node 48450 (IPIN) at (18,22) block=memory side=BOTTOM pin=memory.data[57] has no fanin.
+Error 559: in check_rr_graph: node 48451 (IPIN) at (18,23) block=memory side=BOTTOM pin=memory.data[58] has no fanin.
+Error 560: in check_rr_graph: node 48452 (IPIN) at (18,24) block=memory side=BOTTOM pin=memory.data[59] has no fanin.
+Error 561: in check_rr_graph: node 48453 (IPIN) at (18,19) block=memory side=LEFT pin=memory.data[60] has no fanin.
+Error 562: in check_rr_graph: node 48454 (IPIN) at (18,20) block=memory side=LEFT pin=memory.data[61] has no fanin.
+Error 563: in check_rr_graph: node 48455 (IPIN) at (18,21) block=memory side=LEFT pin=memory.data[62] has no fanin.
+Error 564: in check_rr_graph: node 48456 (IPIN) at (18,22) block=memory side=LEFT pin=memory.data[63] has no fanin.
+Error 565: in check_rr_graph: node 48697 (IPIN) at (18,25) block=memory side=BOTTOM pin=memory.addr1[12] has no fanin.
+Error 566: in check_rr_graph: node 48698 (IPIN) at (18,26) block=memory side=BOTTOM pin=memory.addr1[13] has no fanin.
+Error 567: in check_rr_graph: node 48699 (IPIN) at (18,27) block=memory side=BOTTOM pin=memory.addr1[14] has no fanin.
+Error 568: in check_rr_graph: node 48712 (IPIN) at (18,28) block=memory side=TOP pin=memory.addr2[12] has no fanin.
+Error 569: in check_rr_graph: node 48713 (IPIN) at (18,29) block=memory side=TOP pin=memory.addr2[13] has no fanin.
+Error 570: in check_rr_graph: node 48714 (IPIN) at (18,30) block=memory side=TOP pin=memory.addr2[14] has no fanin.
+Error 571: in check_rr_graph: node 48763 (IPIN) at (18,25) block=memory side=RIGHT pin=memory.data[48] has no fanin.
+Error 572: in check_rr_graph: node 48764 (IPIN) at (18,26) block=memory side=RIGHT pin=memory.data[49] has no fanin.
+Error 573: in check_rr_graph: node 48765 (IPIN) at (18,27) block=memory side=RIGHT pin=memory.data[50] has no fanin.
+Error 574: in check_rr_graph: node 48766 (IPIN) at (18,28) block=memory side=RIGHT pin=memory.data[51] has no fanin.
+Error 575: in check_rr_graph: node 48767 (IPIN) at (18,29) block=memory side=RIGHT pin=memory.data[52] has no fanin.
+Error 576: in check_rr_graph: node 48768 (IPIN) at (18,30) block=memory side=RIGHT pin=memory.data[53] has no fanin.
+Error 577: in check_rr_graph: node 48769 (IPIN) at (18,25) block=memory side=BOTTOM pin=memory.data[54] has no fanin.
+Error 578: in check_rr_graph: node 48770 (IPIN) at (18,26) block=memory side=BOTTOM pin=memory.data[55] has no fanin.
+Error 579: in check_rr_graph: node 48771 (IPIN) at (18,27) block=memory side=BOTTOM pin=memory.data[56] has no fanin.
+Error 580: in check_rr_graph: node 48772 (IPIN) at (18,28) block=memory side=BOTTOM pin=memory.data[57] has no fanin.
+Error 581: in check_rr_graph: node 48773 (IPIN) at (18,29) block=memory side=BOTTOM pin=memory.data[58] has no fanin.
+Error 582: in check_rr_graph: node 48774 (IPIN) at (18,30) block=memory side=BOTTOM pin=memory.data[59] has no fanin.
+Error 583: in check_rr_graph: node 48775 (IPIN) at (18,25) block=memory side=LEFT pin=memory.data[60] has no fanin.
+Error 584: in check_rr_graph: node 48776 (IPIN) at (18,26) block=memory side=LEFT pin=memory.data[61] has no fanin.
+Error 585: in check_rr_graph: node 48777 (IPIN) at (18,27) block=memory side=LEFT pin=memory.data[62] has no fanin.
+Error 586: in check_rr_graph: node 48778 (IPIN) at (18,28) block=memory side=LEFT pin=memory.data[63] has no fanin.
+Error 587: in check_rr_graph: node 57753 (IPIN) at (22,4) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 588: in check_rr_graph: node 57755 (IPIN) at (22,2) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 589: in check_rr_graph: node 57756 (IPIN) at (22,3) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 590: in check_rr_graph: node 57757 (IPIN) at (22,4) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 591: in check_rr_graph: node 57759 (IPIN) at (22,2) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 592: in check_rr_graph: node 57760 (IPIN) at (22,3) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 593: in check_rr_graph: node 57761 (IPIN) at (22,4) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 594: in check_rr_graph: node 57789 (IPIN) at (22,4) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 595: in check_rr_graph: node 57791 (IPIN) at (22,2) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 596: in check_rr_graph: node 57792 (IPIN) at (22,3) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 597: in check_rr_graph: node 57793 (IPIN) at (22,4) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 598: in check_rr_graph: node 57795 (IPIN) at (22,2) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 599: in check_rr_graph: node 57796 (IPIN) at (22,3) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 600: in check_rr_graph: node 57797 (IPIN) at (22,4) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 601: in check_rr_graph: node 58041 (IPIN) at (22,8) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 602: in check_rr_graph: node 58042 (IPIN) at (22,5) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 603: in check_rr_graph: node 58043 (IPIN) at (22,6) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 604: in check_rr_graph: node 58044 (IPIN) at (22,7) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 605: in check_rr_graph: node 58045 (IPIN) at (22,8) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 606: in check_rr_graph: node 58046 (IPIN) at (22,5) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 607: in check_rr_graph: node 58047 (IPIN) at (22,6) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 608: in check_rr_graph: node 58048 (IPIN) at (22,7) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 609: in check_rr_graph: node 58049 (IPIN) at (22,8) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 610: in check_rr_graph: node 58077 (IPIN) at (22,8) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 611: in check_rr_graph: node 58078 (IPIN) at (22,5) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 612: in check_rr_graph: node 58079 (IPIN) at (22,6) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 613: in check_rr_graph: node 58080 (IPIN) at (22,7) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 614: in check_rr_graph: node 58081 (IPIN) at (22,8) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 615: in check_rr_graph: node 58082 (IPIN) at (22,5) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 616: in check_rr_graph: node 58083 (IPIN) at (22,6) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 617: in check_rr_graph: node 58084 (IPIN) at (22,7) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 618: in check_rr_graph: node 58085 (IPIN) at (22,8) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 619: in check_rr_graph: node 58329 (IPIN) at (22,12) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 620: in check_rr_graph: node 58330 (IPIN) at (22,9) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 621: in check_rr_graph: node 58331 (IPIN) at (22,10) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 622: in check_rr_graph: node 58332 (IPIN) at (22,11) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 623: in check_rr_graph: node 58333 (IPIN) at (22,12) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 624: in check_rr_graph: node 58334 (IPIN) at (22,9) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 625: in check_rr_graph: node 58335 (IPIN) at (22,10) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 626: in check_rr_graph: node 58336 (IPIN) at (22,11) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 627: in check_rr_graph: node 58337 (IPIN) at (22,12) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 628: in check_rr_graph: node 58365 (IPIN) at (22,12) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 629: in check_rr_graph: node 58366 (IPIN) at (22,9) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 630: in check_rr_graph: node 58367 (IPIN) at (22,10) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 631: in check_rr_graph: node 58368 (IPIN) at (22,11) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 632: in check_rr_graph: node 58369 (IPIN) at (22,12) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 633: in check_rr_graph: node 58370 (IPIN) at (22,9) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 634: in check_rr_graph: node 58371 (IPIN) at (22,10) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 635: in check_rr_graph: node 58372 (IPIN) at (22,11) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 636: in check_rr_graph: node 58373 (IPIN) at (22,12) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 637: in check_rr_graph: node 58617 (IPIN) at (22,16) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 638: in check_rr_graph: node 58618 (IPIN) at (22,13) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 639: in check_rr_graph: node 58619 (IPIN) at (22,14) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 640: in check_rr_graph: node 58620 (IPIN) at (22,15) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 641: in check_rr_graph: node 58621 (IPIN) at (22,16) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 642: in check_rr_graph: node 58622 (IPIN) at (22,13) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 643: in check_rr_graph: node 58623 (IPIN) at (22,14) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 644: in check_rr_graph: node 58624 (IPIN) at (22,15) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 645: in check_rr_graph: node 58625 (IPIN) at (22,16) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 646: in check_rr_graph: node 58653 (IPIN) at (22,16) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 647: in check_rr_graph: node 58654 (IPIN) at (22,13) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 648: in check_rr_graph: node 58655 (IPIN) at (22,14) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 649: in check_rr_graph: node 58656 (IPIN) at (22,15) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 650: in check_rr_graph: node 58657 (IPIN) at (22,16) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 651: in check_rr_graph: node 58658 (IPIN) at (22,13) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 652: in check_rr_graph: node 58659 (IPIN) at (22,14) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 653: in check_rr_graph: node 58660 (IPIN) at (22,15) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 654: in check_rr_graph: node 58661 (IPIN) at (22,16) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 655: in check_rr_graph: node 58905 (IPIN) at (22,20) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 656: in check_rr_graph: node 58906 (IPIN) at (22,17) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 657: in check_rr_graph: node 58907 (IPIN) at (22,18) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 658: in check_rr_graph: node 58908 (IPIN) at (22,19) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 659: in check_rr_graph: node 58909 (IPIN) at (22,20) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 660: in check_rr_graph: node 58910 (IPIN) at (22,17) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 661: in check_rr_graph: node 58911 (IPIN) at (22,18) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 662: in check_rr_graph: node 58912 (IPIN) at (22,19) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 663: in check_rr_graph: node 58913 (IPIN) at (22,20) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 664: in check_rr_graph: node 58941 (IPIN) at (22,20) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 665: in check_rr_graph: node 58942 (IPIN) at (22,17) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 666: in check_rr_graph: node 58943 (IPIN) at (22,18) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 667: in check_rr_graph: node 58944 (IPIN) at (22,19) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 668: in check_rr_graph: node 58945 (IPIN) at (22,20) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 669: in check_rr_graph: node 58946 (IPIN) at (22,17) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 670: in check_rr_graph: node 58947 (IPIN) at (22,18) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 671: in check_rr_graph: node 58948 (IPIN) at (22,19) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 672: in check_rr_graph: node 58949 (IPIN) at (22,20) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 673: in check_rr_graph: node 59193 (IPIN) at (22,24) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 674: in check_rr_graph: node 59194 (IPIN) at (22,21) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 675: in check_rr_graph: node 59195 (IPIN) at (22,22) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 676: in check_rr_graph: node 59196 (IPIN) at (22,23) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 677: in check_rr_graph: node 59197 (IPIN) at (22,24) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 678: in check_rr_graph: node 59198 (IPIN) at (22,21) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 679: in check_rr_graph: node 59199 (IPIN) at (22,22) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 680: in check_rr_graph: node 59200 (IPIN) at (22,23) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 681: in check_rr_graph: node 59201 (IPIN) at (22,24) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 682: in check_rr_graph: node 59229 (IPIN) at (22,24) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 683: in check_rr_graph: node 59230 (IPIN) at (22,21) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 684: in check_rr_graph: node 59231 (IPIN) at (22,22) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 685: in check_rr_graph: node 59232 (IPIN) at (22,23) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 686: in check_rr_graph: node 59233 (IPIN) at (22,24) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 687: in check_rr_graph: node 59234 (IPIN) at (22,21) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 688: in check_rr_graph: node 59235 (IPIN) at (22,22) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 689: in check_rr_graph: node 59236 (IPIN) at (22,23) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 690: in check_rr_graph: node 59237 (IPIN) at (22,24) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 691: in check_rr_graph: node 59481 (IPIN) at (22,28) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 692: in check_rr_graph: node 59482 (IPIN) at (22,25) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 693: in check_rr_graph: node 59483 (IPIN) at (22,26) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 694: in check_rr_graph: node 59484 (IPIN) at (22,27) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 695: in check_rr_graph: node 59485 (IPIN) at (22,28) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 696: in check_rr_graph: node 59486 (IPIN) at (22,25) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 697: in check_rr_graph: node 59487 (IPIN) at (22,26) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 698: in check_rr_graph: node 59488 (IPIN) at (22,27) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 699: in check_rr_graph: node 59489 (IPIN) at (22,28) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 700: in check_rr_graph: node 59517 (IPIN) at (22,28) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 701: in check_rr_graph: node 59518 (IPIN) at (22,25) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 702: in check_rr_graph: node 59519 (IPIN) at (22,26) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 703: in check_rr_graph: node 59520 (IPIN) at (22,27) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 704: in check_rr_graph: node 59521 (IPIN) at (22,28) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 705: in check_rr_graph: node 59522 (IPIN) at (22,25) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 706: in check_rr_graph: node 59523 (IPIN) at (22,26) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 707: in check_rr_graph: node 59524 (IPIN) at (22,27) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 708: in check_rr_graph: node 59525 (IPIN) at (22,28) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 709: in check_rr_graph: node 59770 (IPIN) at (22,29) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 710: in check_rr_graph: node 59771 (IPIN) at (22,30) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 711: in check_rr_graph: node 59772 (IPIN) at (22,31) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 712: in check_rr_graph: node 59774 (IPIN) at (22,29) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 713: in check_rr_graph: node 59775 (IPIN) at (22,30) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 714: in check_rr_graph: node 59776 (IPIN) at (22,31) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 715: in check_rr_graph: node 59806 (IPIN) at (22,29) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 716: in check_rr_graph: node 59807 (IPIN) at (22,30) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 717: in check_rr_graph: node 59808 (IPIN) at (22,31) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 718: in check_rr_graph: node 59810 (IPIN) at (22,29) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 719: in check_rr_graph: node 59811 (IPIN) at (22,30) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 720: in check_rr_graph: node 59812 (IPIN) at (22,31) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 721: in check_rr_graph: node 68796 (IPIN) at (26,2) block=memory side=BOTTOM pin=memory.addr1[13] has no fanin.
+Error 722: in check_rr_graph: node 68797 (IPIN) at (26,3) block=memory side=BOTTOM pin=memory.addr1[14] has no fanin.
+Error 723: in check_rr_graph: node 68810 (IPIN) at (26,4) block=memory side=TOP pin=memory.addr2[12] has no fanin.
+Error 724: in check_rr_graph: node 68811 (IPIN) at (26,5) block=memory side=TOP pin=memory.addr2[13] has no fanin.
+Error 725: in check_rr_graph: node 68812 (IPIN) at (26,6) block=memory side=TOP pin=memory.addr2[14] has no fanin.
+Error 726: in check_rr_graph: node 68862 (IPIN) at (26,2) block=memory side=RIGHT pin=memory.data[49] has no fanin.
+Error 727: in check_rr_graph: node 68863 (IPIN) at (26,3) block=memory side=RIGHT pin=memory.data[50] has no fanin.
+Error 728: in check_rr_graph: node 68864 (IPIN) at (26,4) block=memory side=RIGHT pin=memory.data[51] has no fanin.
+Error 729: in check_rr_graph: node 68865 (IPIN) at (26,5) block=memory side=RIGHT pin=memory.data[52] has no fanin.
+Error 730: in check_rr_graph: node 68866 (IPIN) at (26,6) block=memory side=RIGHT pin=memory.data[53] has no fanin.
+Error 731: in check_rr_graph: node 68868 (IPIN) at (26,2) block=memory side=BOTTOM pin=memory.data[55] has no fanin.
+Error 732: in check_rr_graph: node 68869 (IPIN) at (26,3) block=memory side=BOTTOM pin=memory.data[56] has no fanin.
+Error 733: in check_rr_graph: node 68870 (IPIN) at (26,4) block=memory side=BOTTOM pin=memory.data[57] has no fanin.
+Error 734: in check_rr_graph: node 68871 (IPIN) at (26,5) block=memory side=BOTTOM pin=memory.data[58] has no fanin.
+Error 735: in check_rr_graph: node 68872 (IPIN) at (26,6) block=memory side=BOTTOM pin=memory.data[59] has no fanin.
+Error 736: in check_rr_graph: node 68874 (IPIN) at (26,2) block=memory side=LEFT pin=memory.data[61] has no fanin.
+Error 737: in check_rr_graph: node 68875 (IPIN) at (26,3) block=memory side=LEFT pin=memory.data[62] has no fanin.
+Error 738: in check_rr_graph: node 68876 (IPIN) at (26,4) block=memory side=LEFT pin=memory.data[63] has no fanin.
+Error 739: in check_rr_graph: node 69117 (IPIN) at (26,7) block=memory side=BOTTOM pin=memory.addr1[12] has no fanin.
+Error 740: in check_rr_graph: node 69118 (IPIN) at (26,8) block=memory side=BOTTOM pin=memory.addr1[13] has no fanin.
+Error 741: in check_rr_graph: node 69119 (IPIN) at (26,9) block=memory side=BOTTOM pin=memory.addr1[14] has no fanin.
+Error 742: in check_rr_graph: node 69132 (IPIN) at (26,10) block=memory side=TOP pin=memory.addr2[12] has no fanin.
+Error 743: in check_rr_graph: node 69133 (IPIN) at (26,11) block=memory side=TOP pin=memory.addr2[13] has no fanin.
+Error 744: in check_rr_graph: node 69134 (IPIN) at (26,12) block=memory side=TOP pin=memory.addr2[14] has no fanin.
+Error 745: in check_rr_graph: node 69183 (IPIN) at (26,7) block=memory side=RIGHT pin=memory.data[48] has no fanin.
+Error 746: in check_rr_graph: node 69184 (IPIN) at (26,8) block=memory side=RIGHT pin=memory.data[49] has no fanin.
+Error 747: in check_rr_graph: node 69185 (IPIN) at (26,9) block=memory side=RIGHT pin=memory.data[50] has no fanin.
+Error 748: in check_rr_graph: node 69186 (IPIN) at (26,10) block=memory side=RIGHT pin=memory.data[51] has no fanin.
+Error 749: in check_rr_graph: node 69187 (IPIN) at (26,11) block=memory side=RIGHT pin=memory.data[52] has no fanin.
+Error 750: in check_rr_graph: node 69188 (IPIN) at (26,12) block=memory side=RIGHT pin=memory.data[53] has no fanin.
+Error 751: in check_rr_graph: node 69189 (IPIN) at (26,7) block=memory side=BOTTOM pin=memory.data[54] has no fanin.
+Error 752: in check_rr_graph: node 69190 (IPIN) at (26,8) block=memory side=BOTTOM pin=memory.data[55] has no fanin.
+Error 753: in check_rr_graph: node 69191 (IPIN) at (26,9) block=memory side=BOTTOM pin=memory.data[56] has no fanin.
+Error 754: in check_rr_graph: node 69192 (IPIN) at (26,10) block=memory side=BOTTOM pin=memory.data[57] has no fanin.
+Error 755: in check_rr_graph: node 69193 (IPIN) at (26,11) block=memory side=BOTTOM pin=memory.data[58] has no fanin.
+Error 756: in check_rr_graph: node 69194 (IPIN) at (26,12) block=memory side=BOTTOM pin=memory.data[59] has no fanin.
+Error 757: in check_rr_graph: node 69195 (IPIN) at (26,7) block=memory side=LEFT pin=memory.data[60] has no fanin.
+Error 758: in check_rr_graph: node 69196 (IPIN) at (26,8) block=memory side=LEFT pin=memory.data[61] has no fanin.
+Error 759: in check_rr_graph: node 69197 (IPIN) at (26,9) block=memory side=LEFT pin=memory.data[62] has no fanin.
+Error 760: in check_rr_graph: node 69198 (IPIN) at (26,10) block=memory side=LEFT pin=memory.data[63] has no fanin.
+Error 761: in check_rr_graph: node 69439 (IPIN) at (26,13) block=memory side=BOTTOM pin=memory.addr1[12] has no fanin.
+Error 762: in check_rr_graph: node 69440 (IPIN) at (26,14) block=memory side=BOTTOM pin=memory.addr1[13] has no fanin.
+Error 763: in check_rr_graph: node 69441 (IPIN) at (26,15) block=memory side=BOTTOM pin=memory.addr1[14] has no fanin.
+Error 764: in check_rr_graph: node 69454 (IPIN) at (26,16) block=memory side=TOP pin=memory.addr2[12] has no fanin.
+Error 765: in check_rr_graph: node 69455 (IPIN) at (26,17) block=memory side=TOP pin=memory.addr2[13] has no fanin.
+Error 766: in check_rr_graph: node 69456 (IPIN) at (26,18) block=memory side=TOP pin=memory.addr2[14] has no fanin.
+Error 767: in check_rr_graph: node 69505 (IPIN) at (26,13) block=memory side=RIGHT pin=memory.data[48] has no fanin.
+Error 768: in check_rr_graph: node 69506 (IPIN) at (26,14) block=memory side=RIGHT pin=memory.data[49] has no fanin.
+Error 769: in check_rr_graph: node 69507 (IPIN) at (26,15) block=memory side=RIGHT pin=memory.data[50] has no fanin.
+Error 770: in check_rr_graph: node 69508 (IPIN) at (26,16) block=memory side=RIGHT pin=memory.data[51] has no fanin.
+Error 771: in check_rr_graph: node 69509 (IPIN) at (26,17) block=memory side=RIGHT pin=memory.data[52] has no fanin.
+Error 772: in check_rr_graph: node 69510 (IPIN) at (26,18) block=memory side=RIGHT pin=memory.data[53] has no fanin.
+Error 773: in check_rr_graph: node 69511 (IPIN) at (26,13) block=memory side=BOTTOM pin=memory.data[54] has no fanin.
+Error 774: in check_rr_graph: node 69512 (IPIN) at (26,14) block=memory side=BOTTOM pin=memory.data[55] has no fanin.
+Error 775: in check_rr_graph: node 69513 (IPIN) at (26,15) block=memory side=BOTTOM pin=memory.data[56] has no fanin.
+Error 776: in check_rr_graph: node 69514 (IPIN) at (26,16) block=memory side=BOTTOM pin=memory.data[57] has no fanin.
+Error 777: in check_rr_graph: node 69515 (IPIN) at (26,17) block=memory side=BOTTOM pin=memory.data[58] has no fanin.
+Error 778: in check_rr_graph: node 69516 (IPIN) at (26,18) block=memory side=BOTTOM pin=memory.data[59] has no fanin.
+Error 779: in check_rr_graph: node 69517 (IPIN) at (26,13) block=memory side=LEFT pin=memory.data[60] has no fanin.
+Error 780: in check_rr_graph: node 69518 (IPIN) at (26,14) block=memory side=LEFT pin=memory.data[61] has no fanin.
+Error 781: in check_rr_graph: node 69519 (IPIN) at (26,15) block=memory side=LEFT pin=memory.data[62] has no fanin.
+Error 782: in check_rr_graph: node 69520 (IPIN) at (26,16) block=memory side=LEFT pin=memory.data[63] has no fanin.
+Error 783: in check_rr_graph: node 69761 (IPIN) at (26,19) block=memory side=BOTTOM pin=memory.addr1[12] has no fanin.
+Error 784: in check_rr_graph: node 69762 (IPIN) at (26,20) block=memory side=BOTTOM pin=memory.addr1[13] has no fanin.
+Error 785: in check_rr_graph: node 69763 (IPIN) at (26,21) block=memory side=BOTTOM pin=memory.addr1[14] has no fanin.
+Error 786: in check_rr_graph: node 69776 (IPIN) at (26,22) block=memory side=TOP pin=memory.addr2[12] has no fanin.
+Error 787: in check_rr_graph: node 69777 (IPIN) at (26,23) block=memory side=TOP pin=memory.addr2[13] has no fanin.
+Error 788: in check_rr_graph: node 69778 (IPIN) at (26,24) block=memory side=TOP pin=memory.addr2[14] has no fanin.
+Error 789: in check_rr_graph: node 69827 (IPIN) at (26,19) block=memory side=RIGHT pin=memory.data[48] has no fanin.
+Error 790: in check_rr_graph: node 69828 (IPIN) at (26,20) block=memory side=RIGHT pin=memory.data[49] has no fanin.
+Error 791: in check_rr_graph: node 69829 (IPIN) at (26,21) block=memory side=RIGHT pin=memory.data[50] has no fanin.
+Error 792: in check_rr_graph: node 69830 (IPIN) at (26,22) block=memory side=RIGHT pin=memory.data[51] has no fanin.
+Error 793: in check_rr_graph: node 69831 (IPIN) at (26,23) block=memory side=RIGHT pin=memory.data[52] has no fanin.
+Error 794: in check_rr_graph: node 69832 (IPIN) at (26,24) block=memory side=RIGHT pin=memory.data[53] has no fanin.
+Error 795: in check_rr_graph: node 69833 (IPIN) at (26,19) block=memory side=BOTTOM pin=memory.data[54] has no fanin.
+Error 796: in check_rr_graph: node 69834 (IPIN) at (26,20) block=memory side=BOTTOM pin=memory.data[55] has no fanin.
+Error 797: in check_rr_graph: node 69835 (IPIN) at (26,21) block=memory side=BOTTOM pin=memory.data[56] has no fanin.
+Error 798: in check_rr_graph: node 69836 (IPIN) at (26,22) block=memory side=BOTTOM pin=memory.data[57] has no fanin.
+Error 799: in check_rr_graph: node 69837 (IPIN) at (26,23) block=memory side=BOTTOM pin=memory.data[58] has no fanin.
+Error 800: in check_rr_graph: node 69838 (IPIN) at (26,24) block=memory side=BOTTOM pin=memory.data[59] has no fanin.
+Error 801: in check_rr_graph: node 69839 (IPIN) at (26,19) block=memory side=LEFT pin=memory.data[60] has no fanin.
+Error 802: in check_rr_graph: node 69840 (IPIN) at (26,20) block=memory side=LEFT pin=memory.data[61] has no fanin.
+Error 803: in check_rr_graph: node 69841 (IPIN) at (26,21) block=memory side=LEFT pin=memory.data[62] has no fanin.
+Error 804: in check_rr_graph: node 69842 (IPIN) at (26,22) block=memory side=LEFT pin=memory.data[63] has no fanin.
+Error 805: in check_rr_graph: node 70083 (IPIN) at (26,25) block=memory side=BOTTOM pin=memory.addr1[12] has no fanin.
+Error 806: in check_rr_graph: node 70084 (IPIN) at (26,26) block=memory side=BOTTOM pin=memory.addr1[13] has no fanin.
+Error 807: in check_rr_graph: node 70085 (IPIN) at (26,27) block=memory side=BOTTOM pin=memory.addr1[14] has no fanin.
+Error 808: in check_rr_graph: node 70098 (IPIN) at (26,28) block=memory side=TOP pin=memory.addr2[12] has no fanin.
+Error 809: in check_rr_graph: node 70099 (IPIN) at (26,29) block=memory side=TOP pin=memory.addr2[13] has no fanin.
+Error 810: in check_rr_graph: node 70100 (IPIN) at (26,30) block=memory side=TOP pin=memory.addr2[14] has no fanin.
+Error 811: in check_rr_graph: node 70149 (IPIN) at (26,25) block=memory side=RIGHT pin=memory.data[48] has no fanin.
+Error 812: in check_rr_graph: node 70150 (IPIN) at (26,26) block=memory side=RIGHT pin=memory.data[49] has no fanin.
+Error 813: in check_rr_graph: node 70151 (IPIN) at (26,27) block=memory side=RIGHT pin=memory.data[50] has no fanin.
+Error 814: in check_rr_graph: node 70152 (IPIN) at (26,28) block=memory side=RIGHT pin=memory.data[51] has no fanin.
+Error 815: in check_rr_graph: node 70153 (IPIN) at (26,29) block=memory side=RIGHT pin=memory.data[52] has no fanin.
+Error 816: in check_rr_graph: node 70154 (IPIN) at (26,30) block=memory side=RIGHT pin=memory.data[53] has no fanin.
+Error 817: in check_rr_graph: node 70155 (IPIN) at (26,25) block=memory side=BOTTOM pin=memory.data[54] has no fanin.
+Error 818: in check_rr_graph: node 70156 (IPIN) at (26,26) block=memory side=BOTTOM pin=memory.data[55] has no fanin.
+Error 819: in check_rr_graph: node 70157 (IPIN) at (26,27) block=memory side=BOTTOM pin=memory.data[56] has no fanin.
+Error 820: in check_rr_graph: node 70158 (IPIN) at (26,28) block=memory side=BOTTOM pin=memory.data[57] has no fanin.
+Error 821: in check_rr_graph: node 70159 (IPIN) at (26,29) block=memory side=BOTTOM pin=memory.data[58] has no fanin.
+Error 822: in check_rr_graph: node 70160 (IPIN) at (26,30) block=memory side=BOTTOM pin=memory.data[59] has no fanin.
+Error 823: in check_rr_graph: node 70161 (IPIN) at (26,25) block=memory side=LEFT pin=memory.data[60] has no fanin.
+Error 824: in check_rr_graph: node 70162 (IPIN) at (26,26) block=memory side=LEFT pin=memory.data[61] has no fanin.
+Error 825: in check_rr_graph: node 70163 (IPIN) at (26,27) block=memory side=LEFT pin=memory.data[62] has no fanin.
+Error 826: in check_rr_graph: node 70164 (IPIN) at (26,28) block=memory side=LEFT pin=memory.data[63] has no fanin.
+Error 827: in check_rr_graph: node 79139 (IPIN) at (30,4) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 828: in check_rr_graph: node 79141 (IPIN) at (30,2) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 829: in check_rr_graph: node 79142 (IPIN) at (30,3) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 830: in check_rr_graph: node 79143 (IPIN) at (30,4) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 831: in check_rr_graph: node 79145 (IPIN) at (30,2) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 832: in check_rr_graph: node 79146 (IPIN) at (30,3) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 833: in check_rr_graph: node 79147 (IPIN) at (30,4) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 834: in check_rr_graph: node 79175 (IPIN) at (30,4) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 835: in check_rr_graph: node 79177 (IPIN) at (30,2) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 836: in check_rr_graph: node 79178 (IPIN) at (30,3) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 837: in check_rr_graph: node 79179 (IPIN) at (30,4) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 838: in check_rr_graph: node 79181 (IPIN) at (30,2) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 839: in check_rr_graph: node 79182 (IPIN) at (30,3) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 840: in check_rr_graph: node 79183 (IPIN) at (30,4) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 841: in check_rr_graph: node 79427 (IPIN) at (30,8) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 842: in check_rr_graph: node 79428 (IPIN) at (30,5) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 843: in check_rr_graph: node 79429 (IPIN) at (30,6) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 844: in check_rr_graph: node 79430 (IPIN) at (30,7) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 845: in check_rr_graph: node 79431 (IPIN) at (30,8) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 846: in check_rr_graph: node 79432 (IPIN) at (30,5) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 847: in check_rr_graph: node 79433 (IPIN) at (30,6) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 848: in check_rr_graph: node 79434 (IPIN) at (30,7) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 849: in check_rr_graph: node 79435 (IPIN) at (30,8) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 850: in check_rr_graph: node 79463 (IPIN) at (30,8) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 851: in check_rr_graph: node 79464 (IPIN) at (30,5) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 852: in check_rr_graph: node 79465 (IPIN) at (30,6) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 853: in check_rr_graph: node 79466 (IPIN) at (30,7) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 854: in check_rr_graph: node 79467 (IPIN) at (30,8) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 855: in check_rr_graph: node 79468 (IPIN) at (30,5) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 856: in check_rr_graph: node 79469 (IPIN) at (30,6) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 857: in check_rr_graph: node 79470 (IPIN) at (30,7) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 858: in check_rr_graph: node 79471 (IPIN) at (30,8) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 859: in check_rr_graph: node 79715 (IPIN) at (30,12) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 860: in check_rr_graph: node 79716 (IPIN) at (30,9) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 861: in check_rr_graph: node 79717 (IPIN) at (30,10) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 862: in check_rr_graph: node 79718 (IPIN) at (30,11) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 863: in check_rr_graph: node 79719 (IPIN) at (30,12) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 864: in check_rr_graph: node 79720 (IPIN) at (30,9) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 865: in check_rr_graph: node 79721 (IPIN) at (30,10) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 866: in check_rr_graph: node 79722 (IPIN) at (30,11) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 867: in check_rr_graph: node 79723 (IPIN) at (30,12) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 868: in check_rr_graph: node 79751 (IPIN) at (30,12) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 869: in check_rr_graph: node 79752 (IPIN) at (30,9) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 870: in check_rr_graph: node 79753 (IPIN) at (30,10) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 871: in check_rr_graph: node 79754 (IPIN) at (30,11) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 872: in check_rr_graph: node 79755 (IPIN) at (30,12) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 873: in check_rr_graph: node 79756 (IPIN) at (30,9) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 874: in check_rr_graph: node 79757 (IPIN) at (30,10) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 875: in check_rr_graph: node 79758 (IPIN) at (30,11) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 876: in check_rr_graph: node 79759 (IPIN) at (30,12) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 877: in check_rr_graph: node 80003 (IPIN) at (30,16) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 878: in check_rr_graph: node 80004 (IPIN) at (30,13) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 879: in check_rr_graph: node 80005 (IPIN) at (30,14) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 880: in check_rr_graph: node 80006 (IPIN) at (30,15) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 881: in check_rr_graph: node 80007 (IPIN) at (30,16) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 882: in check_rr_graph: node 80008 (IPIN) at (30,13) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 883: in check_rr_graph: node 80009 (IPIN) at (30,14) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 884: in check_rr_graph: node 80010 (IPIN) at (30,15) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 885: in check_rr_graph: node 80011 (IPIN) at (30,16) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 886: in check_rr_graph: node 80039 (IPIN) at (30,16) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 887: in check_rr_graph: node 80040 (IPIN) at (30,13) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 888: in check_rr_graph: node 80041 (IPIN) at (30,14) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 889: in check_rr_graph: node 80042 (IPIN) at (30,15) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 890: in check_rr_graph: node 80043 (IPIN) at (30,16) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 891: in check_rr_graph: node 80044 (IPIN) at (30,13) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 892: in check_rr_graph: node 80045 (IPIN) at (30,14) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 893: in check_rr_graph: node 80046 (IPIN) at (30,15) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 894: in check_rr_graph: node 80047 (IPIN) at (30,16) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 895: in check_rr_graph: node 80291 (IPIN) at (30,20) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 896: in check_rr_graph: node 80292 (IPIN) at (30,17) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 897: in check_rr_graph: node 80293 (IPIN) at (30,18) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 898: in check_rr_graph: node 80294 (IPIN) at (30,19) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 899: in check_rr_graph: node 80295 (IPIN) at (30,20) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 900: in check_rr_graph: node 80296 (IPIN) at (30,17) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 901: in check_rr_graph: node 80297 (IPIN) at (30,18) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 902: in check_rr_graph: node 80298 (IPIN) at (30,19) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 903: in check_rr_graph: node 80299 (IPIN) at (30,20) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 904: in check_rr_graph: node 80327 (IPIN) at (30,20) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 905: in check_rr_graph: node 80328 (IPIN) at (30,17) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 906: in check_rr_graph: node 80329 (IPIN) at (30,18) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 907: in check_rr_graph: node 80330 (IPIN) at (30,19) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 908: in check_rr_graph: node 80331 (IPIN) at (30,20) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 909: in check_rr_graph: node 80332 (IPIN) at (30,17) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 910: in check_rr_graph: node 80333 (IPIN) at (30,18) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 911: in check_rr_graph: node 80334 (IPIN) at (30,19) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 912: in check_rr_graph: node 80335 (IPIN) at (30,20) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 913: in check_rr_graph: node 80579 (IPIN) at (30,24) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 914: in check_rr_graph: node 80580 (IPIN) at (30,21) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 915: in check_rr_graph: node 80581 (IPIN) at (30,22) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 916: in check_rr_graph: node 80582 (IPIN) at (30,23) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 917: in check_rr_graph: node 80583 (IPIN) at (30,24) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 918: in check_rr_graph: node 80584 (IPIN) at (30,21) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 919: in check_rr_graph: node 80585 (IPIN) at (30,22) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 920: in check_rr_graph: node 80586 (IPIN) at (30,23) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 921: in check_rr_graph: node 80587 (IPIN) at (30,24) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 922: in check_rr_graph: node 80615 (IPIN) at (30,24) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 923: in check_rr_graph: node 80616 (IPIN) at (30,21) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 924: in check_rr_graph: node 80617 (IPIN) at (30,22) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 925: in check_rr_graph: node 80618 (IPIN) at (30,23) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 926: in check_rr_graph: node 80619 (IPIN) at (30,24) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 927: in check_rr_graph: node 80620 (IPIN) at (30,21) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 928: in check_rr_graph: node 80621 (IPIN) at (30,22) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 929: in check_rr_graph: node 80622 (IPIN) at (30,23) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 930: in check_rr_graph: node 80623 (IPIN) at (30,24) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 931: in check_rr_graph: node 80867 (IPIN) at (30,28) block=mult_36 side=BOTTOM pin=mult_36.a[27] has no fanin.
+Error 932: in check_rr_graph: node 80868 (IPIN) at (30,25) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 933: in check_rr_graph: node 80869 (IPIN) at (30,26) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 934: in check_rr_graph: node 80870 (IPIN) at (30,27) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 935: in check_rr_graph: node 80871 (IPIN) at (30,28) block=mult_36 side=LEFT pin=mult_36.a[31] has no fanin.
+Error 936: in check_rr_graph: node 80872 (IPIN) at (30,25) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 937: in check_rr_graph: node 80873 (IPIN) at (30,26) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 938: in check_rr_graph: node 80874 (IPIN) at (30,27) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 939: in check_rr_graph: node 80875 (IPIN) at (30,28) block=mult_36 side=TOP pin=mult_36.a[35] has no fanin.
+Error 940: in check_rr_graph: node 80903 (IPIN) at (30,28) block=mult_36 side=LEFT pin=mult_36.b[27] has no fanin.
+Error 941: in check_rr_graph: node 80904 (IPIN) at (30,25) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 942: in check_rr_graph: node 80905 (IPIN) at (30,26) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 943: in check_rr_graph: node 80906 (IPIN) at (30,27) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 944: in check_rr_graph: node 80907 (IPIN) at (30,28) block=mult_36 side=TOP pin=mult_36.b[31] has no fanin.
+Error 945: in check_rr_graph: node 80908 (IPIN) at (30,25) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 946: in check_rr_graph: node 80909 (IPIN) at (30,26) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 947: in check_rr_graph: node 80910 (IPIN) at (30,27) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+Error 948: in check_rr_graph: node 80911 (IPIN) at (30,28) block=mult_36 side=RIGHT pin=mult_36.b[35] has no fanin.
+Error 949: in check_rr_graph: node 81156 (IPIN) at (30,29) block=mult_36 side=LEFT pin=mult_36.a[28] has no fanin.
+Error 950: in check_rr_graph: node 81157 (IPIN) at (30,30) block=mult_36 side=LEFT pin=mult_36.a[29] has no fanin.
+Error 951: in check_rr_graph: node 81158 (IPIN) at (30,31) block=mult_36 side=LEFT pin=mult_36.a[30] has no fanin.
+Error 952: in check_rr_graph: node 81160 (IPIN) at (30,29) block=mult_36 side=TOP pin=mult_36.a[32] has no fanin.
+Error 953: in check_rr_graph: node 81161 (IPIN) at (30,30) block=mult_36 side=TOP pin=mult_36.a[33] has no fanin.
+Error 954: in check_rr_graph: node 81162 (IPIN) at (30,31) block=mult_36 side=TOP pin=mult_36.a[34] has no fanin.
+Error 955: in check_rr_graph: node 81192 (IPIN) at (30,29) block=mult_36 side=TOP pin=mult_36.b[28] has no fanin.
+Error 956: in check_rr_graph: node 81193 (IPIN) at (30,30) block=mult_36 side=TOP pin=mult_36.b[29] has no fanin.
+Error 957: in check_rr_graph: node 81194 (IPIN) at (30,31) block=mult_36 side=TOP pin=mult_36.b[30] has no fanin.
+Error 958: in check_rr_graph: node 81196 (IPIN) at (30,29) block=mult_36 side=RIGHT pin=mult_36.b[32] has no fanin.
+Error 959: in check_rr_graph: node 81197 (IPIN) at (30,30) block=mult_36 side=RIGHT pin=mult_36.b[33] has no fanin.
+Error 960: in check_rr_graph: node 81198 (IPIN) at (30,31) block=mult_36 side=RIGHT pin=mult_36.b[34] has no fanin.
+## Build routing resource graph took 0.20 seconds (max_rss 203.9 MiB, delta_rss +0.0 MiB)
+  RR Graph Nodes: 94388
+  RR Graph Edges: 181140
+# Create Device took 0.24 seconds (max_rss 203.9 MiB, delta_rss +0.0 MiB)
+
+# Computing router lookahead map
+## Computing wire lookahead
+## Computing wire lookahead took 0.04 seconds (max_rss 203.9 MiB, delta_rss +0.0 MiB)
+## Computing src/opin lookahead
+Warning 22: Found no more sample locations for SOURCE in io
+Warning 23: Found no more sample locations for OPIN in io
+Warning 24: Found no more sample locations for SOURCE in clb
+Warning 25: Found no more sample locations for OPIN in clb
+Warning 26: Found no more sample locations for SOURCE in mult_36
+Warning 27: Found no more sample locations for OPIN in mult_36
+Warning 28: Found no more sample locations for SOURCE in memory
+Warning 29: Found no more sample locations for OPIN in memory
+## Computing src/opin lookahead took 0.01 seconds (max_rss 203.9 MiB, delta_rss +0.0 MiB)
+# Computing router lookahead map took 0.05 seconds (max_rss 203.9 MiB, delta_rss +0.0 MiB)
+# Computing placement delta delay look-up
+RR graph channel widths unchanged, skipping RR graph rebuild
+Serial Connection Router is being destroyed. Time spent on path search: 0.000 seconds.
+# Computing placement delta delay look-up took 0.00 seconds (max_rss 203.9 MiB, delta_rss +0.0 MiB)
+
+Bounding box mode is Cube
+
+# Compressed grid construction
+# Compressed grid construction took 0.00 seconds (max_rss 203.9 MiB, delta_rss +0.0 MiB)
+# Placement
+## Initial Placement
+Initial placement iteration 0 has finished successfully
+## Initial Placement took 0.00 seconds (max_rss 203.9 MiB, delta_rss +0.0 MiB)
+Using simple RL 'Softmax agent' for choosing move and block types
+
+BB estimate of min-dist (placement) wire length: 142019
+
+Completed placement consistency check successfully.
+Initial placement cost: 1 bb_cost: 14201.9 td_cost: 1.7303e-06
+Initial placement estimated Critical Path Delay (CPD): 8.37173 ns
+Initial placement estimated setup Total Negative Slack (sTNS): -18545 ns
+Initial placement estimated setup Worst Negative Slack (sWNS): -8.37173 ns
+
+Initial placement estimated setup slack histogram:
+[ -8.4e-09: -7.6e-09)    7 (  0.1%) |
+[ -7.6e-09: -6.8e-09)    3 (  0.0%) |
+[ -6.8e-09:   -6e-09)    4 (  0.0%) |
+[   -6e-09: -5.2e-09)   51 (  0.4%) |
+[ -5.2e-09: -4.4e-09)   68 (  0.6%) |*
+[ -4.4e-09: -3.6e-09)   79 (  0.7%) |*
+[ -3.6e-09: -2.9e-09)  346 (  3.0%) |***
+[ -2.9e-09: -2.1e-09) 1895 ( 16.2%) |******************
+[ -2.1e-09: -1.3e-09) 4791 ( 41.0%) |**********************************************
+[ -1.3e-09:   -5e-10) 4435 ( 38.0%) |*******************************************
+Placement contains 0 placement macros involving 0 blocks (average macro size -nan)
+
+Moves per temperature: 5586
+Warning 30: Starting t: 478 of 1087 configurations accepted.
+
+---- ------ ------- ------- ---------- ---------- ------- ---------- -------- ------- ------- ------ -------- --------- ------
+Tnum   Time       T Av Cost Av BB Cost Av TD Cost     CPD       sTNS     sWNS Ac Rate Std Dev  R lim Crit Exp Tot Moves  Alpha
+      (sec)                                          (ns)       (ns)     (ns)                                                 
+---- ------ ------- ------- ---------- ---------- ------- ---------- -------- ------- ------- ------ -------- --------- ------
+   1    0.1 8.6e-04   0.898   10530.62 1.3302e-06   7.504  -1.74e+04   -7.504   0.716  0.0395   33.0     1.00      5586  1.000
+   2    0.1 8.2e-04   0.935    9796.11 1.5711e-06   5.726   -1.7e+04   -5.726   0.695  0.0276   33.0     1.00     11172  0.950
+   3    0.1 7.8e-04   0.975    9403.04 1.8067e-06   4.678  -1.66e+04   -4.678   0.662  0.0101   33.0     1.00     16758  0.950
+   4    0.1 7.4e-04   0.952    9252.05 1.4468e-06   5.815  -1.66e+04   -5.815   0.662  0.0215   33.0     1.00     22344  0.950
+   5    0.1 7.0e-04   0.948    8902.42 1.4003e-06   5.747  -1.68e+04   -5.747   0.642  0.0182   33.0     1.00     27930  0.950
+   6    0.1 6.7e-04   0.972    8784.72 1.671e-06    4.739  -1.65e+04   -4.739   0.630  0.0111   33.0     1.00     33516  0.950
+   7    0.1 6.3e-04   0.956    8490.88 1.6013e-06   4.811  -1.65e+04   -4.811   0.621  0.0151   33.0     1.00     39102  0.950
+   8    0.1 6.0e-04   0.953    8129.35 1.6741e-06   4.383  -1.61e+04   -4.383   0.619  0.0221   33.0     1.00     44688  0.950
+   9    0.1 5.7e-04   0.964    7676.20 1.4378e-06   4.814  -1.58e+04   -4.814   0.589  0.0168   33.0     1.00     50274  0.950
+  10    0.1 5.4e-04   0.969    7513.21 1.5065e-06   4.469  -1.56e+04   -4.469   0.589  0.0171   33.0     1.00     55860  0.950
+  11    0.1 5.2e-04   0.985    7284.84 1.4252e-06   4.572  -1.54e+04   -4.572   0.566  0.0122   33.0     1.00     61446  0.950
+  12    0.1 4.9e-04   0.969    7099.30 1.3783e-06   4.672  -1.54e+04   -4.672   0.565  0.0099   33.0     1.00     67032  0.950
+  13    0.1 4.6e-04   0.953    6778.99 1.2926e-06   4.801  -1.53e+04   -4.801   0.547  0.0225   33.0     1.00     72618  0.950
+  14    0.1 4.4e-04   0.967    6430.13 1.3316e-06   4.454  -1.51e+04   -4.454   0.533  0.0119   33.0     1.00     78204  0.950
+  15    0.1 4.2e-04   0.982    6336.71 1.3545e-06   4.268  -1.49e+04   -4.268   0.513  0.0081   33.0     1.00     83790  0.950
+  16    0.1 4.0e-04   0.978    6258.05 1.2991e-06   4.406  -1.49e+04   -4.406   0.485  0.0094   33.0     1.00     89376  0.950
+  17    0.1 3.8e-04   0.976    6090.88 1.3111e-06   4.266  -1.47e+04   -4.266   0.477  0.0099   33.0     1.00     94962  0.950
+  18    0.1 3.6e-04   0.981    6043.01 1.3029e-06   4.247  -1.48e+04   -4.247   0.475  0.0080   33.0     1.00    100548  0.950
+  19    0.1 3.4e-04   0.978    5924.44 1.2872e-06   4.231  -1.47e+04   -4.231   0.467  0.0073   33.0     1.00    106134  0.950
+  20    0.1 3.2e-04   0.973    5808.00 1.3846e-06   3.873  -1.47e+04   -3.873   0.456  0.0095   33.0     1.00    111720  0.950
+  21    0.1 3.1e-04   0.973    5708.04 1.3246e-06   3.996  -1.46e+04   -3.996   0.427  0.0117   33.0     1.00    117306  0.950
+  22    0.1 2.9e-04   0.974    5568.34 1.2141e-06   3.891  -1.46e+04   -3.891   0.421  0.0109   32.6     1.09    122892  0.950
+  23    0.1 2.8e-04   0.990    5521.31 1.0087e-06   4.026  -1.44e+04   -4.026   0.425  0.0050   32.0     1.22    128478  0.950
+  24    0.1 2.6e-04   0.973    5476.85 8.8099e-07   4.115  -1.45e+04   -4.115   0.400  0.0141   31.5     1.33    134064  0.950
+  25    0.1 2.5e-04   0.984    5383.58 6.8063e-07   4.016  -1.43e+04   -4.016   0.398  0.0091   30.2     1.61    139650  0.950
+  26    0.1 2.4e-04   0.980    5302.34 5.1923e-07   3.984  -1.44e+04   -3.984   0.385  0.0096   29.0     1.88    145236  0.950
+  27    0.1 2.3e-04   0.990    5227.10 4.248e-07    3.769  -1.42e+04   -3.769   0.376  0.0045   27.4     2.23    150822  0.950
+  28    0.1 2.2e-04   0.969    5157.80 3.1212e-07   3.759  -1.43e+04   -3.759   0.372  0.0144   25.6     2.62    156408  0.950
+  29    0.1 2.0e-04   0.976    5057.69 2.4101e-07   3.672  -1.43e+04   -3.672   0.367  0.0115   23.9     3.00    161994  0.950
+  30    0.1 1.9e-04   0.976    4963.16 1.9466e-07   3.603  -1.42e+04   -3.603   0.347  0.0131   22.1     3.38    167580  0.950
+  31    0.1 1.8e-04   0.985    4917.24 1.4253e-07   3.603  -1.42e+04   -3.603   0.348  0.0043   20.1     3.83    173166  0.950
+  32    0.1 1.8e-04   0.977    4928.02 1.2102e-07   3.559  -1.43e+04   -3.559   0.342  0.0109   18.2     4.23    178752  0.950
+  33    0.1 1.7e-04   0.982    4845.65 1.0336e-07   3.487  -1.43e+04   -3.487   0.336  0.0096   16.4     4.62    184338  0.950
+  34    0.1 1.6e-04   0.981    4831.22 8.9425e-08   3.487  -1.43e+04   -3.487   0.332  0.0060   14.7     5.00    189924  0.950
+  35    0.1 1.5e-04   0.982    4783.74 6.2616e-08   3.609  -1.43e+04   -3.609   0.338  0.0083   13.1     5.34    195510  0.950
+  36    0.1 1.4e-04   0.983    4719.59 5.8328e-08   3.609  -1.44e+04   -3.609   0.315  0.0067   11.8     5.64    201096  0.950
+  37    0.1 1.4e-04   0.980    4677.14 4.9942e-08   3.603  -1.42e+04   -3.603   0.314  0.0087   10.3     5.96    206682  0.950
+  38    0.1 1.3e-04   0.983    4633.79 4.483e-08    3.603  -1.45e+04   -3.603   0.315  0.0079    9.0     6.24    212268  0.950
+  39    0.1 1.2e-04   0.984    4537.58 4.5532e-08   3.531  -1.41e+04   -3.531   0.308  0.0062    7.9     6.49    217854  0.950
+  40    0.1 1.2e-04   0.976    4519.75 4.3198e-08   3.531  -1.41e+04   -3.531   0.294  0.0061    6.9     6.72    223440  0.950
+  41    0.1 1.1e-04   0.986    4447.52 4.2189e-08   3.531  -1.44e+04   -3.531   0.304  0.0065    5.9     6.94    229026  0.950
+  42    0.1 1.1e-04   0.989    4399.56 3.6712e-08   3.531  -1.41e+04   -3.531   0.296  0.0053    5.1     7.11    234612  0.950
+  43    0.1 1.0e-04   0.986    4310.02 3.8224e-08   3.531  -1.45e+04   -3.531   0.363  0.0064    4.3     7.27    240198  0.950
+  44    0.1 9.5e-05   0.990    4241.27 3.5089e-08   3.531  -1.41e+04   -3.531   0.357  0.0048    4.0     7.34    245784  0.950
+  45    0.1 9.0e-05   0.991    4201.86 3.383e-08    3.531  -1.43e+04   -3.531   0.342  0.0040    3.7     7.42    251370  0.950
+  46    0.1 8.6e-05   0.988    4145.61 3.3154e-08   3.531  -1.39e+04   -3.531   0.334  0.0042    3.3     7.49    256956  0.950
+  47    0.1 8.1e-05   0.990    4079.38 3.2407e-08   3.531  -1.43e+04   -3.531   0.366  0.0042    3.0     7.57    262542  0.950
+  48    0.1 7.7e-05   0.994    4051.08 3.2235e-08   3.531  -1.41e+04   -3.531   0.367  0.0031    2.7     7.62    268128  0.950
+  49    0.1 7.3e-05   0.995    4023.54 3.1217e-08   3.531  -1.42e+04   -3.531   0.358  0.0023    2.5     7.66    273714  0.950
+  50    0.1 7.0e-05   0.995    4001.27 3.1587e-08   3.531  -1.41e+04   -3.531   0.348  0.0031    2.3     7.71    279300  0.950
+  51    0.1 6.6e-05   0.996    3974.92 3.0358e-08   3.531  -1.41e+04   -3.531   0.329  0.0023    2.1     7.76    284886  0.950
+  52    0.1 6.3e-05   0.994    3954.25 3.0868e-08   3.531  -1.41e+04   -3.531   0.363  0.0032    1.9     7.81    290472  0.950
+  53    0.1 6.0e-05   0.996    3938.45 3.0433e-08   3.531  -1.41e+04   -3.531   0.350  0.0018    1.7     7.84    296058  0.950
+  54    0.1 5.7e-05   0.996    3909.78 3.0014e-08   3.531  -1.41e+04   -3.531   0.330  0.0020    1.6     7.87    301644  0.950
+  55    0.1 5.4e-05   0.996    3879.84 2.9813e-08   3.531  -1.41e+04   -3.531   0.313  0.0019    1.4     7.91    307230  0.950
+  56    0.1 5.1e-05   0.997    3861.67 2.9803e-08   3.531  -1.41e+04   -3.531   0.321  0.0017    1.2     7.95    312816  0.950
+  57    0.1 4.9e-05   0.998    3857.26 2.9363e-08   3.531  -1.41e+04   -3.531   0.300  0.0008    1.1     7.98    318402  0.950
+  58    0.1 4.6e-05   0.999    3856.97 2.9068e-08   3.531   -1.4e+04   -3.531   0.301  0.0008    1.0     8.00    323988  0.950
+  59    0.1 4.4e-05   0.996    3830.60 2.907e-08    3.531  -1.42e+04   -3.531   0.283  0.0022    1.0     8.00    329574  0.950
+  60    0.1 4.2e-05   0.997    3812.18 2.9331e-08   3.531  -1.41e+04   -3.531   0.281  0.0011    1.0     8.00    335160  0.950
+  61    0.1 4.0e-05   0.998    3801.80 2.9634e-08   3.531  -1.42e+04   -3.531   0.265  0.0013    1.0     8.00    340746  0.950
+  62    0.1 3.8e-05   0.998    3792.46 2.9295e-08   3.531   -1.4e+04   -3.531   0.259  0.0012    1.0     8.00    346332  0.950
+  63    0.1 3.6e-05   0.998    3785.28 2.9263e-08   3.531   -1.4e+04   -3.531   0.255  0.0009    1.0     8.00    351918  0.950
+  64    0.1 3.4e-05   0.998    3779.25 2.8766e-08   3.531   -1.4e+04   -3.531   0.245  0.0008    1.0     8.00    357504  0.950
+  65    0.1 3.2e-05   0.999    3771.13 2.8786e-08   3.531   -1.4e+04   -3.531   0.242  0.0007    1.0     8.00    363090  0.950
+  66    0.1 3.1e-05   0.999    3762.44 2.8575e-08   3.531   -1.4e+04   -3.531   0.227  0.0007    1.0     8.00    368676  0.950
+  67    0.1 2.9e-05   0.999    3757.44 2.8625e-08   3.531   -1.4e+04   -3.531   0.239  0.0005    1.0     8.00    374262  0.950
+  68    0.1 2.8e-05   0.999    3754.10 2.8588e-08   3.531   -1.4e+04   -3.531   0.235  0.0006    1.0     8.00    379848  0.950
+  69    0.1 2.6e-05   0.999    3744.61 2.8983e-08   3.531   -1.4e+04   -3.531   0.222  0.0005    1.0     8.00    385434  0.950
+  70    0.1 2.5e-05   0.999    3747.93 2.8663e-08   3.531   -1.4e+04   -3.531   0.219  0.0011    1.0     8.00    391020  0.950
+  71    0.1 2.4e-05   0.998    3742.47 2.8544e-08   3.531   -1.4e+04   -3.531   0.218  0.0010    1.0     8.00    396606  0.950
+  72    0.1 2.3e-05   0.999    3735.88 2.8552e-08   3.531   -1.4e+04   -3.531   0.216  0.0005    1.0     8.00    402192  0.950
+  73    0.1 2.1e-05   0.998    3728.83 2.8629e-08   3.531   -1.4e+04   -3.531   0.202  0.0008    1.0     8.00    407778  0.950
+  74    0.1 2.0e-05   0.999    3723.08 2.855e-08    3.531   -1.4e+04   -3.531   0.199  0.0007    1.0     8.00    413364  0.950
+  75    0.1 1.9e-05   0.999    3720.65 2.8702e-08   3.531   -1.4e+04   -3.531   0.203  0.0003    1.0     8.00    418950  0.950
+  76    0.1 1.8e-05   0.999    3719.13 2.8705e-08   3.531   -1.4e+04   -3.531   0.188  0.0006    1.0     8.00    424536  0.950
+  77    0.1 1.7e-05   0.999    3712.19 2.8677e-08   3.531   -1.4e+04   -3.531   0.183  0.0007    1.0     8.00    430122  0.950
+  78    0.1 1.7e-05   0.999    3707.42 2.8576e-08   3.531  -1.39e+04   -3.531   0.193  0.0007    1.0     8.00    435708  0.950
+  79    0.1 1.6e-05   1.000    3704.54 2.8576e-08   3.531  -1.39e+04   -3.531   0.181  0.0004    1.0     8.00    441294  0.950
+  80    0.1 1.5e-05   0.997    3698.43 2.8926e-08   3.531  -1.41e+04   -3.531   0.175  0.0009    1.0     8.00    446880  0.950
+  81    0.1 1.4e-05   0.998    3694.12 2.8488e-08   3.531   -1.4e+04   -3.531   0.182  0.0006    1.0     8.00    452466  0.950
+  82    0.1 1.3e-05   0.999    3691.84 2.8478e-08   3.531   -1.4e+04   -3.531   0.162  0.0007    1.0     8.00    458052  0.950
+  83    0.1 1.3e-05   1.000    3688.36 2.8432e-08   3.531  -1.39e+04   -3.531   0.163  0.0003    1.0     8.00    463638  0.950
+  84    0.1 1.2e-05   0.999    3685.54 2.8473e-08   3.531   -1.4e+04   -3.531   0.153  0.0007    1.0     8.00    469224  0.950
+  85    0.1 1.2e-05   1.000    3686.06 2.8438e-08   3.531  -1.39e+04   -3.531   0.155  0.0003    1.0     8.00    474810  0.950
+  86    0.1 1.1e-05   1.000    3686.46 2.8572e-08   3.531   -1.4e+04   -3.531   0.156  0.0003    1.0     8.00    480396  0.950
+  87    0.1 1.0e-05   0.999    3685.63 2.8403e-08   3.531  -1.39e+04   -3.531   0.149  0.0006    1.0     8.00    485982  0.950
+Agent's 2nd state: 
+  88    0.1 8.4e-06   0.999    3683.77 2.8404e-08   3.531  -1.39e+04   -3.531   0.143  0.0003    1.0     8.00    491568  0.800
+Checkpoint saved: bb_costs=3680.49, TD costs=2.85343e-08, CPD=  3.531 (ns) 
+  89    0.1 6.7e-06   0.999    3680.91 2.8492e-08   3.531  -1.39e+04   -3.531   0.091  0.0003    1.0     8.00    497154  0.800
+  90    0.1 5.3e-06   0.999    3674.87 2.856e-08    3.531  -1.39e+04   -3.531   0.079  0.0002    1.0     8.00    502740  0.800
+  91    0.1 4.3e-06   0.999    3677.04 2.8507e-08   3.531  -1.39e+04   -3.531   0.074  0.0004    1.0     8.00    508326  0.800
+  92    0.1 3.4e-06   0.999    3673.65 2.8486e-08   3.531   -1.4e+04   -3.531   0.070  0.0005    1.0     8.00    513912  0.800
+  93    0.1 2.7e-06   0.999    3673.98 2.8437e-08   3.531  -1.39e+04   -3.531   0.070  0.0003    1.0     8.00    519498  0.800
+  94    0.1 2.2e-06   1.000    3671.18 2.8406e-08   3.531   -1.4e+04   -3.531   0.061  0.0002    1.0     8.00    525084  0.800
+  95    0.1 1.8e-06   1.000    3671.69 2.8388e-08   3.531   -1.4e+04   -3.531   0.057  0.0001    1.0     8.00    530670  0.800
+  96    0.1 1.4e-06   1.000    3669.53 2.8803e-08   3.531   -1.4e+04   -3.531   0.059  0.0001    1.0     8.00    536256  0.800
+  97    0.1 1.1e-06   0.999    3670.27 2.878e-08    3.531   -1.4e+04   -3.531   0.056  0.0002    1.0     8.00    541842  0.800
+  98    0.1 9.0e-07   1.000    3668.67 2.8414e-08   3.531   -1.4e+04   -3.531   0.055  0.0001    1.0     8.00    547428  0.800
+  99    0.1 0.0e+00   0.999    3668.92 2.8758e-08   3.531   -1.4e+04   -3.531   0.026  0.0003    1.0     8.00    553014  0.800
+## Placement Quench took 0.07 seconds (max_rss 203.9 MiB)
+post-quench CPD = 3.53134 (ns) 
+
+BB estimate of min-dist (placement) wire length: 36693
+
+Completed placement consistency check successfully.
+
+Swaps called: 554101
+
+Aborted Move Reasons:
+  No moves aborted
+
+Placement estimated critical path delay (least slack): 3.53134 ns, Fmax: 283.178 MHz
+Placement estimated setup Worst Negative Slack (sWNS): -3.53134 ns
+Placement estimated setup Total Negative Slack (sTNS): -13943.9 ns
+
+Placement estimated setup slack histogram:
+[ -3.5e-09: -3.2e-09)   24 (  0.2%) |
+[ -3.2e-09: -2.9e-09)   41 (  0.4%) |
+[ -2.9e-09: -2.6e-09)   84 (  0.7%) |*
+[ -2.6e-09: -2.3e-09)   95 (  0.8%) |*
+[ -2.3e-09:   -2e-09)  188 (  1.6%) |**
+[   -2e-09: -1.7e-09)  481 (  4.1%) |*****
+[ -1.7e-09: -1.4e-09) 2161 ( 18.5%) |************************
+[ -1.4e-09: -1.1e-09) 4191 ( 35.9%) |**********************************************
+[ -1.1e-09:   -8e-10) 2688 ( 23.0%) |******************************
+[   -8e-10:   -5e-10) 1726 ( 14.8%) |*******************
+
+Placement estimated geomean non-virtual intra-domain period: 3.53134 ns (283.178 MHz)
+Placement estimated fanout-weighted geomean non-virtual intra-domain period: 3.53134 ns (283.178 MHz)
+
+Placement cost: 0.999118, bb_cost: 3669.34, td_cost: 2.84127e-08, 
+
+Placement resource usage:
+  io  implemented as io : 366
+  clb implemented as clb: 721
+
+Placement number of temperatures: 99
+Placement total # of swap attempts: 554101
+	Swaps accepted: 177017 (31.9 %)
+	Swaps rejected: 355423 (64.1 %)
+	Swaps aborted:  21661 ( 3.9 %)
+
+
+Placement perturbation distribution by block and move type: 
+------------------ ----------------- ---------------- ---------------- --------------- ------------ 
+    Block Type         Move Type       (%) of Total      Accepted(%)     Rejected(%)    Aborted(%)
+------------------ ----------------- ---------------- ---------------- --------------- ------------ 
+io                 Uniform                8.12             61.92           38.08          0.00         
+                   Median                 7.90             56.42           28.13          15.46        
+                   Centroid               8.05             59.04           30.06          10.90        
+                   W. Centroid            8.04             59.54           29.67          10.79        
+                   W. Median              0.52             18.84           53.95          27.20        
+
+clb                Uniform                15.78            9.81            90.19          0.00         
+                   Median                 15.80            25.05           71.10          3.85         
+                   Centroid               15.75            23.60           75.86          0.53         
+                   W. Centroid            15.82            22.57           77.11          0.32         
+                   W. Median              1.07             2.54            92.14          5.32         
+                   Crit. Uniform          1.59             0.05            99.95          0.00         
+                   Feasible Region        1.55             0.03            99.97          0.00         
+
+
+Placement Quench timing analysis took 0.0278051 seconds (0.0235855 STA, 0.00421957 slack) (1 full updates: 1 setup, 0 hold, 0 combined).
+Placement Total  timing analysis took 3.17229 seconds (2.67578 STA, 0.496514 slack) (101 full updates: 101 setup, 0 hold, 0 combined).
+update_td_costs: connections 0 nets 0 sum_nets 0 total 0
+# Placement took 7.16 seconds (max_rss 203.9 MiB, delta_rss +0.0 MiB)
+
+# Routing
+RR graph channel widths unchanged, skipping RR graph rebuild
+## Initializing router criticalities
+Initial Net Connection Criticality Histogram:
+[        0:      0.1) 5023 ( 50.6%) |**********************************************
+[      0.1:      0.2)    0 (  0.0%) |
+[      0.2:      0.3)    0 (  0.0%) |
+[      0.3:      0.4) 4603 ( 46.4%) |******************************************
+[      0.4:      0.5)    0 (  0.0%) |
+[      0.5:      0.6)    0 (  0.0%) |
+[      0.6:      0.7)  265 (  2.7%) |**
+[      0.7:      0.8)    0 (  0.0%) |
+[      0.8:      0.9)    0 (  0.0%) |
+[      0.9:        1)   39 (  0.4%) |
+## Initializing router criticalities took 0.34 seconds (max_rss 203.9 MiB, delta_rss +0.0 MiB)
+---- ------ ------- ---- ------- ------- ------- ----------------- --------------- -------- ---------- ---------- ---------- ---------- --------
+Iter   Time    pres  BBs    Heap  Re-Rtd  Re-Rtd Overused RR Nodes      Wirelength      CPD       sTNS       sWNS       hTNS       hWNS Est Succ
+      (sec)     fac Updt    push    Nets   Conns                                       (ns)       (ns)       (ns)       (ns)       (ns)     Iter
+---- ------ ------- ---- ------- ------- ------- ----------------- --------------- -------- ---------- ---------- ---------- ---------- --------
+Warning 31: No routing path found in high-fanout mode for net 1267 connection (to sink_rr 76871), retrying with full route tree
+Warning 32: No routing path for connection to sink_rr 76871, leaving unrouted to retry later
+Cannot route from clb[0].O[14] (RR node: 42536 class: 16 capacity: 1 fan-in: 0 fan-out: 1 SOURCE:42536  (16,13,0)) to clb[0].I[0:39] (RR node: 76871 class: 0 capacity: 40 fan-in: 40 fan-out: 0 SINK:76871  (29,10,0)) -- no possible path
+Failed to route connection from 'li01308' to '$add~803^ADD~77-0[0]' for net '$sdff~1236^Q~0' (#1267)
+Routing failed for sink 1 of net 1267
+Warning 33: No routing path found in high-fanout mode for net 1267 connection (to sink_rr 76871), retrying with full route tree
+Cannot route from clb[0].O[14] (RR node: 42536 class: 16 capacity: 1 fan-in: 0 fan-out: 1 SOURCE:42536  (16,13,0)) to clb[0].I[0:39] (RR node: 76871 class: 0 capacity: 40 fan-in: 40 fan-out: 0 SINK:76871  (29,10,0)) -- no possible path
+Cannot route from clb[0].O[14] (RR node: 42536 class: 16 capacity: 1 fan-in: 0 fan-out: 1 SOURCE:42536  (16,13,0)) to clb[0].I[0:39] (RR node: 76871 class: 0 capacity: 40 fan-in: 40 fan-out: 0 SINK:76871  (29,10,0)) -- no possible path
+Failed to route connection from 'li01308' to '$add~803^ADD~77-0[0]' for net '$sdff~1236^Q~0' (#1267)
+Routing failed for sink 1 of net 1267
+Serial Connection Router is being destroyed. Time spent on path search: 0.000 seconds.
+# Routing took 0.41 seconds (max_rss 203.9 MiB, delta_rss +0.0 MiB)
+Circuit is unroutable with a channel width factor of 10.
+For a detailed report on the RR node overuse information (report_overused_nodes.rpt), specify --generate_rr_node_overuse_report on.
+Incr Slack updates 101 in 0.160387 sec
+Full Max Req/Worst Slack updates 32 in 0.01796 sec
+Incr Max Req/Worst Slack updates 69 in 0.0453778 sec
+Incr Criticality updates 65 in 0.137003 sec
+Full Criticality updates 36 in 0.10427 sec
+VPR failed to implement circuit

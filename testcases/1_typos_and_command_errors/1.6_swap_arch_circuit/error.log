@@ -1,0 +1,24 @@
+VPR FPGA Placement and Routing.
+Version: 9.0.0-dev+v8.0.0-11925-ga544f5fea-dirty
+Revision: v8.0.0-11925-ga544f5fea-dirty
+Compiled: 2025-01-14T21:35:49
+Compiler: GNU 9.4.0 on Linux-4.15.0-213-generic x86_64
+Build Info: release IPO VTR_ASSERT_LEVEL=2
+
+University of Toronto
+verilogtorouting.org
+vtr-users@googlegroups.com
+This is free open source code under MIT license.
+
+VPR was run with the following command-line:
+../vpr/vpr ex1010.pre-vpr.blif k6_frac_N10_40nm.xml
+
+Using up to 1 parallel worker(s)
+
+Architecture file: ex1010.pre-vpr.blif
+Circuit name: k6_frac_N10_40nm
+
+# Loading Architecture Description
+Warning 1: Architecture file 'ex1010.pre-vpr.blif' may be in incorrect format. Expecting .xml format for architecture files.
+# Loading Architecture Description took 0.02 seconds (max_rss 15.2 MiB, delta_rss +1.4 MiB)
+Error 1: ex1010.pre-vpr.blif:8932 Unable to load XML file 'ex1010.pre-vpr.blif', No document element found (line: 8932 col: 1)

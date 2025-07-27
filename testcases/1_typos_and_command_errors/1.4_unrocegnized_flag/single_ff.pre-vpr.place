@@ -1,0 +1,9 @@
+Netlist_File: single_ff.pre-vpr.net Netlist_ID: SHA256:217392bb37cbed83bd3917e6eefadf3297bdf0aec091ff07d39e6f856005be35
+Array size: 3 x 3 logic blocks
+
+#block name	x	y	subblk	layer	block number
+#----------	--	--	------	-----	------------
+out		1	1	0	0	#0
+out:out		1	2	1	0	#1
+clock		2	1	3	0	#2
+in		2	1	6	0	#3

@@ -1,0 +1,60 @@
+#Timing report of worst 2 path(s)
+# Unit scale: 1e-09 seconds
+# Output precision: 3
+
+#Path 1
+Startpoint: out.Q[0] (.latch clocked by clock)
+Endpoint  : out:out.outpad[0] (.output clocked by clock)
+Path Type : setup
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clock (rise edge)                                          0.000     0.000
+clock source latency                                             0.000     0.000
+clock.inpad[0] (.input)                                          0.000     0.000
+out.clk[0] (.latch)                                              1.338     1.338
+out.Q[0] (.latch) [clock-to-output]                              0.124     1.462
+out:out.outpad[0] (.output)                                      1.338     2.800
+data arrival time                                                          2.800
+
+clock clock (rise edge)                                          0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                         0.000
+data arrival time                                                         -2.800
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -2.800
+
+
+#Path 2
+Startpoint: in.inpad[0] (.input clocked by clock)
+Endpoint  : out.D[0] (.latch clocked by clock)
+Path Type : setup
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clock (rise edge)                                          0.000     0.000
+clock source latency                                             0.000     0.000
+input external delay                                             0.000     0.000
+in.inpad[0] (.input)                                             0.000     0.000
+out.D[0] (.latch)                                                1.338     1.338
+data arrival time                                                          1.338
+
+clock clock (rise edge)                                          0.000     0.000
+clock source latency                                             0.000     0.000
+clock.inpad[0] (.input)                                          0.000     0.000
+out.clk[0] (.latch)                                              1.338     1.338
+clock uncertainty                                                0.000     1.338
+cell setup time                                                 -0.066     1.272
+data required time                                                         1.272
+--------------------------------------------------------------------------------
+data required time                                                         1.272
+data arrival time                                                         -1.338
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -0.066
+
+
+#End of timing report

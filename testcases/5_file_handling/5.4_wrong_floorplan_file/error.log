@@ -1,0 +1,637 @@
+VPR FPGA Placement and Routing.
+Version: 9.0.0-dev+v8.0.0-11925-ga544f5fea-dirty
+Revision: v8.0.0-11925-ga544f5fea-dirty
+Compiled: 2025-01-14T21:35:49
+Compiler: GNU 9.4.0 on Linux-4.15.0-213-generic x86_64
+Build Info: release IPO VTR_ASSERT_LEVEL=2
+
+University of Toronto
+verilogtorouting.org
+vtr-users@googlegroups.com
+This is free open source code under MIT license.
+
+VPR was run with the following command-line:
+./vpr/vpr k6_frac_N10_frac_chain_mem32K_40nm.xml stereovision0.pre-vpr.blif --pack --place --read_vpr_constraints constraints.xml
+
+Using up to 1 parallel worker(s)
+
+Architecture file: k6_frac_N10_frac_chain_mem32K_40nm.xml
+Circuit name: stereovision0.pre-vpr
+
+# Loading Architecture Description
+# Loading Architecture Description took 0.04 seconds (max_rss 15.3 MiB, delta_rss +1.2 MiB)
+
+Timing analysis: ON
+Circuit netlist file: stereovision0.pre-vpr.net
+Circuit placement file: stereovision0.pre-vpr.place
+Circuit routing file: stereovision0.pre-vpr.route
+Circuit SDC file: stereovision0.pre-vpr.sdc
+Vpr floorplanning constraints file: constraints.xml
+
+Packer: ENABLED
+Placer: ENABLED
+Analytical Placer: DISABLED
+Router: DISABLED
+Analysis: DISABLED
+
+VPR was run with the following options:
+
+NetlistOpts.absorb_buffer_luts            : true
+NetlistOpts.sweep_dangling_primary_ios    : true
+NetlistOpts.sweep_dangling_nets           : true
+NetlistOpts.sweep_dangling_blocks         : true
+NetlistOpts.sweep_constant_primary_outputs: false
+NetlistOpts.netlist_verbosity             : 1
+NetlistOpts.const_gen_inference           : COMB_SEQ
+
+PackerOpts.allow_unrelated_clustering: auto
+PackerOpts.alpha_clustering: 0.750000
+PackerOpts.beta_clustering: 0.900000
+PackerOpts.cluster_seed_type: BLEND2
+PackerOpts.connection_driven: true
+PackerOpts.global_clocks: true
+PackerOpts.inter_cluster_net_delay: 1.000000
+PackerOpts.timing_driven: true
+PackerOpts.target_external_pin_util: auto
+
+PlacerOpts.place_freq: PLACE_ONCE
+PlacerOpts.place_algorithm: CRITICALITY_TIMING_PLACE
+PlacerOpts.pad_loc_type: FREE
+PlacerOpts.constraints_file: No constraints file given
+PlacerOpts.place_chan_width: 100
+PlacerOpts.inner_loop_recompute_divider: 0
+PlacerOpts.recompute_crit_iter: 1
+PlacerOpts.timing_tradeoff: 0.500000
+PlacerOpts.td_place_exp_first: 1.000000
+PlacerOpts.td_place_exp_last: 8.000000
+PlacerOpts.delay_offset: 0.000000
+PlacerOpts.delay_ramp_delta_threshold: -1
+PlacerOpts.delay_ramp_slope: 0.000000
+PlacerOpts.tsu_rel_margin: 1.000000
+PlacerOpts.tsu_abs_margin: 0.000000
+PlacerOpts.post_place_timing_report_file: 
+PlacerOpts.allowed_tiles_for_delay_model: 
+PlacerOpts.delay_model_reducer: MIN
+PlacerOpts.delay_model_type: SIMPLE
+PlacerOpts.rlim_escape_fraction: 0.000000
+PlacerOpts.move_stats_file: 
+PlacerOpts.placement_saves_per_temperature: 0
+PlacerOpts.effort_scaling: CIRCUIT
+PlacerOpts.place_delta_delay_matrix_calculation_method: ASTAR_ROUTE
+PlaceOpts.seed: 1
+AnnealSched.type: AUTO_SCHED
+AnnealSched.inner_num: 0.500000
+
+# Building complex block graph
+Warning 1: io[0].clock[0] unconnected pin in architecture.
+# Building complex block graph took 0.05 seconds (max_rss 23.1 MiB, delta_rss +7.8 MiB)
+Circuit file: stereovision0.pre-vpr.blif
+# Load circuit
+Found constant-one generator 'offchip_sram_oe~1'
+Found constant-zero generator 'offchip_sram_addr~18'
+Found constant-zero generator 'offchip_sram_addr~17'
+Found constant-zero generator 'depth_out~15'
+Found constant-zero generator 'depth_out~14'
+Found constant-zero generator 'depth_out~13'
+Found constant-zero generator 'depth_out~12'
+Found constant-zero generator 'depth_out~11'
+Found constant-zero generator 'depth_out~10'
+Found constant-zero generator 'depth_out~9'
+Found constant-zero generator 'depth_out~8'
+Found constant-zero generator 'tm3_vidout_blue~1'
+Found constant-zero generator 'tm3_vidout_blue~0'
+Found constant-zero generator 'tm3_vidout_green~1'
+Found constant-zero generator 'tm3_vidout_green~0'
+Found constant-zero generator 'gnd'
+Found constant-one generator 'vcc'
+Found constant-zero generator 'unconn'
+# Load circuit took 0.60 seconds (max_rss 73.8 MiB, delta_rss +50.8 MiB)
+# Clean circuit
+Absorbed 8953 LUT buffers
+Inferred    0 additional primitive pins as constant generators since they have no combinationally connected inputs
+Inferred  510 additional primitive pins as constant generators due to constant inputs
+Inferred    0 additional primitive pins as constant generators since they have no combinationally connected inputs
+Inferred    0 additional primitive pins as constant generators due to constant inputs
+Swept input(s)      : 0
+Swept output(s)     : 0 (0 dangling, 0 constant)
+Swept net(s)        : 666
+Swept block(s)      : 0
+Constant Pins Marked: 510
+# Clean circuit took 0.03 seconds (max_rss 73.8 MiB, delta_rss +0.0 MiB)
+# Compress circuit
+# Compress circuit took 0.07 seconds (max_rss 73.8 MiB, delta_rss +0.0 MiB)
+# Verify circuit
+# Verify circuit took 0.01 seconds (max_rss 73.8 MiB, delta_rss +0.0 MiB)
+Circuit Statistics:
+  Blocks: 21365
+    .input :     169
+    .latch :   11497
+    .names :    6779
+        0-LUT:      17
+        1-LUT:      47
+        2-LUT:     130
+        3-LUT:    5652
+        4-LUT:     130
+        5-LUT:     565
+        6-LUT:     238
+    .output:     197
+    adder  :    2723
+  Nets  : 23225
+    Avg Fanout:     2.3
+    Max Fanout: 11497.0
+    Min Fanout:     1.0
+  Netlist Clocks: 1
+# Build Timing Graph
+  Timing Graph Nodes: 76534
+  Timing Graph Edges: 112526
+  Timing Graph Levels: 34
+# Build Timing Graph took 0.11 seconds (max_rss 75.4 MiB, delta_rss +1.5 MiB)
+Netlist contains 1 clocks
+  Netlist Clock 'tm3_clk_v0' Fanout: 11497 pins (15.0%), 11497 blocks (53.8%)
+# Load Timing Constraints
+
+SDC file 'stereovision0.pre-vpr.sdc' not found
+Setting default timing constraints:
+   * constrain all primay inputs and primary outputs on netlist clock 'tm3_clk_v0'
+   * optimize netlist clock to run as fast as possible
+Timing constraints created 1 clocks
+  Constrained Clock 'tm3_clk_v0' Source: 'tm3_clk_v0.inpad[0]'
+
+# Load Timing Constraints took 0.00 seconds (max_rss 75.4 MiB, delta_rss +0.0 MiB)
+# Reading VPR constraints from constraints.xml
+# Reading VPR constraints from constraints.xml took 0.42 seconds (max_rss 75.4 MiB, delta_rss +0.0 MiB)
+# Packing
+Begin packing 'stereovision0.pre-vpr.blif'.
+
+After removing unused inputs...
+	total blocks: 21365, total nets: 23225, total inputs: 169, total outputs: 197
+Begin prepacking.
+
+There is one chain in this architecture called "chain" with the following starting points:
+	clb[0]/fle[0]/lut5inter[0]/ble5[0]/arithmetic[0]/adder[0].cin[0]
+
+0 attraction groups were created during prepacking.
+Finish prepacking.
+Using inter-cluster delay: 1.33777e-09
+Packing with pin utilization targets: io:1,1 clb:0.8,0.6 mult_36:1,1 memory:1,1
+Packing with high fanout thresholds: io:128 clb:32 mult_36:128 memory:128
+Starting Clustering - Clustering Progress: 
+-------------------   --------------------------   ---------
+Molecules processed   Number of clusters created   FPGA size
+-------------------   --------------------------   ---------
+   409/10249     3%                           49    11 x 11    
+   826/10249     8%                           96    14 x 14    
+  1242/10249    12%                          134    16 x 16    
+  1659/10249    16%                          173    18 x 18    
+  2076/10249    20%                          212    19 x 19    
+  2496/10249    24%                          250    21 x 21    
+  2906/10249    28%                          281    22 x 22    
+  3330/10249    32%                          309    23 x 23    
+  3746/10249    36%                          338    24 x 24    
+  4165/10249    40%                          367    25 x 25    
+  4574/10249    44%                          391    25 x 25    
+  4986/10249    48%                          415    26 x 26    
+  5409/10249    52%                          440    27 x 27    
+  5827/10249    56%                          465    27 x 27    
+  6239/10249    60%                          486    28 x 28    
+  6652/10249    64%                          508    29 x 29    
+  7070/10249    68%                          529    29 x 29    
+  7490/10249    73%                          550    30 x 30    
+  7903/10249    77%                          571    30 x 30    
+  8318/10249    81%                          593    31 x 31    
+  8733/10249    85%                          614    31 x 31    
+  9160/10249    89%                          637    31 x 31    
+  9579/10249    93%                          658    32 x 32    
+  9988/10249    97%                          826    34 x 34    
+ 10249/10249   100%                         1087    34 x 34    
+
+Logic Element (fle) detailed count:
+  Total number of Logic Elements used : 6601
+  LEs used for logic and registers    : 5155
+  LEs used for logic only             : 385
+  LEs used for registers only         : 1061
+
+Incr Slack updates 1 in 0.00168659 sec
+Full Max Req/Worst Slack updates 1 in 0.000564601 sec
+Incr Max Req/Worst Slack updates 0 in 0 sec
+Incr Criticality updates 0 in 0 sec
+Full Criticality updates 1 in 0.00326126 sec
+FPGA sized to 34 x 34 (auto)
+Device Utilization: 0.66 (target 1.00)
+	Block Utilization: 0.36 Type: io
+	Block Utilization: 0.94 Type: clb
+
+
+
+A partition including the following regions has been assigned 1 blocks of type clb, but only has 0 tiles of that type
+	Region (1990, 1, 0) to (2000, 1, 0) st -1 
+
+
+A partition including the following regions has been assigned 0 blocks of type memory, but only has -33 tiles of that type
+	Region (1990, 1, 0) to (2000, 1, 0) st -1 
+Floorplan regions are overfull: trying to pack again using cluster attraction groups. 
+1 clustering attraction groups created. 
+Starting Clustering - Clustering Progress: 
+-------------------   --------------------------   ---------
+Molecules processed   Number of clusters created   FPGA size
+-------------------   --------------------------   ---------
+   409/10249     3%                           49    34 x 34    
+   826/10249     8%                           96    34 x 34    
+  1242/10249    12%                          134    34 x 34    
+  1659/10249    16%                          173    34 x 34    
+  2076/10249    20%                          212    34 x 34    
+  2496/10249    24%                          250    34 x 34    
+  2914/10249    28%                          282    34 x 34    
+  3325/10249    32%                          311    34 x 34    
+  3742/10249    36%                          341    34 x 34    
+  4161/10249    40%                          370    34 x 34    
+  4570/10249    44%                          394    34 x 34    
+  4982/10249    48%                          418    34 x 34    
+  5405/10249    52%                          443    34 x 34    
+  5823/10249    56%                          468    34 x 34    
+  6235/10249    60%                          489    34 x 34    
+  6648/10249    64%                          511    34 x 34    
+  7066/10249    68%                          532    34 x 34    
+  7486/10249    73%                          553    34 x 34    
+  7899/10249    77%                          574    34 x 34    
+  8314/10249    81%                          596    34 x 34    
+  8729/10249    85%                          617    34 x 34    
+  9156/10249    89%                          640    34 x 34    
+  9575/10249    93%                          661    34 x 34    
+  9984/10249    97%                          828    34 x 34    
+ 10249/10249   100%                         1093    34 x 34    
+
+Logic Element (fle) detailed count:
+  Total number of Logic Elements used : 6605
+  LEs used for logic and registers    : 5154
+  LEs used for logic only             : 387
+  LEs used for registers only         : 1064
+
+Incr Slack updates 1 in 0.00164502 sec
+Full Max Req/Worst Slack updates 1 in 0.000571075 sec
+Incr Max Req/Worst Slack updates 0 in 0 sec
+Incr Criticality updates 0 in 0 sec
+Full Criticality updates 1 in 0.00278141 sec
+FPGA sized to 34 x 34 (auto)
+Device Utilization: 0.67 (target 1.00)
+	Block Utilization: 0.36 Type: io
+	Block Utilization: 0.95 Type: clb
+
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (16, 7, 0) to (16, 7, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (15, 8, 0) to (15, 8, 0) st -1 
+
+
+A partition including the following regions has been assigned 0 blocks of type EMPTY, but only has -941223485 tiles of that type
+	Region (1990, 1, 0) to (2000, 1, 0) st -1 
+
+
+A partition including the following regions has been assigned 1 blocks of type clb, but only has 0 tiles of that type
+	Region (1990, 1, 0) to (2000, 1, 0) st -1 
+
+
+A partition including the following regions has been assigned 0 blocks of type mult_36, but only has -1063256064 tiles of that type
+	Region (1990, 1, 0) to (2000, 1, 0) st -1 
+
+
+A partition including the following regions has been assigned 0 blocks of type memory, but only has -921165765 tiles of that type
+	Region (1990, 1, 0) to (2000, 1, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (15, 7, 0) to (15, 7, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (17, 11, 0) to (17, 11, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (11, 11, 0) to (11, 11, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (11, 7, 0) to (11, 7, 0) st -1 
+Floorplan regions are overfull: trying to pack again with more attraction groups exploration. 
+7 clustering attraction groups created. 
+Pack iteration is 2
+Starting Clustering - Clustering Progress: 
+-------------------   --------------------------   ---------
+Molecules processed   Number of clusters created   FPGA size
+-------------------   --------------------------   ---------
+   409/10249     3%                           49    34 x 34    
+   826/10249     8%                           96    34 x 34    
+  1242/10249    12%                          134    34 x 34    
+  1659/10249    16%                          173    34 x 34    
+  2076/10249    20%                          212    34 x 34    
+  2496/10249    24%                          250    34 x 34    
+  2919/10249    28%                          282    34 x 34    
+  3342/10249    32%                          310    34 x 34    
+  3756/10249    36%                          339    34 x 34    
+  4179/10249    40%                          368    34 x 34    
+  4604/10249    44%                          393    34 x 34    
+  5017/10249    48%                          417    34 x 34    
+  5441/10249    53%                          442    34 x 34    
+  5864/10249    57%                          467    34 x 34    
+  6276/10249    61%                          488    34 x 34    
+  6689/10249    65%                          510    34 x 34    
+  7107/10249    69%                          531    34 x 34    
+  7527/10249    73%                          552    34 x 34    
+  7940/10249    77%                          573    34 x 34    
+  8355/10249    81%                          595    34 x 34    
+  8770/10249    85%                          616    34 x 34    
+  9197/10249    89%                          639    34 x 34    
+  9616/10249    93%                          660    34 x 34    
+ 10025/10249    97%                          865    34 x 34    
+ 10249/10249   100%                         1089    34 x 34    
+
+Logic Element (fle) detailed count:
+  Total number of Logic Elements used : 6602
+  LEs used for logic and registers    : 5153
+  LEs used for logic only             : 387
+  LEs used for registers only         : 1062
+
+Incr Slack updates 1 in 0.00164144 sec
+Full Max Req/Worst Slack updates 1 in 0.000520166 sec
+Incr Max Req/Worst Slack updates 0 in 0 sec
+Incr Criticality updates 0 in 0 sec
+Full Criticality updates 1 in 0.00347566 sec
+FPGA sized to 34 x 34 (auto)
+Device Utilization: 0.67 (target 1.00)
+	Block Utilization: 0.36 Type: io
+	Block Utilization: 0.94 Type: clb
+
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (16, 7, 0) to (16, 7, 0) st -1 
+
+
+A partition including the following regions has been assigned 0 blocks of type EMPTY, but only has -1 tiles of that type
+	Region (1990, 1, 0) to (2000, 1, 0) st -1 
+
+
+A partition including the following regions has been assigned 1 blocks of type clb, but only has 0 tiles of that type
+	Region (1990, 1, 0) to (2000, 1, 0) st -1 
+
+
+A partition including the following regions has been assigned 0 blocks of type mult_36, but only has -33 tiles of that type
+	Region (1990, 1, 0) to (2000, 1, 0) st -1 
+
+
+A partition including the following regions has been assigned 0 blocks of type memory, but only has -921195960 tiles of that type
+	Region (1990, 1, 0) to (2000, 1, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (17, 11, 0) to (17, 11, 0) st -1 
+1087 clustering attraction groups created. 
+Floorplan regions are overfull: trying to pack again with more attraction groups exploration. 
+Pack iteration is 3
+Starting Clustering - Clustering Progress: 
+-------------------   --------------------------   ---------
+Molecules processed   Number of clusters created   FPGA size
+-------------------   --------------------------   ---------
+   413/10249     4%                           51    34 x 34    
+   824/10249     8%                           96    34 x 34    
+  1240/10249    12%                          134    34 x 34    
+  1657/10249    16%                          173    34 x 34    
+  2074/10249    20%                          212    34 x 34    
+  2494/10249    24%                          250    34 x 34    
+  2917/10249    28%                          282    34 x 34    
+  3327/10249    32%                          311    34 x 34    
+  3743/10249    36%                          340    34 x 34    
+  4161/10249    40%                          369    34 x 34    
+  4583/10249    44%                          394    34 x 34    
+  4994/10249    48%                          418    34 x 34    
+  5410/10249    52%                          443    34 x 34    
+  5835/10249    56%                          472    34 x 34    
+  6247/10249    60%                          493    34 x 34    
+  6660/10249    64%                          515    34 x 34    
+  7078/10249    69%                          536    34 x 34    
+  7499/10249    73%                          558    34 x 34    
+  7912/10249    77%                          579    34 x 34    
+  8327/10249    81%                          601    34 x 34    
+  8742/10249    85%                          622    34 x 34    
+  9151/10249    89%                          646    34 x 34    
+  9570/10249    93%                          667    34 x 34    
+  9979/10249    97%                          834    34 x 34    
+ 10249/10249   100%                         1104    34 x 34    
+
+Logic Element (fle) detailed count:
+  Total number of Logic Elements used : 6617
+  LEs used for logic and registers    : 5163
+  LEs used for logic only             : 388
+  LEs used for registers only         : 1066
+
+Incr Slack updates 1 in 0.00187366 sec
+Full Max Req/Worst Slack updates 1 in 0.000566825 sec
+Incr Max Req/Worst Slack updates 0 in 0 sec
+Incr Criticality updates 0 in 0 sec
+Full Criticality updates 1 in 0.0030943 sec
+FPGA sized to 34 x 34 (auto)
+Device Utilization: 0.68 (target 1.00)
+	Block Utilization: 0.36 Type: io
+	Block Utilization: 0.96 Type: clb
+
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (24, 23, 0) to (24, 23, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (16, 7, 0) to (16, 7, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (27, 10, 0) to (27, 10, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (23, 14, 0) to (23, 14, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (25, 12, 0) to (25, 12, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (16, 9, 0) to (16, 9, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (31, 15, 0) to (31, 15, 0) st -1 
+
+
+A partition including the following regions has been assigned 1 blocks of type clb, but only has 0 tiles of that type
+	Region (1990, 1, 0) to (2000, 1, 0) st -1 
+
+
+A partition including the following regions has been assigned 0 blocks of type mult_36, but only has -869706768 tiles of that type
+	Region (1990, 1, 0) to (2000, 1, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (12, 11, 0) to (12, 11, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (17, 11, 0) to (17, 11, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (23, 13, 0) to (23, 13, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (23, 11, 0) to (23, 11, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (24, 12, 0) to (24, 12, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (12, 22, 0) to (12, 22, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (11, 24, 0) to (11, 24, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (12, 24, 0) to (12, 24, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (23, 23, 0) to (23, 23, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (24, 14, 0) to (24, 14, 0) st -1 
+1087 clustering attraction groups created. 
+Floorplan regions are overfull: trying to pack again with more attraction groups exploration and higher target pin utilization. 
+Pack iteration is 4
+Starting Clustering - Clustering Progress: 
+-------------------   --------------------------   ---------
+Molecules processed   Number of clusters created   FPGA size
+-------------------   --------------------------   ---------
+   409/10249     3%                           49    34 x 34    
+   826/10249     8%                           96    34 x 34    
+  1242/10249    12%                          134    34 x 34    
+  1659/10249    16%                          173    34 x 34    
+  2076/10249    20%                          212    34 x 34    
+  2496/10249    24%                          250    34 x 34    
+  2906/10249    28%                          281    34 x 34    
+  3330/10249    32%                          309    34 x 34    
+  3746/10249    36%                          338    34 x 34    
+  4164/10249    40%                          367    34 x 34    
+  4586/10249    44%                          392    34 x 34    
+  4997/10249    48%                          416    34 x 34    
+  5413/10249    52%                          441    34 x 34    
+  5838/10249    56%                          470    34 x 34    
+  6250/10249    60%                          491    34 x 34    
+  6663/10249    65%                          513    34 x 34    
+  7081/10249    69%                          534    34 x 34    
+  7502/10249    73%                          556    34 x 34    
+  7915/10249    77%                          577    34 x 34    
+  8330/10249    81%                          599    34 x 34    
+  8745/10249    85%                          620    34 x 34    
+  9154/10249    89%                          644    34 x 34    
+  9573/10249    93%                          665    34 x 34    
+  9982/10249    97%                          833    34 x 34    
+ 10249/10249   100%                         1100    34 x 34    
+
+Logic Element (fle) detailed count:
+  Total number of Logic Elements used : 6613
+  LEs used for logic and registers    : 5163
+  LEs used for logic only             : 387
+  LEs used for registers only         : 1063
+
+Incr Slack updates 1 in 0.00169425 sec
+Full Max Req/Worst Slack updates 1 in 0.000500249 sec
+Incr Max Req/Worst Slack updates 0 in 0 sec
+Incr Criticality updates 0 in 0 sec
+Full Criticality updates 1 in 0.00269154 sec
+FPGA sized to 34 x 34 (auto)
+Device Utilization: 0.67 (target 1.00)
+	Block Utilization: 0.36 Type: io
+	Block Utilization: 0.96 Type: clb
+
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (24, 23, 0) to (24, 23, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (27, 10, 0) to (27, 10, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (23, 14, 0) to (23, 14, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (25, 12, 0) to (25, 12, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (31, 15, 0) to (31, 15, 0) st -1 
+
+
+A partition including the following regions has been assigned 0 blocks of type EMPTY, but only has -882439933 tiles of that type
+	Region (1990, 1, 0) to (2000, 1, 0) st -1 
+
+
+A partition including the following regions has been assigned 1 blocks of type clb, but only has 0 tiles of that type
+	Region (1990, 1, 0) to (2000, 1, 0) st -1 
+
+
+A partition including the following regions has been assigned 0 blocks of type memory, but only has -20085 tiles of that type
+	Region (1990, 1, 0) to (2000, 1, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (23, 13, 0) to (23, 13, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (23, 11, 0) to (23, 11, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (24, 12, 0) to (24, 12, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (12, 22, 0) to (12, 22, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (11, 24, 0) to (11, 24, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (12, 24, 0) to (12, 24, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (23, 23, 0) to (23, 23, 0) st -1 
+
+
+A partition including the following regions has been assigned 2 blocks of type clb, but only has 1 tiles of that type
+	Region (24, 14, 0) to (24, 14, 0) st -1 
+# Packing took 26.32 seconds (max_rss 120.7 MiB, delta_rss +45.1 MiB)
+Error 1: 
+Type: Other
+File: /home/elgamma8/research/release/vtr-verilog-to-routing/vpr/src/pack/pack.cpp
+Line: 204
+Message: Failed to find pack clusters densely enough to fit in the designated floorplan regions.
+The floorplan regions may need to be expanded to run successfully. 

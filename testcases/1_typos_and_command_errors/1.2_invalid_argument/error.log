@@ -1,0 +1,25 @@
+VPR FPGA Placement and Routing.
+Version: 9.0.0-dev+v8.0.0-11925-ga544f5fea-dirty
+Revision: v8.0.0-11925-ga544f5fea-dirty
+Compiled: 2025-01-14T21:35:49
+Compiler: GNU 9.4.0 on Linux-4.15.0-213-generic x86_64
+Build Info: release IPO VTR_ASSERT_LEVEL=2
+
+University of Toronto
+verilogtorouting.org
+vtr-users@googlegroups.com
+This is free open source code under MIT license.
+
+VPR was run with the following command-line:
+./vpr/vpr k6_frac_N10_40nm.xml pdc.pre-vpr.blif --timing_analysis OFF
+
+Missing expected argument for --timing_analysis
+
+usage: vpr architecture circuit [--pack] [--legalize] [--place] 
+       [--analytical_place] [--route] [--analysis] [--disp {on, off}] 
+       [--save_graphics {on, off}] [--graphics_commands GRAPHICS_COMMANDS] [-h] 
+       [--version] [--device DEVICE_NAME] [-j NUM_WORKERS] 
+       [--timing_analysis {on, off}] [--disable_errors DISABLE_ERRORS] 
+       [--suppress_warnings SUPPRESS_WARNINGS] 
+       [--terminate_if_timing_fails {on, off}] 
+       [--route_chan_width CHANNEL_WIDTH] [--server] [OTHER_OPTIONS ...]
