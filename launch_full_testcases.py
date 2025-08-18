@@ -20,7 +20,7 @@ error_lines = 10
 mode = ""
 llm_output_csv = ""
 vpr_output_csv = ""
-input_help = "help/help.txt"
+input_help = "help_srcs/help.txt"
 #llm_model = "llama-3.1-8b-instant"
 llm_model = ""
 embedding_model = "thenlper/gte-large"
@@ -144,6 +144,8 @@ def process_csv_and_run_commands(input_csv, output_csv):
 
 
 
+os.makedirs("output/", exist_ok=True)
+
 # Iterate over directories under testcases/
 leaf_dirs = []
 for root, dirs, files in os.walk(testcases_dir, topdown=True):
@@ -169,6 +171,7 @@ for mode in ["rag"]:
                     result = subprocess.run(command, shell=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
                     df = pd.read_csv(llm_output_csv)
+                    df["LLM Error"] = df["LLM Error"].astype("object")
                     df.at[df.index[-1], "LLM Error"] = result.stdout.replace(",","") + result.stderr.replace(",","")
                     df.to_csv(llm_output_csv, index=False)
                 
