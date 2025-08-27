@@ -1,5 +1,5 @@
-**VTR-LLM**
-VTR-LLM is a system that brings the power of Large Language Models (LLMs) to FPGA computer-aided design (CAD) tools. It integrates LLMs with the VTR (Versatile Place and Route) toolchain to provide natural-language assistance during CAD tool usage and development.
+**VPR-LLM**
+VPR-LLM is a system that brings the power of Large Language Models (LLMs) to FPGA computer-aided design (CAD) tools. It integrates LLMs with the VTR (Versatile Place and Route) toolchain to provide natural-language assistance during CAD tool usage and development.
 
 This repository contains both:
 
